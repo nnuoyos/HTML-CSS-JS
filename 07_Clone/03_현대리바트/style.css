@@ -1,0 +1,325 @@
+@charset "utf-8";
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1220px;
+}
+/* header */
+.header_in {
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo a {
+    position: absolute;
+    display: block;
+    top: 20px;
+}
+.gnb {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.utill {
+    position: absolute;
+    margin-top: 5px;
+    right: 0px;
+}
+.gnb ul {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.gnb li {
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #232323;
+}
+.gnb li a:hover {
+    color: rgb(0, 153, 129);
+}
+.gnb .search a {
+    display: block;
+    width: 26px;
+    height: 26px;
+    margin-left: 9px;
+    background-image: url(./img/icon_sc.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -99999999px;
+}
+.utill ul {
+    display: flex;
+    align-items: center;
+}
+.utill li {
+    margin-left: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    color: #888;
+}
+.utill li a:hover {
+    color: #121212;
+}
+/* main slide */
+.mainSlide {
+    position: relative;
+    min-width: 1240px;
+}
+.sImg {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+.img_box {
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    top: 5px;
+}
+.img_box a {
+    position: absolute;
+    display: block;
+}
+
+/* prev - next btn */
+.mainSlide .prev_btn,
+.mainSlide .next_btn {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    top: 275px;
+    cursor: pointer;
+}
+.prev_btn {
+    background-image: url(./img/a_left.png);
+    left: 360px;
+}
+.next_btn {
+    background-image: url(./img/a_right.png);
+    right: 360px;
+}
+.prev_btn span,
+.next_btn span {
+    display: block;
+    width: 64px;
+    height: 64px;
+    text-indent: -999999px;
+}
+/* Brand Intro */
+
+.intro {
+    position: relative;
+    width: 1220px;
+    height: 300px;
+    margin: 0 auto;
+    top: 35px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.intro h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.listFirst {
+    width: 230px;
+    height: 172px;
+    border: 1px solid #ddd;
+}
+.brandList ul {
+    position: absolute;
+    display: flex;
+    margin-left: 235px;
+    justify-content: flex-end;
+}
+.brandList li {
+    border: 1px solid #ddd;
+    margin-left: 9px;
+}
+.listTop {
+    top: 50px;
+    margin-bottom: 9px;
+}
+.listBt {
+    top: 142px;
+}
+
+/* event */
+.eventWarp {
+    width: 100%;
+    min-width: 1220px;
+    height: 380px;
+    background-color: #eee;
+}
+.eventInner {
+    position: relative;
+    width: 1220px;
+    height: 290px;
+    margin: 0 auto;
+    top: 45px;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.eventImg ul {
+    display: flex;
+    /* padding-top: 50px; */
+    /* top: 20px; */
+    margin-left: 255px;
+    justify-content: center;
+}
+.eventImg li {
+    margin-left: 18px;
+    align-items: center;
+    justify-content: center;
+}
+.textBox {
+    position: absolute;
+    width: 230px;
+    height: 300px;
+
+    /* margin-left: 140px; */
+}
+
+.eventText1 {
+    position: absolute;
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+    top: 20px;
+}
+.eventText2 {
+    position: absolute;
+    /* margin-top: 30px; */
+    font-size: 27px;
+    font-weight: 500;
+    top: 110px;
+}
+.textBox::before {
+    content: '';
+    width: 80px;
+    position: absolute;
+    border: 2px solid #121212;
+    transform: rotate(180deg);
+}
+.ev_prev {
+    position: absolute;
+    bottom: 10px;
+}
+.ev_next {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 28px;
+}
+/* show room */
+.showroom {
+    position: relative;
+    width: 1220px;
+    height: 300px;
+    margin: 0 auto;
+    top: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.showroom h2 {
+    margin-bottom: 15px;
+}
+.roomImg {
+    display: flex;
+}
+.roomImg li {
+    margin-right: 11px;
+}
+/* utill */
+.utillWarp {
+    width: 100%;
+    min-width: 1220px;
+    height: 50px;
+    background-color: #eee;
+}
+.utillText {
+    position: relative;
+    width: 1220px;
+    height: 50px;
+    margin: 0 auto;
+    align-items: center;
+
+    color: #777;
+}
+.utillText ul {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+.text {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 260px;
+    top: 14px;
+}
+.utillText li {
+    margin-right: 40px;
+}
+.utillText a:hover {
+    font-weight: 400;
+    color: #444;
+}
+
+/* footer */
+#footer {
+    width: 1220px;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 40px;
+    color: #777;
+    font-size: 14px;
+}
+#footerIn {
+    position: relative;
+    width: 1220px;
+    height: 50px;
+}
+.ft_logo a {
+    display: block;
+    width: 106px;
+    height: 40px;
+    top: 0px;
+}
+.ftMenu ul {
+    position: absolute;
+    display: flex;
+    width: 830px;
+    height: 40px;
+    margin-left: 130px;
+    margin-bottom: 7px;
+    top: -3px;
+}
+.ftMenu li {
+    vertical-align: top;
+    margin-left: 17px;
+}
+/* footer info */
+.ftInfo {
+    width: 830px;
+    position: absolute;
+    margin-left: 146px;
+    /* margin-top: 0px; */
+    margin-bottom: 30px;
+}
+.corporation {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 146px;
+}

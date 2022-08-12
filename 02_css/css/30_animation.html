@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        .ex{
+            width: 100%;
+            height: 200vh;
+            background-color: lightgoldenrodyellow;
+        }
+        .ani01{
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            background-color: deeppink;
+            animation-name : ani01;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 3;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        @keyframes ani01 {
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(200px);
+            }
+        }
+        .ani02{
+            width: 100px;
+            height: 100px;
+            margin: 30px 0 250px;
+            background-color: lightgreen;
+            
+            animation-name : ani02;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes ani02{
+            0%{
+                transform: translateX(0);
+            }
+            17%{
+                width: 200px;
+                transform: translateX(0);
+            }
+            34%{
+                width: 100px;
+                transform: translateX(100px);
+            }
+            51%{
+                width: 200px;
+                transform: translateX(100px);
+            }
+            68%{
+                width: 100px;
+                transform: translateX(200px);
+            }
+            85%{
+                width: 200px;
+                transform: translateX(200px);
+            }
+            100%{
+                width: 100px;
+                transform: translateX(300px);
+            }
+        }
+        .ani03{
+            width: 100px;
+            height: 100px;
+            margin: 0 0 250px;
+            background-color: lightblue;
+
+            animation-name: ani03;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes ani03{
+            0%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(200px,0);
+                background-color: mediumslateblue;
+            }
+            50%{
+                transform: translate(200px,200px);
+                background-color: orchid;
+            }
+            75%{
+                transform: translate(0,200px);
+                background-color: darkgreen;
+            }
+            100%{
+
+            }
+        }
+        .ani04{
+            width: 300px;
+            height: 100px;
+            margin: 0 0 100px 0;
+            background-color: lightsalmon;
+
+        }
+        .ani04:hover>div{
+            /* 애니04에 호버 됐을 때 그 자식인 div태그에 일어나는 변화 */
+            animation-name: ani04;
+            animation-duration: 3s;
+            animation-iteration-count: 5;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+        }
+        .ani04>div{
+            width: 80px;
+            height: 30px;
+            margin: 20px 0 0 0;
+            font-size: 12px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 20px;
+            background-color: darkgoldenrod;
+        }
+        @keyframes ani04{
+            0%{
+                transform: translate(0,0);
+            }
+            25%{
+                transform: translate(55px,55px);
+            }
+            50%{
+                transform: translate(110px,0);
+            }
+            75%{
+                transform: translate(165px,50px);
+            }
+            100%{
+                transform: translate(220px,0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>animation : @keyframes 를 이용해 애니메이션을 만든다</h1>
+    <ol>
+        <li>animation-name :  @keyframes 이름;</li>
+        <li>animation-duration : 애니메이션 진행 시간 (s)</li>
+        <li>animation-timing-function: 애니메이션 속도변화 유형;
+            <ul>
+                <li>ease : 느린시작으로 빨리진 뒤 느린 끝</li>
+                <li>linear : 처음부터 끝까지 일정한 속도</li>
+                <li>ease-in: 느린시작</li>
+                <li>ease-out: 느린끝</li>
+                <li>ease-in-out:느린시작과 끝</li>
+            </ul>
+        </li>
+        <li>animation-delay : 애니메이션 시작하기 전 지연시간</li>
+        <li>animation-iteration-count: 애니메이션 재생횟수를 지정(N, infinite 무한대)</li>
+        <li>animation-direction : 애니메이션 종료 후 반복될 때 진행하는 방향
+            <ul>
+                <li>normal: 기본값, 0% > 100%</li>
+                <li>reverse: 역방향, 100%>0%</li>
+                <li>alternate: 정방향으로 움직이고 역방향으로 다시 감, 0%>100%>0%</li>
+                <li>alternate-reverse: 역방향으로 움직이고 정방향으로 다시 감, 100%>0%>100%</li>
+                <li>단, alternatesms interation-count를 2이상으로 해야 정,역방향 모두 볼 수 있음</li>
+            </ul>
+        </li>
+        <li>animation-fill-mode: 애니매이션 미실행시(시작할때말고, 종료/대기) 요소의 스타일
+            <ul>
+                <li>none : 기본값, 애니메이션 끝난후 상태 지정 않음 그냥 끝</li>
+                <li>forwards : 끝난 후 그 지점 그대로 있음 끝난 상태 그대로 끝남</li>
+                <li>backwards : 끝난 후 시작점으로 돌아옴</li>
+                <li>both : 앞뒤 결과를 조합해서 설정</li>
+                <li>inherit : 상위요소에 상속</li>
+            </ul>
+        </li>
+        <li>animation-paly-state : 애니메이션 재생상태(재생/중지)를 지정</li>
+        <li>animation:(name)(duration)(timing-function)(delay)(iteration-count)(direction); 괄호는 구분을 위해 쓴 것</li>
+    </ol>
+    <br><br>
+    <div class="ex">
+        <div class="ani01">애니1</div>
+        <div class="ani02">애니2</div>
+        <div class="ani03">애니3</div>
+        <div class="ani04">
+            <div>애니4</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>하나투어 클론코딩</title>
+        <script src="https://kit.fontawesome.com/fa4474c805.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="wrap">
+            <!-- section은 영역을 표시하는 태그 -->
+            <section id="topBn">
+                <div class="topBnList">
+                    <figure>
+                        <img src="./img/topbn_01.jpg" alt="마일리지,여행상품권 유효기간 연장" />
+                        <figcaption>마일리지, 여행상품권 유효기간 연장</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="./img/topbn_02.jpg" alt="2022 설 연휴 국내여행 얼리버드 특가" />
+                        <figcaption>2022 설 연휴 국내여행 얼리버드 특가</figcaption>
+                    </figure>
+                </div>
+                <p class="topBnClose"><a href="#">상단배너 닫기</a></p>
+            </section>
+            <!-- #topBn -->
+            <header id="header">
+                <!-- 크게 두가지 영역으로 나누기 헤더상단메뉴바/채팅상담창-->
+                <div class="h_in">
+                    <div class="h_utill">
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <div class="h_ls">
+                        <!-- 로고 이미지의 경우 h1태그에 넣는다 -->
+                        <h1 class="logo"><a href="#">하나투어</a></h1>
+                        <div class="h_search">
+                            <form action="">
+                                <!-- fieldset과 세트로 legend 사용 -->
+                                <!-- fieldset 안에 나란히 검색창,입력창 -->
+                                <fieldset>
+                                    <legend class="hide">통합 검색 영역</legend>
+                                    <input type="text" placeholder="검색어를 입력해주세요" />
+                                    <button>검색하기</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="h_keyword">
+                            <div class="h_keyword_slide">
+                                <div class="hks_box">
+                                    <span class="hks_hot">HOT</span>
+                                    <span class="hks_local">부산</span>
+                                </div>
+                            </div>
+                            <div class="h_keyword_list">
+                                <div class="h_keyword_list_box">
+                                    <p><span>HOT</span> 인기검색어</p>
+                                    <ul>
+                                        <li><a href="#">제주도</a></li>
+                                        <li><a href="#">무착륙</a></li>
+                                        <li><a href="#">사이판</a></li>
+                                        <li><a href="#">울릉도</a></li>
+                                        <li><a href="#">괌</a></li>
+                                        <li><a href="#">부산</a></li>
+                                        <li><a href="#">하와이</a></li>
+                                        <li><a href="#">롯데월드</a></li>
+                                        <li><a href="#">터키</a></li>
+                                        <li><a href="#">하이원</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .h_keyword_list -->
+                        </div>
+                        <!-- .h_keyword -->
+                    </div>
+                    <!-- .h_ls -->
+                    <div class="h_icon">
+                        <ul>
+                            <li class="hi01">
+                                <a href="#">마이메뉴</a>
+                                <!-- 호버효과 위해 박스 틀 생성 -->
+                                <div class="info_login">
+                                    <div class="info_login_box">
+                                        <div class="ilb_01">
+                                            마이메뉴는<br />
+                                            <span>회원 전용</span> 메뉴 입니다
+                                        </div>
+                                        <div class="ilb_02">
+                                            <p class="bt1"><a href="#">로그인</a></p>
+                                            <p class="bt2"><a href="#">회원가입</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- .info_login -->
+                            </li>
+                            <li class="hi02"><a href="#">예약내역</a></li>
+                            <li class="hi03"><a href="#">찜</a></li>
+                        </ul>
+                    </div>
+                    <!-- .h_icon -->
+                    <nav class="gnb_wrap">
+                        <div class="gnb_L">
+                            <p class="open_all_menu"><a href="#">전체메뉴</a></p>
+                            <div class="menu">
+                                <ul>
+                                    <li class="m1"><a href="#">해외여행</a></li>
+                                    <li class="m2">
+                                        <a href="#">제주/국내여행</a>
+                                        <div class="sub">
+                                            <ul>
+                                                <li><a href="#">제주/국내여행</a></li>
+                                                <li><a href="#">제주렌터카</a></li>
+                                                <li><a href="#">기차예약</a></li>
+                                                <li><a href="#">국내골프</a></li>
+                                                <li><a href="#">단독여행문의</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- .m2 -->
+                                    <li class="m3"><a href="#">항공</a></li>
+                                    <li class="m4">
+                                        <a href="#">호텔/펜션</a>
+                                        <div class="sub">
+                                            <ul>
+                                                <li><a href="#">호텔예약</a></li>
+                                                <li><a href="#">펜션/풀빌라예약</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- .m4 -->
+                                    <li class="m5">
+                                        <a href="#">투어/입장권</a>
+                                        <div class="sub">
+                                            <ul>
+                                                <li><a href="#">제주</a></li>
+                                                <li><a href="#">서울</a></li>
+                                                <li><a href="#">경상</a></li>
+                                                <li><a href="#">경기</a></li>
+                                                <li><a href="#">전라</a></li>
+                                                <li><a href="#">강원</a></li>
+                                                <li><a href="#">충청</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- .m5 -->
+                                    <li class="m6">
+                                        <a href="#">테마여행</a>
+                                        <div class="sub">
+                                            <ul>
+                                                <li><a href="#">허니문</a></li>
+                                                <li><a href="#">골프</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <!-- .m6 -->
+                                    <li class="m7"><a href="#">럭셔리 여행</a></li>
+                                    <li class="m8"><a href="#">하나LIVE</a></li>
+                                </ul>
+                            </div>
+                            <!-- .menu -->
+                        </div>
+                        <!-- .gnb_L -->
+                        <div class="gnb_R">
+                            <ul>
+                                <li><a href="#">여행기획</a></li>
+                                <li><a href="#">전기업여행</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- .gnb_Wrap -->
+                </div>
+                <div class="h_quick">
+                    <div class="open_chat"><a href="#">채팅상담</a></div>
+                    <div class="btn_recent"><a href="#">최근본상품(<span>0</span>)</a></div>
+                    <div class="recent_list"></div>
+                    <div class="btn_go_top"><a href="#">TOP</a></div>
+                </div>
+                <!-- .h_quick -->
+            </header>
+            <!-- #header -->
+            <main id="container">
+                <section id="main1">
+                    <div class="inner">
+                        <div class="main_search">
+                            <p class="ment">
+                                고객님,<br />
+                                <strong>어떤 여행을 꿈꾸시나요?</strong>
+                            </p>
+                            <!-- 여행검색창 아래 탭버튼 -->
+                            <div class="ms_tabs">
+                                <div class="ms_tabs_btn">
+                                    <ul>
+                                        <li class="on"><a href="#">패키지</a></li>
+                                        <li><a href="#">항공</a></li>
+                                        <li><a href="#">호텔</a></li>
+                                    </ul>
+                                </div>
+                                <!-- .ms_tabs_btn -->
+                            </div>
+                            <!-- .ms_tab -->
+                            <div class="ms_tabs_pannel">
+                                <div class="ms_tabs_pkg">
+                                    <form action="">
+                                        <fieldset>
+                                            <legend>패키지 검색하기</legend>
+                                            <div class="tab_line1">
+                                                <input type="text" placeholder="어디로 떠나세요?" class="tabs_input_txt_01" />
+                                            </div>
+                                            <div class="tab_line2">
+                                                <p class="tabs_input_txt_02">
+                                                    <input type="text" placeholder="인천/김포 출발" />
+                                                </p>
+                                                <p class="tabs_input_txt_03">
+                                                    <input type="text" placeholder="여행시작일 선택" />
+                                                </p>
+                                            </div>
+                                            <div class="tab_line3">
+                                                <p class="tabs_btn_01">
+                                                    <button>항공권은<br />있어요</button>
+                                                </p>
+                                                <p class="tabs_btn_02">
+                                                    <button>우리끼리만<br />여행할래요</button>
+                                                </p>
+                                            </div>
+                                            <div class="tab_line4">
+                                                <button class="tabs_submit">패키지 검색</button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                                <div class="ms_tabs_ap"></div>
+                                <div class="ms_tabs_ht"></div>
+                            </div>
+                            <!-- .ms_tabs_pannel -->
+                        </div>
+                        <div class="main_slide">
+                            <img src="./img/mainBn_01.jpg" alt="main slide" />
+                        </div>
+                    </div>
+                    <!-- .inner -->
+                </section>
+                <!-- #main1 -->
+                <section id="main2">
+                    <div class="main2_inner1">
+                        <h2>미리미리 준비하는 설연휴 여행</h2>
+                        <ul>
+                            <li>
+                                <a href="#" class="main2_inr1_photo">
+                                    <img src="./img/s02_01.jpg" alt="제주패키지3일">
+                                    <p class="main2_package_title">[설연휴] 제주 패키지3일</p>
+                                    <p class="main2_package_txt">#선착순10만원할인 #우도포함 #제주특식 #특1급</p>
+                                    <p class="main2_price"><strong>499,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr1_photo">
+                                    <img src="./img/s02_02.jpg" alt="설연휴 제주 항공 호텔 렌트카3일">
+                                    <p class="main2_package_title">[설연휴] 제주 항공+호텔+렌트카 3일</p>
+                                    <p class="main2_package_txt">#이동반값 #중형렌트카 #특1급</p>
+                                    <p class="main2_price"><strong>499,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr1_photo">
+                                    <img src="./img/s02_03.jpg" alt="설연휴 제주 항공 호텔3일">
+                                    <p class="main2_package_title">[설연휴] 제주 항공+호텔 3일</p>
+                                    <p class="main2_package_txt">#설연휴항공 #찜카 10만원 이용권포함 #특2급</p>
+                                    <p class="main2_price"><strong>359,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr1_photo">
+                                    <img src="./img/s02_04.jpg" alt="설캉스 덕산 스플라스 리솜">
+                                    <p class="main2_package_title">[설캉스] 덕산 스플라스 리솜</p>
+                                    <p class="main2_package_txt">#성인2+아동1 #스테이타워 S25 #부대시설 할인</p>
+                                    <p class="main2_price"><strong>223,300</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .main2_inner1 -->
+                    <div class="main2_inner2">
+                        <div class="main2_inr2_img">
+                            <a href="#">
+                                <img src="./img/s03_00.jpg" alt="한국 귀국 후 자가격리 없는 해외여행">
+                            </a>
+                            <h1 class="main2_inr2_title">
+                                한국 귀국 후 <br><br> 자가격리 없는 <br><br>해외여행
+                            </h1>
+                            <div class="main2_inr2_text">
+                                <p><a href="#">탁 트인 푸른 바다, 사이판</a></p>
+                                <p><a href="#">부산에서 출발가능, 사이판</a></p>
+                                <p><a href="#">마리나베이샌즈, 싱가포르</a></p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="main2_inr2_li">
+                                <a href="#" class="main2_inr2_photo">
+                                        <img src="./img/s03_01.jpg" alt="사이판 하얏트호텔 자유여행 4,5일">
+                                        <div class="main2_text_group">
+                                            <p class="main2_subtitle">격리없이 즐기는 사이판 자유여행 / 커플여행</p>
+                                            <p class="main2_package_title2">사이판 하얏트호텔 자유여행 4,5일</p>
+                                            <p class="main2_package_txt2">사이판 시내 중심에 위치한 선셋 맛집</p>
+                                            <p class="main2_price2"><strong>909,000</strong><span>원~</span></p>
+                                        </div>
+                                    </a>
+                            </li>
+                            <li class="main2_inr2_li">
+                                <a href="#">
+                                    <p class="main2_inr2_photo">
+                                        <img src="./img/s03_02.jpg" alt="사이판 월드리조트 자유여행 4,5일">
+                                    </p>
+                                    <div class="main2_text_group">
+                                        <p class="main2_subtitle">격리없이 즐기는 사이판 자유여행 / 커플여행</p>
+                                        <p class="main2_package_title2">사이판 월드리조트 자유여행 4,5일</p>
+                                        <p class="main2_package_txt2">최대규모 워터파크와 호텔식 1일 2식</p>
+                                        <p class="main2_price2"><strong>969,000</strong><span>원~</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="main2_inr2_li">
+                                <a href="#">
+                                    <p class="main2_inr2_photo">
+                                        <img src="./img/s03_03.jpg" alt="사이판 켄신텅호텔 자유여행 4,5일">
+                                    </p>
+                                    <div class="main2_text_group">
+                                        <p class="main2_subtitle">격리없이 즐기는 사이판 자유여행 / 커플여행</p>
+                                        <p class="main2_package_title2">사이판 켄신텅호텔 자유여행 4,5일</p>
+                                        <p class="main2_package_txt2">전객실 오션뷰 & 커플 여행객 안성맞춤</p>
+                                        <p class="main2_price2"><strong>1,159,000</strong><span>원~</span></p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- .main2_inner2 -->
+                    <div class="main2_inner3">
+                        <h2>고객님만을 위한 추천여행</h2>
+                        <ul>
+                            <li>
+                                <a href="#" class="main2_inr3_photo">
+                                    <img src="./img/s04_01.jpg" alt="사이판 5일 #켄싱턴호텔 #호캉스">
+                                    <p class="main2_inr3_subtitle">에어텔</p>
+                                    <p class="main2_package_title3">
+                                        사이판 5일 #켄싱턴호텔 #호캉스 #공항픽업+샌딩 포함 #호텔 조,석식포함 # ...
+                                    </p>
+                                    <p class="main2_price3"><strong>1,318,800</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr3_photo">
+                                    <img src="./img/s04_02.jpg" alt="사이판 5일 #하얏트리젠시 #시내중심">
+                                    <p class="main2_inr3_subtitle">패키지</p>
+                                    <p class="main2_package_title3">
+                                        사이판 5일 #하얏트리젠시 #시내중심 #북섬일주(파우파우비치)
+                                    </p>
+                                    <p class="main2_price3"><strong>1,257,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr3_photo">
+                                    <img src="./img/s04_03.png" alt="설연휴 제주 항공 호텔3일">
+                                    <p class="main2_inr3_subtitle">에어텔</p>
+                                    <p class="main2_package_title3">
+                                        사이판 4일 #월드리조트 #최대워터파크 #슈페리어 #호텔식_1일2식 #자유여행
+                                    </p>
+                                    <p class="main2_price3"><strong>1,379,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"  class="main2_inr3_photo">
+                                    <img src="./img/s04_04.jpg" alt="설캉스 덕산 스플라스 리솜">
+                                    <p class="main2_inr3_subtitle">에어텔</p>
+                                    <p class="main2_package_title3">
+                                        사이판 4일 #켄싱턴호텔 #호캉스 #로얄디럭스 #호텔 조/석식포함 #자유여행
+                                    </p>
+                                    <p class="main2_price3"><strong>1,509,000</strong><span>원~</span></p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="prev_button">
+                            <a href="#">
+                                <span>이전</span>
+                            </a>
+                        </div>
+                        <div class="next_button">
+                            <a href="#">
+                                <span>다음</span></div>
+                            </a>
+                    </div>
+                    <!-- .main2_inner3 -->
+                </section>
+                <!-- #main2 -->
+                <section id="main3">
+                    <div class="main3_inner">
+                        <div class="main3_img">
+                            <a href="#">
+                                <img src="./img/s05_00.jpg" alt="상상 그 이상의 최상의 여행 보러가기">
+                            </a>
+                        </div>
+                        <div class="main3_text">
+                            <div class="original_text">
+                                <p class="original_01">꿈을 담은 특별한 여행</p>
+                                <h2>하나 Original</h2>
+                                <p class="original_02">[추천키워드] ZEUSworld Special Edition 제우스월드 특별판</p>
+                                <p class="original_03">하나투어 최고의 럭셔리 패키지 브랜드 ZEUSworld,
+                                    <br>상상 그 이상의 최상의 여행을 만나보세요.
+                                </p>
+                            </div>
+                            <!-- .original_text -->
+                            <div class="express_group">
+                                <div class="main3_inr_text">
+                                    <ul class="express_01">
+                                        <li class="express_img01"><a href="#">img01</a></li>
+                                        <li class="express_text">
+                                            <a href="#">
+                                                <p class="main3_inr_title">[프랑스/이탈리아] 심플론 오리엔트 익스프레스</p>
+                                                <p class="main3_express_text">창 너머 프르는 유럽의 풍경</p>
+                                                <p class="main3_inr3_price"><strong>19,500,000</strong><span>원~</span></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="express_02">
+                                        <li class="express_img02"><a href="#">img02</a></li>
+                                        <li class="express_text">
+                                            <a href="#">
+                                                <p class="main3_inr_title">[방콕/싱가포르] 벨몬드 이스턴&오리엔탈 익스프레스</p>
+                                                <p class="main3_express_text">고급스러움이 더해진 동남아시아 여행</p>
+                                                <p class="main3_inr3_price"><strong>15,859,000</strong><span>원~</span></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- .express_group -->
+                        </div>
+                    </div>
+                    <!-- .main3_inner -->
+                </section>
+                <!-- #main3 -->
+                <section id="main4">
+                    <div class="main4_inner">
+                        <h2>내나라 구석구석</h2>
+                        <a href="#"><p class="recommend">추천</p></a>
+                        <ul>
+                            <li>
+                                <a href="#" class="main4_inr1_photo">
+                                    <img src="./img/s06_01.jpg" alt="강원 산과 바다가 매력적인 강원도">
+                                    <p class="main4_inr1_title">강원</p>
+                                    <p class="main4_subtitle">
+                                        산과 바다가 매력적인 강원도 <br>2022년 새해맞이 첫 여행
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="main4_inr1_photo">
+                                    <img src="./img/s06_02.jpg" alt="평창 설레는 윈터랜드 스키패키지 겨울여행">
+                                    <p class="main4_inr1_title">평창</p>
+                                    <p class="main4_subtitle">
+                                        설레는 윈터랜드 <br> 스키패키지 겨울여행
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="main4_inr1_center">
+                                <a href="#" class="main4_inr1_photo">
+                                    <img src="./img/s06_03.jpg" alt="제주 항상 편안하고 설레는 제주도 구석구석 여행">
+                                    <p class="main4_inr1_title">제주</p>
+                                    <p class="main4_subtitle">
+                                        항상 편안하고 설레는 <br>제주도 구석구석 여행
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="main4_inr1_photo">
+                                    <img src="./img/s06_04.jpg" alt="서울 모험과 신비의 나라, 롯데월드 재미와 휴식을 동시에!">
+                                    <p class="main4_inr1_title">서울</p>
+                                    <p class="main4_subtitle">
+                                        모험과 신비의 나라, 롯데월드 <br>재미와 휴식을 동시에!
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="main4_inr1_photo">
+                                    <img src="./img/s06_05.jpg" alt="부산여행엔 패스포트가 필수 야경과 겨울바다 즐기기!">
+                                    <p class="main4_inr1_title">부산</p>
+                                    <p class="main4_subtitle">
+                                        부산여행엔 패스포트가 필수 <br>야경과 겨울바다 즐기기!
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- .main4_inner -->
+                </section>
+                <!-- #main4 -->
+                <section id="main5">
+                    <div class="main5_inner">
+                        <h2>추워도 괜찮아! 겨울에 즐기는 국내여행</h2>
+                        <div class="main5_inr_box">
+                            <ul>
+                                <li class="main5_side main5_side01">
+                                    <a href="#" class="main5_inr1_photo">
+                                        <p class="about_text">동영상</p>
+                                        <img src="./img/s06_02.jpg" alt="짜릿하게, 스키로운 생활">
+                                        <div class="main5_text_box">
+                                            <p class="main5_inr1_title">
+                                                짜릿하게, 스키로운 생활 ⛷
+                                            </p>
+                                            <p class="main5_subtitle">
+                                                겨울이 오기만을 기다린 전국 스키어들 모여라👀<br>
+                                                보기만 해도 가슴이 탁! 트이는 스키장에서 <br>
+                                                짜릿하고 스릴 넘치는🏂<br>
+                                                겨울 액티비티 즐기러 떠날 준비 완료?
+                                            </p>
+                                            <p class="main5_bottom_text">[겨울여행 성지] 雪레는 윈터랜드, 평창 ></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="main5_center">
+                                    <a href="#" class="main5_inr1_photo">
+                                        <p class="about_text">Get About</p>
+                                        <div class="main5_text_box">
+                                            <p class="main5_inr1_title">
+                                                다이나믹하게, 트레킹 <i class="fa-solid fa-mountain"></i></i>
+                                            </p>
+                                            <p class="main5_subtitle">
+                                                겨울이 만든 또 다른 경이로움, 한라산<br>
+                                                환상적인 순백의 겨울왕국 속으로 한 걸음 ♀<br>
+                                                눈부시게 빛나는 새하얀 설원 ❄<br>
+                                                한라산의 매력에 빠질 준비 되셨나요?
+                                            </p>
+                                            <p class="main5_bottom_text">[전국방방곡곡] 겨울이라 제맛! 겨울 트레킹 ></p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="main5_side main5_side03">
+                                    <a href="#" class="main5_inr1_photo">
+                                        <p class="about_text">여행정보</p>
+                                        <img src="./img/s07_03.png" alt="따뜻하게, 온수풀">
+                                        <div class="main5_text_box">
+                                            <p class="main5_inr1_title">따뜻하게, 온수풀 ♨</p>
+                                            <p class="main5_subtitle">
+                                                찬바람이 불면~🎵<br>
+                                                추울수록 더~ 좋은 온수풀로 풍덩!🏊‍♂️<br>
+                                                따뜻한 온수풀에 스르르 <br>
+                                                몸과 마음을 녹여줄 온수풀 찾아 떠나요
+                                            </p>
+                                            <p class="main5_bottom_text">[숙소모음.ZIP] 호캉스는 따뜻한 온수풀에서 ></p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .main5_inr_box -->
+                    </div>
+                    <!-- .main5_inner -->
+                </section>
+                <!-- #main5 -->
+                <section id="main6">
+                    <div class="main6_inner">
+                        <div class="icon_list">
+                            <ul>
+                                <li>
+                                    <a href="#"><p class="list01 icon">이미지</p><p class="main6_icon_text">하나투어상품권</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list02 icon">이미지</p><p class="main6_icon_text">해외여행 필수체크</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list03 icon">이미지</p><p class="main6_icon_text">SAFETY&JOY</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list04 icon">이미지</p><p class="main6_icon_text">하나 LIVE</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list05 icon">이미지</p><p class="main6_icon_text">제우스</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list06 icon">이미지</p><p class="main6_icon_text">교육여행/단체</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list07 icon">이미지</p><p class="main6_icon_text">기업출장/단체</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list08 icon">이미지</p><p class="main6_icon_text">외국인여행</p></a>
+                                </li>
+                                <li>
+                                    <a href="#"><p class="list09 icon">이미지</p><p class="main6_icon_text">이벤트</p></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .icon_list -->
+                        <div class="customer_center">
+                            <ul>
+                                <li>
+                                    <p class="cs_center_text text01">
+                                        <strong>
+                                            하나투어닷컴 <br>고객센터
+                                        </strong>
+                                    </p>
+                                    <p class="cs_center_text text02"><strong>1577-1233</strong></p>
+                                    <p class="text03">
+                                        <a href="#">
+                                                자주 찾는 질문 > <br>ARS상담번호 안내 >
+                                        </a>
+                                    </p>
+                                </li>
+                                <li class="cs_center_text02">
+                                    <p class="cs_title_text">
+                                        <strong>
+                                            해외여행 문의
+                                        </strong>
+                                    </p>
+                                    <p class="cs_global_text02 CStime01">평일: 09:00~18:00</p>
+                                    <p class="cs_contain_text">※코로나 바이러스19로 인한 근무 시간 축소로 <br>
+                                        주말 및 야간 상담 서비스가 임시 중단 됩니다. <br>
+                                        더 나은 서비스로 찾아뵐 수 있도록 하겠습니다.</p>
+                                </li>
+                                <li class="cs_center_text03">
+                                    <p class="cs_title_text"><strong>상담 번호 안내</strong></p>
+                                    <p class="cs_contain_text">
+                                        1번 예약상담 <br>
+                                        2번 ARS 예약 확인 및 결제 확인<br>
+                                        3번 국내공연예매, 마일리지 및 제휴카드, 기타문의
+                                    </p>
+                                </li>
+                                <li class="cs_center_text04">
+                                    <p class="cs_title_text">
+                                        <strong>
+                                            국내여행/기업출장/교육여행 단체 문의
+                                        </strong>
+                                    </p>
+                                    <p class="CStime02">평일: 09:00~18:00</p>
+                                    <p class="cs_title_text"><strong>법인고객 전용상담 1566-0072</strong></p>
+                                    <p class="cs_title_text"><strong>안심카드결제 ARS 1577-0015</strong></p>
+                                    <button class="cs_card_benefits">카드/제휴혜택</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- .customer_center -->
+                    </div>
+                    <!-- .main6_inner -->
+                </section>
+                <!-- #main6 -->
+            </main>
+            <footer id="footer">
+                <section class="footer_info_text">
+                    <div class="footer_inner">
+                        <nav class="footer_bar">
+                            <div class="footer_left">
+                                <p>
+                                    <strong class="info">공지</strong>
+                                    <하나LIVE> 21년 12월 29일 선착순 예약자 이벤트 당첨자 안내(21년···
+                                    <a href="#"><span class="more">더보기</span></a>
+                                </p>
+                            </div>
+                            <div class="footer_right">
+                                <ul>
+                                    <li class="footer_icon01"><a href="#"><img src="./img/facebook.png" alt="페이스북"></a></li>
+                                    <li class="footer_icon02"><a href="#"><img src="./img/instagram.png" alt="인스타그램"></a></li>
+                                    <li class="footer_icon03"><a href="#"><img src="./img/naverblog.png" alt="네이버블로그"></a></li>
+                                    <li class="footer_icon04"><a href="#"><img src="./img/kakaoplus.png" alt="카카오플러스"></a></li>
+                                    <li class="footer_icon05"><a href="#"><img src="./img/youtube.png" alt="유튜브"></a></li>
+                                    <li class="footer_icon06"><a href="#"><img src="./img/kakaostory.png" alt="카카오스토리"></a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </section>
+                    <section class="footer_address_box">
+                        <div class="footer_menu_bar">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li class="strong_point"><a href="#">개인정보처리방침</a></li>
+                                <li><a href="#">여행약관</a></li>
+                                <li><a href="#">해외여행자보험</a></li>
+                                <li><a href="#">마케팅제휴</a></li>
+                                <li><a href="#">공식인증예약센터 검색</a></li>
+                            </ul>
+                        </div>
+                        <address class="address">
+                            <ul class="info_check_point01">
+                                <li class="strong_point"><a href="#">(주)하나투어</a></li>
+                                <li><a href="#">대표 : 김진국, 송미선</a></li>
+                                <li><a href="#">주소 : (03161) 서울특별시 종로구 인사동 5길 41</a></li>
+                            </ul>
+                            <ul class="info_check_point02">
+                                <li><a href="#">사업자등록번호 : 102-81-39440</a></li>
+                                <li class="check_point"><a href="#">사업자정보확인</a></li>
+                                <li><a href="#">통신판매업신고번호 : 종로01-1806호</a></li>
+                                <li><a href="#">관광사업자 등록번호 : 제1993-000006호</a></li>
+                            </ul>
+                            <ul class="info_check_point03">
+                                <li><a href="#">개인정보 보호책임자 : 채철훈</a></li>
+                                <li><a href="#">영업보증보험 : 22억 1천만원 가입</a></li>
+                                <li><a href="#">팩스 : 02-734-0392</a></li>
+                                <li><a href="#">이메일 : 15771233@hanatour.com</a></li>
+                                <li class="footer_cs_center">
+                                    <a href="#">
+                                        <i class="fa-solid fa-headphones"></i>고객센터<strong>1577-1233</strong>
+                                    </a></li>
+                            </ul>
+                        </address>
+                        <div class="footer_info">
+                            <p>※부득이한 사정에 의해 여행일정이 변경되는 경우 사전 동의를 받습니다</p>
+                            <p>※하나투어는 개별 항공권, 단품 및 일부 여행상품에 대하여 통신판매중개자로서
+                                 통신판매의 당사자가 아니며 해당상품의 거래정보 및 거래등에 대해 책임을 지지 않습니다
+                            </p>
+                            <br>
+                            <p>COPYRIGHTⓒ HANATOUR SERVICE INC. ALL RIGHTS RESERVED</p>
+                        </div>
+                        <div class="safe_service">
+                            <p class="service_check01"><strong>하나은행 구매안전 서비스</strong></p>
+                            <p class="service_check02">
+                                고객님은 안전거래를 위해 현금으로 결제시 <br>
+                                (주)하나투어에서 가입한 하나은행으로 <br>
+                                구매안전서비스를 이용하실 수 있습니다.
+                            </p>
+                            <p class="service_check03"><a href="#">서비스 기업사실 확인</a></p>
+                        </div>
+                </section>
+                <!-- .footer_address_box -->
+                <section class="footer_logo">
+                    <div class="footer_logo_box">
+                        <div class="footer_logo_inner">
+                            <ul class="footer_icon_01">
+                                <li class="footer_icon_img01"><a href="#"><img src="./img/award-logo-01.png" alt="대한민국100대브랜드"></a></li>
+                                <li class="footer_icon_text">
+                                    <a href="#">
+                                        <p class=>대한민국 <br>100대 브랜드</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="footer_icon_02">
+                                <li class="footer_icon_img02"><a href="#"><img src="./img/award-logo-02.png" alt="브랜드파워1위"></a></li>
+                                <li class="footer_icon_text">
+                                    <a href="#">
+                                        <p class=>한국능률협회선정 <br>15년연속[2005~2019] <br>브랜드파워1위</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="footer_icon_03">
+                                <li class="footer_icon_img03"><a href="#"><img src="./img/award-logo-03.png" alt="브랜드스타1위"></a></li>
+                                <li class="footer_icon_text">
+                                    <a href="#">
+                                        <p class=>브랜드스특선정 <br>15년연속[2005~2019] <br>브랜드스타1위</p>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="footer_button">
+                                <p class="footer_prev"><a href="#"><img src="./img/ico-arrow-left.png" alt=""></a></p>
+                                <p class="footer_next"><a href="#"><img src="./img/ico-arrow-right.png" alt=""></a></p>
+                            </div>
+                            <div class="footer_mark">
+                                <ul>
+                                    <li><p><img src="./img/mark_01.png" alt=""></p></li>
+                                    <li><p><img src="./img/mark_02.png" alt=""></p></li>
+                                    <li><p><img src="./img/mark_03.png" alt=""></p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- .footer_logo -->
+            </footer>
+            <!-- #footer -->
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

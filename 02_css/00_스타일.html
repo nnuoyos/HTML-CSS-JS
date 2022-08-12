@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style seet 연결</title>
+    <link rel="stylesheet" href="./css/00_style.css">
+
+
+    <style>
+        div{ 
+            background-color: salmon;
+        }
+    </style>
+    <!-- div 태그에 모두 적용되도록 적용 -->
+</head>
+<body>
+    <main>
+        <h1>CSS 파일 시트 연결하기</h1>
+        <section>
+            <h2>인라인 스타일</h2>
+            <ul>
+                <li>태그 옆에 style 속성으로 적어주는 방법</li>
+                <li>
+                    style은 속성과 속성값이 있다<br>
+                    style="속성: 속성값;" 의 방식으로 사용
+                </li>
+                <li>
+                    <p style="background-color: bisque;"> 
+                        box1
+                    </p>
+                    <!-- background-color는 속성에, bisque 라는 속성값을 사용 -->
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>내부 스타일 시트</h2>
+            <ul>
+                <li>CSS를 HTML문서 안에 스타일 태그로 작성하는 방법</li>
+                <li>head 태그 안에서 style 태그로 작성</li>
+                <li>태그를 쓰고 {속성: 속성값;} 으로 작성</li>
+                <li>
+                    <div>
+                        box2
+                    </div>
+                </li>
+            </ul>
+               
+        </section>
+        <section>
+            <h2>외부 스타일 시트</h2>
+            <ul>
+                <li>스타일 속성들을 CSS파일로 따로 저장해서 HTML문서에 링크(연결)시켜서 사용하는 방법</li>
+                <li>보통의 홈페이지들은 이 방식을 사용</li>
+                <li>
+                    홈페이지가 커지면 각각의 요소들에게 스타일을 일일이 부여할 수 없고, 그런식으로 작성하면 스크롤이 길어져 가독성이 좋지 않다<br>
+                    따라서 통상적으로 외부 스타일 시트를 생성하여 따로 저장하고, HTML 문서에 링크(연결) 시켜서 사용하는 방식을 선호한다
+                </li>
+
+                <li>
+                    <footer>box3</footer>
+                </li>
+                <li>
+                    새창을 열어, css확장자명의 파일을 저장하고 기초 캐릭터셋 인코딩코드(@charset "utf-8";)을 입력하고<br> 태그 {속성: 속성값;} 으로 스타일 속성을 작성한다
+                    <br>한가지씩이 아니라 한 번에 여러가지 속성도 넣을 수 있다
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

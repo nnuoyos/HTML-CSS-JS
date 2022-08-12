@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>11_stop명령 / delay 명령</title>
+        <style>
+            .box1 {
+                height: 300px;
+                padding: 30px;
+                background-color: rgb(51, 177, 145);
+            }
+            .box1 p {
+                height: 300px;
+                margin: 0;
+                background-color: bisque;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>stop() 과 delay() 명령</h1>
+        <textarea cols="150" rows="10">
+            -이벤트가 연속해서 발생하게 되면 지정된 애니메이션도 이벤트의 발생횟수만큼 반복해서 실행하게 됨
+            더이상 애니메이션이 필요 없을 때도 대상이 계속 움직이게 됨
+            따라서 애니메이션 명령 앞에 stop() 명령을 추가함
+            -stop() 명령이 적용되면, 애니메이션 명령이 즉시 멈추게 되고, 움직임을 한번만 실행시켜줌
+            -delay() 명령으로 애니메이션이 시작되는 시점을 늦출 수 있음
+            $.delay(시간).애니메이션명령();
+        </textarea>
+        <div class="box1">
+            <p></p>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s11.js"></script>
+    </body>
+</html>

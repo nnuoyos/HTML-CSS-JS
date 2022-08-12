@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex04_PC기본메뉴</title>
+    </head>
+    <style>
+        /* 전체적으로 reset */
+        body {
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        /* 메뉴 style */
+        #warp {
+            position: relative;
+            width: 100%;
+            min-width: 1220px;
+        }
+        #header {
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            z-index: 500;
+        }
+        .h_in {
+            position: relative;
+            width: 1200px;
+            height: 80px;
+            margin: 0 auto;
+            background-color: rgba(196, 193, 240, 0.74);
+            z-index: 100;
+        }
+        .gnb {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            height: 40px;
+            /* overflow: hidden; */
+        }
+        .menu {
+            display: flex;
+        }
+    /*     .menu .d1 {
+            position: relative;
+        } */
+        .menu .d1 .main {
+            display: block;
+            padding: 7px 50px 13px 50px;
+            font-size: 17px;
+            color: #232329;
+            font-weight: 700;
+            background-color: cornflowerblue;
+        }
+        .gnb .sub {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            display: none;
+            width: 100%;
+            background-color: lemonchiffon;
+        }
+        .gnb .sub ul {
+            padding: 10px 0;
+            /* text-align: center; */
+        }
+        .gnb .sub ul li {
+            padding: 5px 0;
+        }
+        .gnb .sub li a {
+            font-size: 15px;
+            color: #575759;
+        }
+        .gnbBg {
+            position: absolute;
+            top: 80px;
+            display: none;
+            left: 0;
+            width: 100%;
+            height: 400px;
+            background-color: rgb(197, 221, 197);
+        }
+        .sub > ul > li:hover {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <!-- 전체적인 뼈대가 되는 틀 -->
+    <div id="wrap">
+        <header id="header">
+            <div class="h_in">
+                <nav class="gnb">
+                    <ul class="menu">
+                        <li class="d1">
+                            <a href="" class="main">리바트브랜드</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="">리바트</a></li>
+                                    <li><a href="">리바트 이즈마인</a></li>
+                                    <li><a href="">리바트 키즈</a></li>
+                                    <li><a href="">H.MODE</a></li>
+                                    <li><a href="">리첸</a></li>
+                                    <li><a href="">리바트 키친</a></li>
+                                    <li><a href="">리바트 하움</a></li>
+                                    <li><a href="">리바트 네오스</a></li>
+                                    <li><a href="">리바트 빌트인</a></li>
+                                    <li><a href="">리바트 마린</a></li>
+                                    <li><a href="">리바트 엔슬립</a></li>
+                                    <li><a href="">법인 영업(H&S)</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <a href="" class="main">리바트몰</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="">기획전</a></li>
+                                    <li><a href="">아울렛</a></li>
+                                    <li><a href="">패키지 상품</a></li>
+                                    <li><a href="">고객사은행사</a></li>
+                                    <li><a href="">문화생활</a></li>
+                                    <li><a href="">상품권</a></li>
+                                    <li><a href="">이달의 행사</a></li>
+                                    <li><a href="">온라인전용</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <a href="" class="main">리바트스토리</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="">미디어</a></li>
+                                    <li><a href="">신제품</a></li>
+                                    <li><a href="">다이어리</a></li>
+                                    <li><a href="">매장 이벤트</a></li>
+                                    <li><a href="">주방 시공 사례</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="d1">
+                            <a href="" class="main">회사소개</a>
+                            <div class="sub">
+                                <ul>
+                                    <li><a href="">현대리바트</a></li>
+                                    <li><a href="">연구소</a></li>
+                                    <li><a href="">매장찾기</a></li>
+                                    <li><a href="">인재채용</a></li>
+                                    <li><a href="">투자정보</a></li>
+                                    <li><a href="">고객센터</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="gnbBg"></div>
+        </header>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/ex04.js"></script>
+</body>
+</html>

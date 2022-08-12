@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커서</title>
+    <style>
+        div > p{
+            cursor: pointer;
+        }
+        input{
+            cursor: pointer;
+        }
+        .c1{cursor: crosshair;}
+        .c2{cursor: default;}
+        .c3{cursor: move;}
+        .c4{cursor: e-resize;}
+        .c5{cursor:ne-resize;}
+        .c6{cursor: nw-resize;}
+        .c7{cursor: se-resize;}
+        .c8{cursor: s-resize;}
+        .c9{cursor:w-resize;}
+        .c10{cursor: text;}
+        .c11{cursor: help;}
+        .c12{cursor: no-drop;}
+
+
+    </style>
+</head>
+<body>
+    <h1>cousor : 마우스 포인터 모양을 지정</h1>
+    <p>auto, <mark>pointer</mark>, crosshair, default, move, e-resize, ne-resize, nw-resize,se-resize, s-resize, w-resize, text, help, no-drop
+    </p>
+    <br>
+    <!-- 예시 -->
+    <div>
+        <a href="#">a태그</a>
+        <p>p태그</p>
+        <input type="button" value="버튼">
+        <button class="c1">crosshair</button>
+        <button class="c2">default</button>
+        <button class="c3">move</button>
+        <button class="c4">e-resize</button>
+        <button class="c5">ne-resize</button>
+        <button class="c6">nw-resize</button>
+        <button class="c7">se-resize</button>
+        <button class="c8">s-resize</button>
+        <button class="c9">w-resize</button>
+        <button class="c10">text</button>
+        <button class="c11">help</button>
+        <button class="c12">no-drop</button>
+    </div>
+</body>
+</html>

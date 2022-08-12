@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity</title>
+    <style>
+        li{
+            width: 200px;
+            height: 200px;
+            margin: 0 0 30px 0;
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        li:nth-child(1){
+            opacity: 0.5;
+        }
+        li:nth-child(2){
+            background-color:rgba(253, 140, 179, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1>opacity : 요소의 투명도를 지정</h1>
+    <p>0~1 사이의 수치를 지정(0=완전투명, 1=완전불투명)</p>
+    <br><br>
+    <ul>
+        <li>opacity</li>
+        <li>rgba()</li>
+    </ul>
+</body>
+</html>

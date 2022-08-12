@@ -1,0 +1,82 @@
+@charset "UTF-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 상단 버튼 */
+.pdTabBtn {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.pdTabBtn ul {
+    display: flex;
+    justify-content: center;
+}
+.pdTabBtn li {
+    padding: 5px 15px 7px 15px;
+    border: 2px solid #aaa;
+    margin: 0 5px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: #888;
+    cursor: pointer;
+    text-align: center;
+}
+.pdTabBtn .active {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: #fff;
+}
+/* img */
+.pdTabPannel {
+    overflow: hidden;
+}
+.pdList {
+    display: none;
+    width: 150%;
+    padding: 0 9px;
+}
+.pdList.view {
+    display: block;
+}
+.pdItem {
+    box-sizing: border-box;
+    padding: 0 6px;
+}
+.pdItem img {
+    width: 100%;
+    height: auto;
+}
+.pdList ul.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    width: 62.5%;
+    margin-top: 15px;
+}
+
+.pdList ul.slick-dots li {
+    margin: 0 4px;
+}
+/* pager */
+.pdList ul.slick-dots li button {
+    width: 13px;
+    height: 13px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #aaa;
+    text-indent: -99999px;
+}
+.pdList ul.slick-dots .slick-active button {
+    background-color: cornflowerblue;
+}

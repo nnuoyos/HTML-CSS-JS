@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex12_slick 플러그인02</title>
+        <link rel="stylesheet" href="./css/slick.css" />
+        <link rel="stylesheet" href="./css/ex12.css" />
+        <!-- 플러그인을 사용할 때는, 내가 작성할 js/css파일 보다 상단에 링크를 걸어야한다 -->
+    </head>
+    <body>
+        <div class="mainSlide">
+            <div class="msImg">
+                <div class="msImgBox">
+                    <a href="">
+                        <p class="photo"><img src="./img/mv1.jpg" alt="slide01" /></p>
+                    </a>
+                </div>
+                <div class="msImgBox">
+                    <a href="">
+                        <p class="photo"><img src="./img/mv2.jpg" alt="slide02" /></p>
+                    </a>
+                </div>
+                <div class="msImgBox">
+                    <a href="">
+                        <p class="photo"><img src="./img/mv3.jpg" alt="slide03" /></p>
+                    </a>
+                </div>
+                <div class="msImgBox">
+                    <a href="">
+                        <p class="photo"><img src="./img/mv4.jpg" alt="slide04" /></p>
+                    </a>
+                </div>
+            </div>
+            <!-- slick plugin 에서 사용할 버튼 영역에는 a태그 사용 불가!!! -->
+            <p class="msPrev">이전으로</p>
+            <p class="msNext">다음으로</p>
+            <div class="msBtn">
+                <div class="msPager"></div>
+                <p class="msPause">멈춤</p>
+                <p class="msPlay">재생</p>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/slick.min.js"></script>
+        <script src="./js/ex12.js"></script>
+    </body>
+</html>

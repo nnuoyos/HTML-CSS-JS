@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+    <style>
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 80px;
+            margin: 0 10px 0 0;
+            text-align: center;
+            line-height: 50px;
+            background-color: hotpink;
+        }
+        li:nth-child(2){
+            visibility: hidden;/* 공간은 그대로 있으나 화면상에서 사라짐 */
+        }
+        li:nth-child(3){
+            display: none; /* 공간도 완전 사라지고 뒤에 있던 것들이 그 자리로 당겨와짐 */
+        }
+        li:nth-child(4){
+            opacity: 0; /* 색상이 투명해진 것일 뿐이다. 숫자위에 마우스커서 올려보면 알 수 있다 */
+        }
+    </style>
+</head>
+<body>
+    <h1>visibility : 요소의 화면상 표시 여부</h1>
+    <p>visible, hidden</p>
+    <p>hidden값을 줄 경우 흔적을 남기고 사라진다. 흔적을 남기지 않고 사라지는 속성-display:none;</p>
+    <br>
+    <!-- 예시 -->
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

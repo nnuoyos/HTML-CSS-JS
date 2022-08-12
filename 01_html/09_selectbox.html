@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selcet Box</title>
+</head>
+<body>
+    <h1>select / option</h1>
+    <p>select 태그로 드롭다운 박스를 만들고, option 태그 안에 각 항목들을 작성하면 된다 selected 속성을 사용해서 선택 된 상태를 만들 수 있다. 체크박스에서 checked와 같은 기능이라고 보면 된다.</p>
+    <p>optgroup 태그로 option 태그의 그룹을 나누어 줄 수 있다. 각 그룹의 제목은 label 속성 값으로 입력한다</p>
+    <select>
+        <option>직접입력</option>
+        <option>naver.com</option>
+        <option>google.com</option>
+        <option>hanmail.net</option>
+    </select>
+    <br><br>
+    <select>
+        <optgroup label="공과대">
+            <option>건축공학과</option>
+            <option>산업공학과</option>
+            <option>기계공학과</option>
+            <option>전기공학과</option>
+            <option>컴퓨터공학과</option>
+        </optgroup>
+        <optgroup label="인문대">
+            <option>사학과</option>
+            <option>철학과</option>
+            <option>국문학과</option>
+            <option>영문학과</option>
+            <option>지리학과</option>
+        </optgroup>
+        <optgroup label="예술대">
+            <option>무용과</option>
+            <option>성악과</option>
+            <option>실용음악과</option>
+            <option>디자인과</option>
+            <option>체육과</option>
+        </optgroup>
+    </select>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif, '돋움';
+    font-size: 14px;
+    line-height: 20px;
+    color: #121217;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}

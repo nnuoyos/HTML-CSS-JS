@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱 태그</title>
+</head> <!-- head태그 안에는 눈에는 안보이는 정보들을 포함하고 있다 -->
+<body> <!-- body태그 안에는 웹상으로 보여지는 정보들을 포함하고 있다 -->
+    <h1>시멘틱태그 semantic</h1>
+    <h2>div 태그 대신에 의미를 전달할 수 있는 태그</h2>
+    <p>시멘틱 태그들은 기본적으로 블락요소</p>
+    <p>텍스트, 인라인, 블락 모두 포함 가능한 요소</p>
+    <ol>
+        <li>
+            <h2>header : html문서의 헤더영역을 의미하는 태그(제목, 로고, 네비게이션, 검색창 등등이 들어가는 자리)</h2>
+            <p>텍스트, 인라인, 블락 모두 포함 가능하다. div와 비슷한 개념으로 이해하면 편하다.</p>
+            <p>header 태그가 또 들어오거나, footer태그가 들어가면 안된다. 작동은 되지만 선호되지 않는다</p>
+            <header style="background-color:thistle;">헤더 태그 사용법</header>
+        </li>
+        <!-- header -->
+        <li>
+            <h2>main : HTML 문서의 주요 내용이 들어오는 태그</h2>
+            <p>텍스트, 인라인, 블락 모두 포함 가능</p>
+            <main style="background-color:thistle;">메인태그 사용법</main>
+        </li>
+        <!-- main 유동성 있게 사용하면 된다 -->
+        <li>
+            <h2>footer : HTML 문서의 푸터 영역을 의미하는 태그. 저작권 정보, 관련문서 링크, 패밀리 사이트, 주소, 영업시간, 사업자 번호, 전화번호 등등이 들어오는 영역</h2>
+            <p>텍스트, 인라인, 블락 모두 포함 가능</p>
+            <p>header태그, footer태그가 또 들어오면 안된다. 작동은 되지만 선호되지 않는다</p>
+            <footer style="background-color:thistle;">푸터 태그 사용법</footer>
+        </li>
+        <!-- footer -->
+        <li>
+            <h2>aside</h2>
+            <p>메인 컨텐츠와 직접적으로 관련이 없는 영역을 의미하는 태그. 홈페이지 같은 곳에서 마우스로 스크롤해서 화면이 움직일 때에 같이 따라 다니는 작은 창을 aside 태그 안에 집어 넣는다</p>
+            <p>SNS, 최근 본 상품, 광고배너, 화면 상단으로 이동 등등</p>
+            <p>보통은 HTML 문서의 오른쪽이나 왼쪽에 사이드메뉴나 광고등의 영역으로 사용</p>
+            <aside style="background-color:thistle;">어사이드 태그 사용법</aside>
+        </li>
+        <!-- aside -->
+        <li>
+            <h2>nav</h2>
+            <p>HTML 문서의 메인메뉴나 목차 등을 정의해주는 태그</p>
+            <p>통상적으로 헤더(header)태그 내에서 많이 사용 된다</p>
+            <nav style="background-color:thistle;">네브 태그 사용법</nav>
+        </li>
+        <!-- nav -->
+        <li>
+            <h2>section</h2>
+            <p>HTML 문서 내에서 맥락이 같은 요소들을 주제별로 그룹화 해주는 태그</p>
+            <p>텍스트, 인라인, 블락 모두 포함 가능</p>
+            <p>통상적으로 메인 (main)태그 안에 주로 사용된다</p>
+            <section style="background-color:thistle;">섹션 태그 사용법</section>
+        </li>
+        <!-- section -->
+        <li>
+            <h2>article</h2>
+            <p>HTML 문서내에서 독립적으로 배포 또는 재사용이 가능한 게시물, 뉴스기사, 블로그 포스팅 등을 나타낼 때 사용</p>
+            <p>텍스트, 인라인, 블락 모두 포함 가능</p>
+            <article style="background-color:thistle;">아티클 태그 사용법</article>
+        </li>
+        <!-- article -->
+        <li>
+            <h2>address</h2>
+            <p>footer 태그 내에서 주소, 사업자등록번호, 사업장 이름, 전화번호 등을 나타낼 때 사용. 반드시 footer태그가 아니더라도 사용 할 수 있으나, 보통은 footer태그 내에서 사용한다</p>
+            <p>기본스타일 (p 태그 아래위로 여백이 좀 생기는 것과 같은 느낌이 기본 스타일) 글자 기울어짐 효과가 들어가있다.</p>
+            <address style="background-color:thistle;">어드레스 태그 사용법</address>
+        </li>
+    </ol>
+     
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴바 만들기</title>
+    <style>
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .icon>img{
+            width: 40px;
+            transform: translate(0px, 15px);
+        }
+        .text{
+            color: #fff;
+            transform: translate(0px, 30px);
+            font-family: 'Inter', sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 530;
+        }
+        .box>li{
+            list-style: none;
+            float: left;
+            text-align: center;
+        }
+        /* 박스들 가로 정렬 */
+        .box>li:nth-child(1){
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .box>li:nth-child(2){
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .box>li:nth-child(3){
+            width: 100px;
+            height: 100px;
+            background-color: sandybrown;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .box>li:nth-child(4){
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .box>li:nth-child(5){
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        .box>li:nth-child(6){
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            transition-property: all;
+            transition-duration: 0.5s;
+        }
+        /* 각 박스마다 컬러 지정 */
+        .box>.b1:hover{
+            height: 150px;
+        }
+        .box>.b2:hover{
+            height: 150px;
+        }
+        .box>.b3:hover{
+            height: 150px;
+        }
+        .box>.b4:hover{
+            height: 150px;
+        }
+        .box>.b5:hover{
+            height: 150px;
+        }
+        .box>.b6:hover{
+            height: 150px;
+        }
+        /* 박스들 호버로 트랜지션 내려오는 효과 주기 */
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+         <ul class="box">
+             <li class="b1">
+                 <a href="#">
+                     <p class="icon">
+                         <img src="./images/new.PNG" alt="new">
+                     </p>
+                     <p class="text">New</p>
+                 </a>
+             </li>
+             <!-- new -->
+             <li class="b2">
+                <a href="#">
+                    <p class="icon">
+                        <img src="./images/camera.PNG" alt="camera">
+                    </p>
+                    <p class="text">camera</p>
+                </a>
+            </li>
+            <!-- camera -->
+            <li class="b3">
+                <a href="#">
+                    <p class="icon">
+                        <img src="./images/heart.PNG" alt="heart">
+                    </p>
+                    <p class="text">heart</p>
+                </a>
+            </li>
+            <!-- heart -->
+            <li class="b4">
+                <a href="#">
+                    <p class="icon">
+                        <img src="./images/share.PNG" alt="share">
+                    </p>
+                    <p class="text">share</p>
+                </a>
+            </li>
+            <!-- share -->
+            <li class="b5">
+                <a href="#">
+                    <p class="icon">
+                        <img src="./images/setting.PNG" alt="setting">
+                    </p>
+                    <p class="text">setting</p>
+                </a>
+            </li>
+            <!-- setting -->
+            <li class="b6">
+                <a href="#">
+                    <p class="icon">
+                        <img src="./images/down.PNG" alt="download">
+                    </p>
+                    <p class="text">download
+                    </p>
+                </a>
+            </li>
+            <!-- download -->
+         </ul>
+    </div>
+</body>
+</html>

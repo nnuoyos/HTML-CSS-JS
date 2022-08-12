@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: top;
+}
+h1 {
+    font-size: 22px;
+    margin: 20px 0;
+}
+/* slide */
+.mainSlide {
+    position: relative;
+    min-width: 1240px;
+    margin: 0 0 100px 0;
+}
+/* img */
+.msImgBox {
+    overflow: hidden;
+}
+.msImgBox a {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+}
+.msImgBox a .photo {
+    margin-left: -360px;
+}
+/* button */
+.mainSlide .msPrev,
+.mainSlide .msNext {
+    position: absolute;
+    top: 180px;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    text-indent: -999999px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px auto;
+    background-color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+.mainSlide .msPrev {
+    left: 50%;
+    margin-left: -640px;
+    background-image: url(../img/btn_prev.png);
+}
+.mainSlide .msNext {
+    right: 50%;
+    margin-right: -640px;
+    background-image: url(../img/btn_next.png);
+}
+.msBtn {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.msPager ul {
+    display: flex !important;
+}
+/* important : 우선순위를 무시하고 !important 키워드를 붙인 값을 최종결과로 브라우저에 반영한다 */
+/* slick을 사용해서 생겨난 버튼 */
+.msPager li {
+    padding: 5px;
+}
+.msPager li button {
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #fff;
+    text-indent: -999999px;
+    cursor: pointer;
+}
+/* slick으로 생겨난 버튼 활성화 표시 */
+.msPager .slick-active button {
+    background-color: tomato;
+}
+/* 멈춤, 재생 버튼 */
+.msPause,
+.msPlay {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    text-indent: -9999px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.msPause {
+    background-image: url(../img/btn_pause.png);
+}
+.msPlay {
+    background-image: url(../img/btn_play.png);
+    display: none;
+}

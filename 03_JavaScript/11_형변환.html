@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>11_형변환</title>
+    </head>
+    <body>
+        <h1>형 변환(Type conversion)</h1>
+        <textarea cols="150" rows="35">
+            -String()함수 : 문자형으로 변환하기
+            -Number()함수 : 숫자형으로 변환하기
+            -Boolean()함수 : 블린형으로 변환하기
+            
+            *자바 스크립트에서 자동으로 형이 변환되는 경우
+            1. 산술 연산자
+            더하기를 제외하고 자동으로 형변환 된다
+            더하기는 문자열 더하기가 우선순위가 더 커서 제외된다
+            숫자 + 문자 =문자로 인식하여 숫자와 문자가 연결되어 나옴
+            4 + '2' => 42
+            4 - true => 3
+            4 * false => 0
+            4 / '2' => 2
+            '4' ** true => 4
+            4 % 'two' => NaN
+
+            2. 관계 비교 연산자
+            2 < '3' => true
+            2 > true => true
+            '2' <= false => false
+            'two' >= 1 => false (비교 불가능일 때도 false가 출력된다)
+
+            3. 동등 비교 연산자
+            ==(같다, 동등) !=(같지않다, 부등) ===(일치) !==(불일치)
+            동등과 부등은 자료의 유형을 변환시켜서 비교하고
+            일치와 불일치는 자료의 유형을 변환시키지 않고 그대로 비교해서 결과를 나타낸다
+            1 === '1' => false
+            1 === true => false
+            1 == '1' => true
+            1 == true => true
+
+            4. 복합 대입 연산자
+            += : a = a + b     
+            -= : a = a - b  
+            *= : a = a * b 
+            /= : a = a / b 
+            %= : a = a % b 
+        </textarea>
+        <script src="./JS/s11.js"></script>
+    </body>
+</html>

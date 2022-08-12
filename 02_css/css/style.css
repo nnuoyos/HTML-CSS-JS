@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* 기본값 - 모바일 화면 기준 */
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    /* 최소사이즈 설정 모바일디바이스 중 가장 작은 사이즈 320px*/
+    max-width: 420px;
+    /* 모바일 디바이스 맥시멈 420px 최대 너비를 지정하여 그 이상 넘어가지 않도록 설정할 수 있다 */
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.box1 .ta {
+    display: none;
+}
+.box2 {
+    margin: 30px 0;
+}
+.box2 li {
+    margin: 10px 0;
+}
+.box3 {
+    margin: 30px 0;
+}
+.box3 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+.box3 li {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 5px;
+    margin: 10px 0 0 0;
+}
+.text textarea {
+    box-sizing: border-box;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    border-color: antiquewhite;
+    background-color: thistle;
+    color: blue;
+}
+/* 모바일 끝 */
+/* 태블릿 시작 */
+@media (min-width: 768px) {
+    #wrap {
+        max-width: 1259px;
+    }
+    .box1 .mo {
+        display: none;
+    }
+    .box1 .ta {
+        display: block;
+    }
+    .box2 {
+        margin: 40px 0;
+    }
+    .box2 ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .box2 li {
+        box-sizing: border-box;
+        width: 50%;
+        padding: 0 7px;
+        margin: 10px 0 0 0;
+    }
+    .box3 {
+        margin: 40px 0;
+    }
+    .box3 ul {
+        padding: 0 18px;
+    }
+    .box3 li {
+        width: 33.33%; /* 한줄에 3개 넣기 위해서 */
+        padding: 0 10px;
+        margin: 18px 0 0 0;
+    }
+    .text textarea {
+        border-color: darkgoldenrod;
+        font-size: 13px;
+        line-height: 1.5em;
+    }
+}
+/* 태블릿 끝 */
+/* pc 시작 */
+@media (min-width: 1260px) {
+    .box1 {
+        max-width: 1920px;
+        margin: 0 auto;
+    }
+    .box2 {
+        width: 1200px;
+        margin: 90px auto 0 auto;
+    }
+    .box3 {
+        width: 1200px;
+        margin: 90px auto;
+    }
+    .text textarea {
+        background-color: lightblue;
+        font-size: 22px;
+    }
+}
+/* pc 끝 */

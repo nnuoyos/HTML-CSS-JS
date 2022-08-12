@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>말줄임</title>
+    <style>
+        .elip1{
+            width: 350px;
+            margin: 0 0 50px 0;
+            background-color:rosybrown;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; /* 말줄임표 */
+        }
+        .elip2{
+            width: 350px;
+            height: 44px;
+            background-color: thistle;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .elip3{
+            width: 350px;
+            height: 73px;
+            margin: 50px 0 0 0;
+            line-height: 1.5em;
+            background-color: antiquewhite;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+    </style>
+</head>
+<body>
+    <h1>말줄임</h1>
+    <p>말줄임을 하기 위해서는 고정 너비가 필요</p>
+    <br>
+    <h3>한 줄 일때 말줄임</h3>
+    <ol>
+        <li>
+            overflow: hidden;
+            :고정 너비를 벗어난 컨텐츠를 숨김
+        </li>
+        <li>
+            white-space: nowrap;
+            :자동 줄바꿈 방지
+        </li>
+        <li>
+            text-overflow : ellipsis;
+            :너비를 벗어난 컨텐츠를 '...'로 표시
+        </li>
+    </ol>
+    <!-- 한줄일때 표시 -->
+    <div class="elip1">
+        '야생마' 라는 뜻을 지닌 브롱코는 약 25년 만에 부활한 포드의 정통 오프로더 SUV모델
+    </div>
+    <h3>여러줄일때 말줄임</h3>
+    <ol>
+        <li>overflow: hidden;</li>
+        <li>display : -webkit-box;</li>
+        <li>
+            -webkit-box-orient : vertical; :방향설정
+        </li>
+        <li>-webkit-box-clamp: 줄수(숫자)</li>
+    </ol>
+    <p>-webkit 브라우저(크롬,오페라,사파리)의 여러줄 말줄임을 위한 속성</p>
+    <p>그 외 브라우저는 line-height와 height를 설정해주어야 함</p>
+    <!-- 여러줄일 때 예시 -->
+    <div class="elip2">
+        브롱코는 1세대 모델의 평평하고 각진 형태의 브롱코 레터링 그릴과 라운드 헤드램프 등 기존 디자인을 유지하면서도 현대적으로 재해석한 외관으로 다시 태어났다. 또한 총 6가지 주행 모드를 지원하는 G.O.A.T. 모드(Goes Over Any Type of Terrain) 지형 관리 시스템과 최신 오프로드 서스펜션이 탑재됐다. 이에 더해, 트레일 툴박스 (Trail Toolbox)에 포함된 기능을 통해 더 쉽게 오프로드 드라이빙을 즐길 수 있다. 
+    </div>
+    <div class="elip3">
+        브롱코는 1세대 모델의 평평하고 각진 형태의 브롱코 레터링 그릴과 라운드 헤드램프 등 기존 디자인을 유지하면서도 현대적으로 재해석한 외관으로 다시 태어났다. 또한 총 6가지 주행 모드를 지원하는 G.O.A.T. 모드(Goes Over Any Type of Terrain) 지형 관리 시스템과 최신 오프로드 서스펜션이 탑재됐다. 이에 더해, 트레일 툴박스 (Trail Toolbox)에 포함된 기능을 통해 더 쉽게 오프로드 드라이빙을 즐길 수 있다. 
+    </div>        
+</body>
+</html>

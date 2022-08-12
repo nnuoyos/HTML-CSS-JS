@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        /* block 예시 */
+        .block1 span{/* 선택자 */
+            display: block; /* sapn태그는 인라인이지만, 블락 디스플레이 설정하여 블락으로 줄바뀜 일어남 */
+            width: 100px;
+            height: 30px;
+            margin: 0 0 30px 0;
+            background-color: palegreen;
+        }
+
+        .block2 span{
+            margin: 0 0 30px 0;
+            background-color: salmon;
+        }
+        .span2{
+            display: block;
+            width: 80px;
+            height: 20px;
+        }
+        /* inline예시 */
+        .inline p{
+            display: inline;
+            width: 50px;
+            height: 30px;
+            background-color: bisque;
+        }
+        /* inline-block예시 */
+        .inline_block1{
+            text-align: center;/* 상위태그에 text-align값을 주면 나열된 요소의 그룹들이 정렬된다 */
+        }
+        .inline_block1 p{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: azure;
+        }
+        .inline_block2 span{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: olivedrab;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>display</h1>
+        <p>속성값 : block, inline, inline-block, none</p>
+    </div>
+    <br><br>
+    <div>
+        <h2>display : block</h2>
+        <p>인라인 요소를 블락 요소로 바꾸어 준다.</p><!-- 줄바꿈 일어남 블락 -->
+        <!-- 예시 -->
+        <div class="block1">
+            <span>box1</span>
+            <span>box2</span>
+            <span>box3</span>
+            <span>box4</span>
+        </div>
+        <div class="block2">
+            <span>box1</span>
+            <span class="span2">box2</span>
+            <span>box3</span>
+            <span>box4</span>
+        </div>
+    </div>
+    <!-- block -->
+    <br><br>
+    <div>
+        <h2>display: inline</h2>
+        <p>블락요소를 인라인 요소로 바꾸어 준다.</p>
+        <!-- 예시 -->
+        <div class="inline">
+            <p>box1</p>
+            <p>box2</p>
+            <p>box3</p>
+            <p>box4</p>
+        </div>
+    </div>
+    <!-- inline -->
+    <br><br>
+
+    <div>
+        <h2>display : inline-block</h2>
+        <p>인라인요소나 블락요소를 인라인블락요소로 바꾸어 준다.
+            <br>인라인요소를 가지고 있기 때문에 줄바뀜이 일어나지 않는다 
+            <br>그러나 너비,높이,text-align 등등 블락요소에만 적용되는 속성들을 사용할 수 있게 된다</p>
+            <p>inline-block 값을 준 요소의 상위태그에 text-align값을 주면 나열된 요소의 그룹들이 정렬된다</p>
+            <br><br>
+            <!-- 예시 -->
+            <div class="inline_block1">
+                <p>box1</p>
+                <p>box2</p>
+                <p>box3</p>
+                <p>box4</p>
+            </div>
+            <div class="inline_block2">
+                <span>box1</span>
+                <span>box2</span>
+                <span>box3</span>
+                <span>box4</span>
+            </div>
+    </div>
+
+</body>
+</html>

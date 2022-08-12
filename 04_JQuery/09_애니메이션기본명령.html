@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>09_애니메이션 기본명령</title>
+        <style>
+            .box1 {
+                display: flex;
+                height: 300px;
+                margin: 50px 0 0 0;
+            }
+            .box1 .btn {
+                width: 300px;
+            }
+            .box1 .btn button {
+                width: 80px;
+                height: 30px;
+                margin: 0 0 10px 0;
+            }
+            .box1 .pan {
+                width: 300px;
+                height: 300px;
+                margin: 0;
+                background-color: darkseagreen;
+            }
+            .box2,
+            .box3 {
+                margin: 30px 0;
+            }
+            .box2 .b2,
+            .box3 .b3 {
+                display: flex;
+                height: 500px;
+            }
+            .box2 .b2 p,
+            .box3 .b3 p {
+                width: 200px;
+                height: 500px;
+                margin: 0 20px 0 0;
+                background-color: bisque;
+            }
+            .box3 .b3 p {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>애니메이션 기본명령</h1>
+        <textarea cols="150" rows="10">
+        -$.애니메이션 명령(시간의 양);
+        -시간의 양은 1초를 1000으로 표기한다
+        -시간의 양이 적으면 빨라지고, 많으며 느려진다
+        -시간의 양이 움직이는 속도를 나타낸다
+        -show(), hide(), toggle()
+        >>너비, 높이, 투명도를 변경해서 움직임을 만든다
+        -slideDown(), slideUp(), slideToggle()
+        >>높이값을 변경해서 움직임을 만든다
+        -fadeIn(), fadeOut(), fadeToggle()
+        >>투명도를 변경해서 움직임을 만든다
+        -9가지 기본명령은 애니메이션이 완료 된 후 태그의 display 상태값을 block 또는 none 으로 만들어준다
+        -애니메이션 명령 사용 시 시간값을 생략 할 수 있다
+        -제이쿼리 기본문서에 애니메이션 명령에 대한 시간값이 600으로 입력되어있기 때문에 시간값 생략이 가능하다
+        -단, show(), hide(), toggle()의 경우 시간값을 생략해서 사용하면 속도값이 0으로 인식된다
+        즉 지속시간 없이 바로 바뀌어버린다
+        </textarea>
+        <br /><br />
+        <div class="box1">
+            <div class="btn">
+                <button class="bt1">show</button>
+                <button class="bt2">hide</button>
+                <button class="bt3">toggle</button>
+                <button class="bt4">slideDown</button>
+                <button class="bt5">slideUp</button>
+                <button class="bt6">slideToggle</button>
+                <button class="bt7">fadeIn</button>
+                <button class="bt8">fadeOut</button>
+                <button class="bt9">fadeToggle</button>
+            </div>
+            <div class="pan"></div>
+        </div>
+        <br /><br /><br />
+        <textarea cols="150" rows="10">
+            -$.애니메이션명령(시간,easing)
+            -easing : 가속 방식 (확 빨리 되는지, 천천히 빨라지는지, 계속 같은 속도로 가는지...의 가속방식)
+            -제이쿼리에서는 기본적으로 두가지 방식이 있다
+                swing : 점점 빨라짐(기본값)
+                linear : 일정 속도로 움직임
+        </textarea>
+        <div class="box2">
+            <button>CLICK</button>
+            <div class="b2">
+                <p class="b21">swing</p>
+                <p class="b22">linear</p>
+            </div>
+        </div>
+        <br /><br /><br />
+        <textarea cols="150" rows="10">
+            -$.애니메이션 명령(시간, easing, 콜백함수);
+            -콜백함수란?
+            애니메이션이 완료 된 후 실행할 명령을 묶어둔 함수
+        </textarea>
+        <div class="box3">
+            <button>CLICK</button>
+            <div class="b3">
+                <p class="b31">swing</p>
+                <p class="b32">linear</p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s09.js"></script>
+    </body>
+</html>

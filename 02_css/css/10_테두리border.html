@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border</title>
+    <style>
+        li {
+            height: 30px;
+            margin: 0 0 20px 0;
+            background-color: bisque;
+        }
+        li:nth-child(1){
+            border: 2px solid red;
+        }
+        li:nth-child(2){
+            border: 2px dotted red;
+        }
+        li:nth-child(3){
+            border: 2px dashed red;
+        }
+        li:nth-child(4){
+            border: 2px none red;
+        }
+        li:nth-child(5){
+            border: 2px double red;
+        }
+        li:nth-child(6){
+            border: 2px hidden red;
+        }
+        li:nth-child(7){
+            border: 2px groove red;
+        }
+        li:nth-child(8){
+            border: 2px ridge red;
+        }
+        li:nth-child(9){
+            border: 2px inset red;
+        }
+        li:nth-child(10){
+            margin: 0 0 150px 0;
+            border: 2px outset red;
+        }
+        li:nth-child(11){
+            height: 40px;
+            margin: 100px;
+            border: 2px solid red;
+        }
+        li:nth-child(12){
+            height: 40px;
+            padding: 100px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>border : 요소의 테두리를 지정</h1>
+    <p>border: 선두께 선스타일 선색상;</p>
+    <p>너비와 높이에 영향을 준다.</p>
+    <p>border-top / border-bottom / border-left / border-right</p>
+    <p>
+        border-width: 2px; >> 테두리 선의 두께<br>
+        border-style: solid, dotted, dashed, none, double, hidden, groove, ridge, inset, outset<br>
+        border-color: 색상명, 색상코드, rgb, rgba
+    </p>
+    <p>선이 있을때 margin을 쓰면 선 밖으로 여백이 생기고, padding을 쓰면 선 안으로 여백이 생김.</p>
+    <!-- 예시 -->
+    <ul>
+        <li>soild</li>
+        <li>dotted</li>
+        <li>dashed</li>
+        <li>none</li>
+        <li>double</li>
+        <li>hidden</li>
+        <li>groove</li>
+        <li>ridge</li>
+        <li>inset</li>
+        <li>outset</li>
+        <li>margin</li>
+        <li>padding</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>05_순서명령</title>
+        <style>
+            .btn {
+                display: flex;
+            }
+            .btn p {
+                border: 1px solid #ccc;
+                border-right: 0;
+                padding: 10px 20px;
+            }
+            .btn p:last-child {
+                border-right: 1px solid #ccc;
+            }
+            .btn .on {
+                background-color: rgb(130, 218, 15);
+            }
+            .inner {
+                display: none;
+                width: 300px;
+                padding: 30px;
+                background-color: antiquewhite;
+            }
+            .inner.view {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>순서 명령</h1>
+        <textarea cols="150" rows="10">
+            -자바스크립트의 첫번째 자료의 순서값은 0이다
+            -이런 순서값을 index값이라고 부른다
+            $.index();
+                셀렉터의 순서값을 저장하는 명령
+            
+            $.eq(인덱스값);
+                예) $('.gnb li') >> .gnb 메뉴의 li가 모두 선택 된다
+                    $('.gnb li').eq(3) >> 인덱스 값이 3인 li만 선택 된다
+        </textarea>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <div class="box">
+            <div class="btn">
+                <p class="on">탭1</p>
+                <p>탭2</p>
+                <p>탭3</p>
+            </div>
+            <div class="pannel">
+                <div class="inner view">탭1의 내용</div>
+                <!-- 클래스가 두개 inner와 view -->
+                <div class="inner">탭2의 내용</div>
+                <div class="inner">탭3의 내용</div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s05.js"></script>
+    </body>
+</html>

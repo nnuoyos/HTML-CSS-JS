@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자관련 스타일1</title>
+</head>
+<body>
+    <div>
+        <h1>문자관련 스타일1</h1>
+        <ol>
+            <li>
+                <h2>font-size: 글자 크기 조정</h2>
+                 <p>단위: px, % , em, rem</p>
+                 <p>em은 부모요소의 사이즈를 기준으로 곱하기</p>
+                 <p><a href="https://brunch.co.kr/@jihoonleeh916/32" target="_blank">em, rem 더 알아보기</a></p>
+                 <!-- 예시 -->
+                 <p style="font-size:20px;">
+                    <span style="font-size: 1.5em;">휴대폰 UI/UX 기획자</span>
+                    휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+                 </p>
+                 <!-- span 태그의 부모요소인 바로 위 p태그의 폰트사이즈가 20px 이므로 1em은 20px, 1.5em은 20*1.5 => span태그 폰트사이즈는 30px -->
+            </li>
+            <!-- font-size -->
+            <br><br>
+            <li>
+                <h2>font-family: 글자체 조정</h2>
+                <p>font-family : dotum; -> 영문글자체 이름을 쓸 경우에는 속성값에 영문 글자체명을 적어주면 된다</p>
+                <p>font-family : '돋움'; ->한글글자체 이름을 쓸 경우에는 속성값에 작은따옴표안에 한글 글자체명을 적어주면 된다</p>
+                <p style="font-family: '궁서';">
+                    <span style="font-family: '고딕';">휴대폰 UI/UX 기획자</span>
+                    휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+                 </p>
+            </li>
+            <!-- font-family -->
+            <br><br>
+            <li>
+                <h2>font-weight: 글자 두께 조정</h2>
+                <p>속성값: normal, bold, bolder, lighter, 별도의 사용 없이 숫자 100부터 100단위로 900까지 사용 가능
+                    <br>normal 400 그 이상은 bold 그 이상은 lighter</p>
+            </li>
+            <br><br>
+
+            <!-- 예시 -->
+            <p style="font-size:20px; font-weight:bold;">
+                <span style="font-size: 1.5em; font-weight:400;">휴대폰 UI/UX 기획자</span>
+                휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+             </p>
+             <br><br>
+             <!-- font-weight -->
+             <li>
+                 <h2>line-height: 행간 조정</h2>
+                 <p>단위: px, %, em</p>
+                 <p>글자 크기가 클수록 더 크게 줘야한다. 글자 크기보다 작으면 글자가 겹치는 현상이 생긴다</p>
+                 <p>통상적으로 작성되는 본문의 행간은 1.4~1.6em 정도가 적당</p>
+                 <p>줄이 1줄일 경우에는 행간값이 하단 높이값으로 된다. 글자가 1줄만 있을 때에는 높이값 없이 line-height값을 높이값으로 주면, 가로 가운데 정렬 된다</p>
+                 <br><br>
+                 <p style="line-height: 1.6em;">
+                    <span style="font-size:2.5em;">휴대폰 UI/UX 기획자</span>
+                    휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+                 </p>
+             </li>
+             <br><br>
+             <!-- line-height -->
+             <li>
+                 <h2>color: 글자 색 조정</h2>
+                 <p>색상명(red, green, blue 등) 정확한 영문 색상명이 들어와야한다(#0000000, #ffffff 등) 앞에 #을 꼭 붙여야 함<br>
+                반복되는 6개의 숫자 또는 영문이 반복되는 경우, 3개만 적어도 사용 가능(#0000000= #000) <br>
+                RGBA컬러(N, N, N, 0~1사이 소수점) <br>
+                red,green,blue수치 오퍼시티값. 수치에 들어가는 값은 0~255까지 사용 가능</p>
+                <!-- 예시 -->
+                 <p style="color: tan;">글자색 변경(색상명)</p>
+                 <p style="color: #55c018;">글자색 변경(색상코드)</p>
+                 <p style="color: rgba(255, 55, 155, 0.5);">글자색 변경(rgba)</p>
+             </li>
+             <!-- color -->
+             <br><br>
+             <li>
+                 <h2>letter-spacing : 자간 조정</h2>
+                 <p>단위: px, em</p>
+                 <p>단위가 음수로 들어오면 자간 줄어든다</p>
+                 <p style="font-size:50px; font-weight:900; letter-spacing: 30px;">자간조절하기</p>
+             </li>
+             <br><br>
+             <li>
+                 <h2 style="text-align: center;">text-align: 글자 정렬 </h2>
+                 <p>속성값: left(기본값), right, center, justify(맞춤정렬)</p>
+                 <p></p>
+                 <p></p>
+             </li>
+        </ol>
+    </div>
+</body>
+</html>

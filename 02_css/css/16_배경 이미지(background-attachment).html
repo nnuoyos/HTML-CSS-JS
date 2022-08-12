@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background-attachment</title>
+    
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* 예시 */
+        div {
+            width: 100%;
+            height: 100vh;
+        }
+        .d1 {
+            background-color: blueviolet;
+        }
+        .d2 {
+            background-image: url(./images/city.jpg);
+            background-size: contain;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+        .d3 {
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <h1>background-attachment : 배경이미지를 붙여서 나오게 해주는 속성</h1>
+    <p>fixed</p>
+    <p>background-image와 함께 나와야 한다.</p>
+    <br><br>
+    <!-- 예시 -->
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+</body>
+</html>

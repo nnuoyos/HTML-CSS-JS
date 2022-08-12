@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow</title>
+    <style>
+        div {
+            width: 400px;
+            height: 120px;
+            margin: 0 0 100px 0;
+            background-color: antiquewhite;
+        }
+        .hidden {
+            overflow: hidden;
+        }
+        .auto{
+            overflow: auto;
+        }
+        .scroll{
+            overflow: scroll;
+        }
+        .visible{
+            overflow: visible;
+        }
+        .scroll2{
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+        .scroll2 > .scroll2_inner{
+            width: 800px;
+            height: 400px;
+            background-image: linear-gradient(to right, red, blue);
+        }
+        .over{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .over > img{
+            height: 100%; /* img의 부모요소인 over가 가진 크기값 만큼을 100% 적용하겠다 */
+        }
+        .back_img{
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-image: url(./images/city.jpg);/* 요소의 크기만큼만 보여줌 */
+            background-size: cover;
+            background-position: center;
+            /* background img로 사진 불러오고 position을 통해 사진 위치를 조절 할 수 있다 */
+        }
+            
+    </style>
+</head>
+<body>
+    <h1>overflow : 지정한 너비보다 내용이 넘칠 경우에 사용</h1>
+    <p>hidden, auto, scroll, visible</p>
+    <br>
+    <!-- 예시 -->
+    <div class="hidden">
+        휴대폰UI/UX기획자<br>
+        휴대폰의 편리한 사용자 인터페이스를 제공하기 위하여 사용자의 요구사항을 분석한다.
+        하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 UI/UX 디자인을 검토한다.
+        검토한 UI/UX의 기능을 바탕으로 UI/UX 디자인을 기획한다.
+        It analyzes user requirements to provide a convenient user interface for mobile phones.
+        UI/UX design is reviewed by analyzing functions of UI/UX considering hardware characteristics.
+        Based on the functions of UI/UX reviewed, UI/UX design is planned.
+    </div>
+    <!-- hidden -->
+    <div class="auto">
+        휴대폰UI/UX기획자<br>
+        휴대폰의 편리한 사용자 인터페이스를 제공하기 위하여 사용자의 요구사항을 분석한다.
+        하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 UI/UX 디자인을 검토한다.
+        검토한 UI/UX의 기능을 바탕으로 UI/UX 디자인을 기획한다.
+        It analyzes user requirements to provide a convenient user interface for mobile phones.
+        UI/UX design is reviewed by analyzing functions of UI/UX considering hardware characteristics.
+        Based on the functions of UI/UX reviewed, UI/UX design is planned.
+    </div>
+    <!-- auto -->
+    <div class="scroll">
+        휴대폰UI/UX기획자<br>
+        휴대폰의 편리한 사용자 인터페이스를 제공하기 위하여 사용자의 요구사항을 분석한다.
+        하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 UI/UX 디자인을 검토한다.
+        검토한 UI/UX의 기능을 바탕으로 UI/UX 디자인을 기획한다.
+        It analyzes user requirements to provide a convenient user interface for mobile phones.
+        UI/UX design is reviewed by analyzing functions of UI/UX considering hardware characteristics.
+        Based on the functions of UI/UX reviewed, UI/UX design is planned.
+    </div>
+    <!-- scroll -->
+    <div class="visible">
+        휴대폰UI/UX기획자<br>
+        휴대폰의 편리한 사용자 인터페이스를 제공하기 위하여 사용자의 요구사항을 분석한다.
+        하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 UI/UX 디자인을 검토한다.
+        검토한 UI/UX의 기능을 바탕으로 UI/UX 디자인을 기획한다.
+        It analyzes user requirements to provide a convenient user interface for mobile phones.
+        UI/UX design is reviewed by analyzing functions of UI/UX considering hardware characteristics.
+        Based on the functions of UI/UX reviewed, UI/UX design is planned.
+    </div>
+    <!-- visible -->
+    <div class="scroll2">
+        <div class="scroll2_inner"></div>
+    </div>
+    <div class="over">
+        <img src="./images/city.jpg" alt="도시 야경">
+    </div>
+    <div class="back_img">
+
+    </div>
+
+</body>
+</html>

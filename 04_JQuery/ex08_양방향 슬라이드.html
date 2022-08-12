@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex08_양방향 슬라이드</title>
+        <style>
+            /* reset */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            /* photo */
+            #wrap {
+                width: 600px;
+                margin: 50px auto;
+            }
+            .photo {
+                position: relative;
+                width: 600px;
+                height: 300px;
+                overflow: hidden;
+                /* background-color: antiquewhite; 확인용 색상 체크*/
+            }
+            .photoBox {
+                position: absolute;
+                top: -100%;
+                left: 0;
+            }
+            .photoBox:nth-child(1) {
+                top: 0; /* 첫번째 사진은 확인차 보이게 한다 */
+            }
+            /* pager */
+            .pager {
+                margin-top: 30px;
+            }
+            .pager ul {
+                display: flex;
+                justify-content: center; /* 전체영역에서 가운데로 정렬 */
+            }
+            .pager li {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin: 0 15px;
+                background-color: #ccc;
+                cursor: pointer;
+                text-indent: -9999px; /* 텍스트 안보이게 하기 => 뒤로 날리기 */
+            }
+            .pager .active {
+                background-color: rgba(105, 183, 255, 0.822);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="photo">
+                <div class="photoBox"><img src="./img/food02.jpg" alt="" /></div>
+                <div class="photoBox"><img src="./img/food03.jpg" alt="" /></div>
+                <div class="photoBox"><img src="./img/food04.jpg" alt="" /></div>
+                <div class="photoBox"><img src="./img/food05.jpg" alt="" /></div>
+            </div>
+            <div class="pager">
+                <ul>
+                    <li class="active">01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/ex08.js"></script>
+    </body>
+</html>

@@ -1,0 +1,156 @@
+@charset "UTF-8";
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1200px;
+}
+/* header */
+#header {
+    width: 100%;
+    height: auto;
+    top: 10px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.headerBox a {
+    margin: 30px;
+}
+.headerBox a img {
+    position: absolute;
+    top: 10px;
+    left: 150px;
+}
+.gnb ul {
+    position: absolute;
+    top: 10px;
+    left: 590px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.gnb li {
+    font-weight: 500;
+    color: #222;
+}
+.userBox ul {
+    position: absolute;
+    top: 10px;
+    display: flex;
+    right: 200px;
+}
+.userBox li {
+    color: #222;
+}
+.userBox li:hover {
+    color: #666;
+}
+/* main */
+/* slide */
+#main {
+    /* position: relative; */
+    width: 1600px;
+    height: 480px;
+    top: 90px;
+    /* margin-bottom: 40px; */
+    margin-left: 150px;
+}
+.main .slide img {
+    top: 70px;
+    margin-bottom: 30px;
+    background-position: center;
+    justify-content: center;
+}
+.search {
+    background-image: url(../img/icon_search.png);
+    background-repeat: no-repeat;
+}
+.cart {
+    background-image: url(../img/icon_cart.png);
+    background-repeat: no-repeat;
+}
+/* newSeason */
+.newSeason {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    /* position: absolute; */
+}
+.newSeason ul {
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
+}
+/* bestItem */
+.bestItem {
+    position: relative;
+    width: 90%;
+    margin-bottom: 30px;
+    /* margin: 5px auto; */
+}
+.more {
+    position: absolute;
+    right: 5px;
+}
+.bestItem ul {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+}
+.itemBox .text {
+    text-align: center;
+}
+.bestItem li img {
+    text-align: center;
+    border: 1px solid #999;
+    justify-content: space-between;
+}
+.price img {
+    left: 5px;
+    bottom: 5px;
+}
+/* event */
+.event {
+    position: relative;
+    width: 100%;
+}
+.eventUl {
+    display: flex;
+    top: 40px;
+    justify-content: space-between;
+}
+.event li {
+    display: flex;
+    justify-content: space-between;
+}
+/* header */
+#header {
+    position: relative;
+    border-bottom: 1px solid #141416;
+}
+#header ::before {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+.h_in {
+    position: relative;
+    width: 1200px;
+    height: 170px;
+    margin: 0 auto;
+}
+.h_utill {
+    padding: 14px 0;
+}
+.h_utill ul {
+    display: flex;
+    justify-content: end;
+}

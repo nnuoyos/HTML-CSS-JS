@@ -1,0 +1,250 @@
+@charset "UTF-8";
+#wrap {
+    position: relative;
+    width: 100%;
+    min-width: 1220px;
+}
+/* header */
+#header_in {
+    position: relative;
+    width: 1200px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    display: block;
+    width: 138px;
+    height: 20px;
+    background-image: url(../img/logo.gif);
+    text-indent: -99999px;
+}
+/* header menu */
+.gnb {
+    position: absolute;
+    top: 30px;
+    left: 260px;
+}
+.gnb ul {
+    display: flex;
+}
+/* .gnb li {
+    margin-right: 60px;
+} */
+.gnb li:not(:last-child) {
+    margin-right: 60px;
+}
+.gnb li a {
+    color: #222;
+    font-size: 18px;
+}
+/* utill */
+.utill ul {
+    display: flex;
+}
+.utill li {
+    margin-left: 19px;
+}
+.utill li a {
+    color: #666;
+}
+.utill li a:hover {
+    color: #222;
+}
+.utill .search a {
+    display: block;
+    width: 22px;
+    height: 20px;
+    text-indent: -99999px;
+    background-image: url(../img/icon_search.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.utill .cart a {
+    display: block;
+    width: 22px;
+    height: 20px;
+    background-image: url(../img/icon_cart.png);
+    text-indent: -999999px;
+}
+.utill .search a,
+.utill .cart a {
+    display: block;
+    width: 22px;
+    height: 20px;
+    text-indent: -99999px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* main */
+/* slider */
+.main_slide {
+    position: relative;
+    height: 480px;
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+.main_slide a {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -800px;
+}
+/* 슬라이더 하단 이벤트 영역 */
+.event {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.event ul {
+    display: flex;
+    justify-content: space-between;
+}
+/* best item */
+.best {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.best h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.best h2 span {
+    font-weight: 400;
+}
+.best ul {
+    display: flex;
+    justify-content: space-between;
+}
+.best li {
+    width: 285px;
+    text-align: center;
+}
+.best .photo {
+    border: 1px solid #ddd;
+    margin-bottom: 18px;
+}
+.best .photo img {
+    width: 100%;
+    height: auto;
+}
+.best .brand_name {
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.best .item_name {
+    font-size: 17px;
+    color: #555;
+    height: 55px;
+}
+.best .price {
+    font-size: 18px;
+    color: #222;
+    font-weight: 500;
+}
+.best .price img {
+    margin-top: 8px;
+}
+/* best itme 더보기 */
+.best .more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.best .more a {
+    color: #777;
+    padding-right: 15px;
+    background-image: url(../img/icon_plus.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+/* promotion */
+.promotion {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.promotion ul {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion li {
+    position: relative;
+}
+.promotion li .text {
+    position: absolute;
+    left: 20px;
+    top: 55px;
+    font-size: 16px;
+    color: #666;
+    line-height: 22px;
+}
+/* footer */
+#footer {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+#footer_in {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.f_menu {
+    margin-bottom: 20px;
+}
+.f_menu ul {
+    display: flex;
+}
+.f_menu li {
+    margin-right: 16px;
+}
+.f_menu li a {
+    color: #777;
+}
+.f_menu .point a {
+    color: hotpink;
+}
+.f_info,
+.f_info a {
+    color: #777;
+}
+.f_info .mr {
+    margin-right: 10px;
+}
+.f_info .bar {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 10px;
+    vertical-align: top;
+    color: #999;
+}
+.kg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.kg_logo {
+    margin-bottom: 12px;
+}
+.kg_text {
+    color: #777;
+    line-height: 22px;
+    font-size: 15px;
+    margin-bottom: 14px;
+}
+.kg_link a {
+    color: #777;
+    font-size: 15px;
+    padding-right: 12px;
+    background-image: url(../img/arrow01.png);
+    background-repeat: no-repeat;
+    background-position: right 8px;
+}

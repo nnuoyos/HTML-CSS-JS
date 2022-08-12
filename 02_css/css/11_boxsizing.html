@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div {
+            height: 80px;
+            width:300px;
+            margin: 0 0 30px 0;
+            background-color: skyblue; 
+        }
+        .box1{
+            padding: 20px;
+            box-sizing: content-box;
+        }
+        /* content-box가 기본값(디폴트)이라 따로 적용 필요 없다 */
+        .box2{
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .box3{
+            border: 5px solid red;
+            box-sizing: content-box;
+        }/* 컨텐츠박스는  */
+        .box4{
+            border: 5px solid red;
+            box-sizing: border-box;
+        }/* size는 고정, 선만 추가로 생김 */
+    </style>
+</head>
+<body>
+    <h1>box-sizing: 박스의 크기를 결정하는 방식</h1>
+    <p>내가 지정한 너비, 높이 안에 padding과 border를 포함할것인가 말것인가를 결정하는 방식</p>
+    <p>속성값: content-box, border-box</p>
+    <p>content-box: 지정한 요소의 크기에 padding, border를 미포함 </p>
+    <p>border-box: 지정한 요소의 크기에 padding, border를 포함 </p>
+    <br><br>
+    <div class="box1">
+        300*80px <br>
+        padding : 20px <br>
+        content-box
+    </div>
+    <div class="box2">
+        300*80px <br>
+        padding : 20px <br>
+        border-box
+    </div>
+    <div class="box3">
+        300*80px <br>
+        border <br>
+        content-box
+    </div>
+    <div class="box4">
+        300*80px <br>
+        border <br>
+        border-box
+    </div>
+</html>

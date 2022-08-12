@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex06_햄버거 _메뉴버튼</title>
+        <style>
+            /* reset */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            /* 버튼 style */
+            .btns {
+                display: flex;
+                justify-content: space-between;
+                width: 250px;
+                margin: 100px auto;
+            }
+            .btns > div {
+                cursor: pointer;
+                text-align: center;
+            }
+            .btns .line span,
+            .btns .line::before,
+            .btns .line::after {
+                display: block;
+                width: 30px;
+                height: 5px;
+                background-color: #171719;
+            }
+            .btns .line::before,
+            .btns .line::after {
+                content: '';
+            }
+            .btns .line span {
+                margin: 7px 0;
+            }
+            /* slide page*/
+            .sideT,
+            .sideB,
+            .sideL,
+            .sideR {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+            .sideT {
+                top: -100%;
+                left: 0;
+                background-color: lightgreen;
+            }
+            .sideB {
+                bottom: -100%;
+                left: 0;
+                background-color: lightsteelblue;
+            }
+            .sideL {
+                top: 0;
+                left: -100%;
+                background-color: antiquewhite;
+            }
+            .sideR {
+                top: 0;
+                right: -100%;
+                background-color: lightsalmon;
+            }
+            .close {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                margin: 40px;
+                background-color: #171719;
+                cursor: pointer;
+            }
+            .close::before,
+            .close::after {
+                position: absolute;
+                top: 17px;
+                left: 3px;
+                content: '';
+                display: block;
+                width: 32px;
+                height: 5px;
+                background-color: #fafafa;
+            }
+            .close::before {
+                transform: rotate(45deg);
+            }
+            .close::after {
+                transform: rotate(-45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btns">
+            <div class="btnT">
+                <p class="line"><span></span></p>
+                <strong>상</strong>
+            </div>
+            <div class="btnB">
+                <p class="line"><span></span></p>
+                <strong>하</strong>
+            </div>
+            <div class="btnL">
+                <p class="line"><span></span></p>
+                <strong>좌</strong>
+            </div>
+            <div class="btnR">
+                <p class="line"><span></span></p>
+                <strong>우</strong>
+            </div>
+        </div>
+        <div class="sideT">
+            <p class="close"></p>
+        </div>
+        <div class="sideB">
+            <p class="close"></p>
+        </div>
+        <div class="sideL">
+            <p class="close"></p>
+        </div>
+        <div class="sideR">
+            <p class="close"></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/ex06.js"></script>
+    </body>
+</html>

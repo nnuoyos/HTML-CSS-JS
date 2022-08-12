@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        ul{
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* reset */
+        .ex1{
+            display: flex;
+            /*flex-direction: row-reverse; 오른쪽으로 붙어 역순으로 나열 됨 */
+            flex-direction: column-reverse;
+            
+        }
+        .ex1>li{
+            width: 14%;
+            margin: 0 5px;
+            line-height: 30px;
+            text-align: center;
+            background-color: chocolate;
+        }
+        /* ex1 */
+        .ex2{
+            height: 250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; 
+            /* 어라운드-여백이 생긴다 , 비트윈-균등하게 꽉 채워준다 */
+            background-color: tomato;
+        }
+        .ex2>li{
+            width: 120px;
+            line-height: 30px;
+            text-align: center;
+            background-color: teal;
+        }
+         /* ex2 */
+        .ex3{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 300px;
+            background-color:thistle;
+        }
+        .ex3>li{
+            width: 70px;
+            margin: 5px;
+            line-height: 30px;
+            text-align: center;
+            background-color: cornflowerblue;
+        }
+         /* ex3 */
+        .ex4{
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            width: 90%;
+            background-color: aqua;
+
+        }
+        .ex4>li{
+            width: 30%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: lawngreen;
+        }
+         /* ex4 */
+        .ex5{
+            display: flex;
+            flex-flow: row-reverse wrap-reverse; /* 한줄에 작성되기 때문에 추천! */
+            justify-content: space-between;
+            width: 90%;
+            background-color: cadetblue;
+        }
+        .ex5>li{
+            width: 30%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: rosybrown;
+        }
+         /* ex5 */
+        .ex6{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+            height: 150px;
+            background-color: dodgerblue;
+        }
+        .ex6>li{
+            width: 30%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: green;
+        }
+         /* ex6 */
+        .ex7{
+            display: flex;
+            justify-content: space-between;
+            background-color: darkgoldenrod;
+        }
+        .ex7>li{
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: tomato;
+        }
+        .ex7>li:nth-child(2){
+            order: -3;
+        }
+        .ex7>li:nth-child(4){
+            order: -1;
+        }
+        .ex7>li:nth-child(6){
+            order: -2;
+        }
+        /* ex7 */
+        .ex8{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            background-color: lightcoral;
+        }
+        .ex8>li{
+            width: 80px;
+            margin: 0 10px;
+            line-height: 30px;
+            text-align: center;
+            background-color: lightgreen;
+        }
+        .ex8>li:nth-child(1){
+            align-self: flex-start;
+        }
+        .ex8>li:nth-child(3){
+            align-self: stretch;
+        }
+        .ex8>li:nth-child(5){
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <h1>display: felx; 정렬을 위한 속성값</h1>
+    <ol>
+        <li>display : flex; 를 정렬하고자하는 요소들의 부모요소에 넣어준다(부모를 띄어 넘어 더 상위요소에는 안됨) </li>
+        <li>flex 된 부모요소에 정렬속성들을같이 넣어줘야 한다</li>
+        <!-- 정렬 속성 -->
+        <li>
+            <h3>flex-direction:나열 방향 지정 속성</h3>
+        </li>
+        <li>
+            <p>row : 요소들의 왼쪽에서 오른쪽으로 정렬(기본값)</p>
+            <p>row-reverse : 요소들을 오른쪽에서 왼쪽으로 정렬</p>
+            <p>column: 요소들을 위-아래로 정렬</p>
+            <p>column-reverse: 요소들을 아래-위로 정렬</p>
+        </li>
+        예시
+        <ul class="ex1">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+            <li>menu6</li>
+        </ul>
+        <!-- flex-direction -->
+        <li>
+            <h3>justify-content : 위치와 간격 좆러 속성</h3>
+            <p>flex-start : 요소들을 시작지점으로 정렬</p>
+            <p>flex-end: 요소들 끝지점으로 정렬</p>
+            <p>cener:가운데 정렬</p>
+            <p>space-between: 지정된 너비 안에서 요소들 사이에 동일한 간격</p>
+            <p>space-around : 지정된 너비 안에서 요소들 양옆으로 동일한 간격</p>
+            <p>
+                <mark>
+                    flex-direction : column;이 오면 세로정렬 속성이 됨 / row가 오면 가로정렬 속성 됨
+                </mark>
+            </p>
+        </li>
+        <li>
+            예시
+            <ul class="ex2">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+        <!-- justify-content -->
+        <li>
+            <h3>align-items : 위치 조절 속성</h3>
+            <p>flex-start : 요소들을 시작지점으로 정렬</p>
+            <p>flex-end: 요소들 끝지점으로 정렬</p>
+            <p>cener:가운데 정렬</p>
+            <p>baseline : 요소들을 시작위치에 정렬</p>
+            <p>stretch : 요소들 컨테이너에 맞도록 늘림 상위요소에 높이값이 있다면, 요소가 높이값 만큼 쭉 들어오게 하는것</p>
+            <p>
+                <mark>
+                    flex-direction : column;이 오면 가로정렬 속성이 됨 / row가 오면 세로정렬 속성 됨
+                </mark>
+            </p>
+        </li>
+        <li>
+            예시
+            <ul class="ex3">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+            <!-- align-items -->
+        </li>
+        <li>
+            <h3>flex-wrap : 요소의 감싸기 속성 / 한줄로 작성할지 여러줄 작성할지 선택해줌</h3>
+            <p>
+                nowrap: 모든 요소들을 한줄에 정렬 (요소의 크기와 상관없이 넘어가면 가고, 사라지면 사라지고)
+            </p>
+            <p>wrap : 요소들을 여러줄에 걸쳐서 정렬</p>
+            <p>wrap-reverse : 요소들을 여러줄에 걸쳐 정렬 시키는데 반대로 정렬</p>
+        </li>
+        <li>            
+            예시
+            <ul class="ex4">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+        <!-- flex-wrap-->
+        <li>
+            <h3>flex-flow : 나열순서와 감싸기를 한번에 지정</h3>
+            <p>flex-direction(나열순서) + flex-wrap(한줄 또는 여러줄)</p>
+            <p>두 속성값을 띄워쓰기 한번을 구분해서 작성 (flex-flow: row wrap;) > 왼쪽에서 오른쪽으로 정렬 ,여러줄로 정렬하겠다</p>
+        </li>
+        <li>
+            예시
+            <ul class="ex5">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+        <!-- flex-flow -->
+        <li>
+            <h3>align-content : 컨텐츠가 여러줄일 때 정렬과 간격 조절 속성</h3>
+            <p>flex-start : 요소들을 시작지점으로 정렬</p>
+            <p>flex-end: 요소들 끝지점으로 정렬</p>
+            <p>cener:가운데 정렬</p>
+            <p>space-between : 지정된 너비 안에서 요소들 사이에 동일한 간격</p>
+            <p>space-around : 지정된 너비 안에서 요소들 양옆으로 동일한 간격</p>
+        </li>
+        <li>
+            예시
+            <ul class="ex6">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+        <!-- align-content -->
+        <li>
+            <h3>order : 순서변경</h3>
+            <mark>자식요소에 작성(순서가 변경되는 바로 그 요소에!!)</mark>
+            <p>기본값 0, 양수나 음수로 값을 작성. 작은수일수록 앞 순서</p>
+        </li>
+        <li>
+            예시
+            <ul class="ex7">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+        <!-- order -->
+        <li>
+            <h3>align-self : 개별요소의 정렬</h3>
+            <mark>자식요소에 작성(순서가 변경되는 바로 그 요소에!!!</mark>
+            <p>flex-start : 요소들을 시작지점으로 정렬</p>
+            <p>flex-end: 요소들 끝지점으로 정렬</p>
+            <p>cener:가운데 정렬</p>
+            <p>baseline : 요소들을 시작위치에 정렬</p>
+            <p>stretch : 요소들 컨테이너에 맞도록 늘림 상위요소에 높이값이 있다면, 요소가 높이값 만큼 쭉 들어오게 하는것</p>
+        </li>
+        <li>
+            예시
+            <ul class="ex8">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+                <li>menu5</li>
+                <li>menu6</li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>04_class명령</title>
+        <style>
+            .box1 {
+                display: flex;
+            }
+            .box1 > p {
+                width: 200px;
+                height: 200px;
+                margin: 0 20px 0 0;
+                background-color: yellowgreen;
+            }
+            .box1 > .p11 {
+                display: none;
+            }
+            .box1 .on {
+                border: 5px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>class 명령</h1>
+        <textarea cols="150" rows="10">
+            addClass() - 클래스 추가하기
+            removeClass() - 클래스 삭제하기
+            toggleClass() - 클래스 추가/삭제하기
+            *토글은 반대되는 두 동작이 번갈아 실행되는 의미를 가진다
+
+            매개변수로 클래스명을 사용하는데 이 때는 .을 찍지 않는다
+        </textarea>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <div class="box1">
+            <p class="p11"></p>
+            <p class="p12"></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s04.js"></script>
+    </body>
+</html>

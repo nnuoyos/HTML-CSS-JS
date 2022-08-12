@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>03_css명령</title>
+        <link rel="stylesheet" href="css/style03.css" />
+    </head>
+    <body>
+        <h1>CSS 명령</h1>
+        <textarea cols="150" rows="20">
+            -셀렉터의 스타일을 변경한다
+                $('셀렉터').css('스타일 속성 이름', '값');
+
+                $.css(
+                    {
+                        스타일 속성 이름 : '값'
+                    }
+                )
+
+                $.css(
+                    {
+                        스타일 속성 이름 : '값'
+                        스타일 속성 이름 : '값'
+                        스타일 속성 이름 : '값'
+                    }
+                )
+                *스타일 속성 이름 중 -로 연결되는 대상을 표기할 때
+                margin-left >> marginLeft
+                padding-top >> padding-top 
+                *스타일 속성의 값 중 px단위의 값은 따옴표 없이 숫자만 작성해도 된다
+
+                -셀렉터의 스타일을 저장한다
+                    $.css('스타일 속성 이름');
+        </textarea>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <div class="box1"></div>
+        <br /><br />
+        <hr />
+        <br /><br />
+        <div class="box2">
+            <p class="p21">21</p>
+            <p class="p22">22</p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s03.js"></script>
+    </body>
+</html>

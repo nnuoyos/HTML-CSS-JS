@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+</head>
+<body>
+    <ol>
+        <li>
+            <h2>background-color</h2>
+            <p>속성값 : 색상명(red, blue 등등), 색상코드(#000000, #ffaadd 등등), rgba값(N, N, N, 0~1), rgb값(N, N, N)</p>
+            <!-- 예시 -->
+            <div style="padding: 10px 0; background-color: red;">색상명</div>
+            <div style="padding: 10px 0; background-color: #ff33aa;">색상코드</div>
+            <div style="padding: 10px 0; background-color: rgba(100, 190, 70, 0.5);">rgba</div>
+            <div style="padding: 10px 0; background-color: rgb(100, 190, 70);">rgb</div>
+            <div style="padding: 10px 0; background-color: #ccc;">색상코드 줄임</div>
+        </li>
+        <!-- background-color -->
+        <li>
+            <h2>background-image : 배경 이미지</h2>
+            <p>background-image: url(경로/폴더이름/파일이름.확장자)</p>
+            <p>배경이미지를 넣을때는 너비와 높이값이 있어야 적용이 가능하다. 안그러면 글자가 있는 크기나, 기본 요소의 크기만큼만 이미지가 보여진다. 내용이 없더라도 높이값과 너비값이 있어야 이미지가 나타난다.</p>
+            <!-- 예시 -->
+            <div style="width: 800px; height: 200px; background-image: url(./images/flower.jpg);">배경이미지 넣기</div>
+        </li>
+        <!-- background-image -->
+        <li>
+            <h2>background-size : 배경이미지 사이즈</h2>
+            <ol>
+                <li>
+                    background-size: 80px 60px;(가로 80px, 세로 60px)
+                </li>
+                <li>
+                    background-size: 50% 100%;(원본사이즈로 계산하는거 아니고, 지정된 사이즈의 가로 50%, 세로 100%)
+                </li>
+                <li>
+                    background-size: auto;(원본사이즈 비율 유지, 남는 공간은 비워준다.)
+                </li>
+                <li>
+                    background-size: 100%, auto;(가로는 100% 체우고, 세로는 원본비율 유지해서 나타난다. 억지로 늘어나는 게 아니라 가로만 늘어나고 세로는 그에 맞춰서 비율 맞춰서 들어오는거임. 반대로도 가능하다. background-size: auto 100%;)
+                </li>
+                <li>
+                    background-size: auto 200px;(세로는 200px로 가로는 비율유지해서 나타난다.)
+                </li>
+                <li>
+                    background-size: contain;(이미지를 지정된 사이즈 안에서 원본비율을 유지해서 잘리지 않도록 배치한다.)
+                </li>
+                <li>
+                    background-size: cover;(이미지를 지정된 사이즈 안에서 원본비율을 유지해서 꽉 차도록 배치한다. 넘치는 이미지의 부분은 잘려나간다.)
+                </li>
+            </ol>
+            <!-- 예시 -->
+            <div style="width: 800px; height: 200px; background-image: url(./images/flower.jpg); background-size: cover;">배경이미지 사이즈</div>
+        </li>
+        <!-- background-size -->
+        <li>
+            <h2>background-repeat : 배경이미지의 반복</h2>
+            <p>속성값 : no-repeat, repeat, repeat-x, repeat-y, space, round</p>
+            <!-- 예시 -->
+            <div style="width: 800px; height: 200px; background-image: url(./images/flower.jpg); background-size: contain; background-repeat: no-repeat;">배경이미지 반복</div>
+        </li>
+        <!-- background-repeat -->
+        <li>
+            <h2>background-position : 배경이미지의 위치</h2>
+            <p>
+                background-position: 가로위치 세로위치;<br>
+                가로위치 : left, right, center, px, %<br>
+                세로위치 : top, bottom, center, px, %
+            </p>
+            <!-- 예시 -->
+            <div style="width: 800px; height: 200px; background-image: url(./images/flower.jpg); background-size: contain; background-repeat: no-repeat; background-position: center bottom; text-indent: -9999px;">배경이미지 위치</div>
+        </li>
+        <!-- background-position -->
+    </ol>
+</body>
+</html>

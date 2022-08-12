@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>01_제이쿼리 기본 명령</title>
+    </head>
+    <body>
+        <h1>제이쿼리 기본 명령</h1>
+        <textarea cols="150" rows="30">
+            -자바스크립트 라이브러리 언어 중 하나
+            -자바스크립트의 명령을 보다 간단하게 사용할 수 있도록 해준다
+            -제이쿼리 기본 문서를 반드시 HTML 문서에 연결해서 사용해야 한다
+            -내가 작성 할 명령보다 앞에 작성되어야 한다
+
+            -제이쿼리는 버전1, 버전2, 버전3이 있다
+            -버전1과 버전2는 동일한 문서이나, 버전2는 HTML5 전용으로 만들어졌다(현재에는 무의미)
+            -버전3은 CSS3의 애니메이션 명령, 색상 명령 등이 추가 되었고 버전1의 일부 명령이 삭제 또는 개정 되었다
+            -기존의 소스와 제일 많이 대응되는 버전1을 사용하게 된다
+        </textarea>
+        <h1>제이쿼리 셀렉터</h1>
+        <textarea cols="150" rows="30">
+            -명령이 적용 될 대상
+                예) 클릭해야 할 버튼, 팝업창, 메뉴목록, 슬라이드 등등
+            -셀렉터의 형태
+            $('셀렉터')
+            -css에서 사용했던 모든 형태의 셀렉터를 제이쿼리에서 그대로 사용할 수 있다
+                예)$('div') $('#wrap') $('.gnb') $('.list li') $('.list > li')
+        </textarea>
+        <h1>제이쿼리 명령</h1>
+        <textarea cols="150" rows="30">
+            -명령의 가장 기본적인 형태
+                $('셀렉터').명령어();
+            -하나의 대상에 여러개의 명령이 순차적으로 실행 될 때 명령을 사슬처럼 엮어서 작성할 수 있다
+                $('셀렉터').명령어().명령어().명령어();
+            -명령어에 따라서는 뒤에 괄호가 비워진 경우도 있고 채워진 경우도 있음. 매개변수(Parameter).
+            -매개변수가 설정되어 있는 명령의 경우, 매개변수를 사용할 때와, 사용하지 않을 때 실행되는 결과가 달라질 수 있다
+            -어떤 명령의 경우에 여러개의 매개변수를 가질 수도 있다
+        </textarea>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/s01.js"></script>
+    </body>
+</html>

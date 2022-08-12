@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        /* reset */
+        ul{ /* 리셋값, 기본적으로 들어있는 스타일속성을 0으로 초기화 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* left 예시 */
+        .left li{
+            float: left;
+            width: 100px;
+            height: 40px;
+            margin: 0 10px 0 0;
+            text-align: center;
+            line-height: 40px;
+            background-color: palegreen;
+        }
+        .left{
+            background-color: antiquewhite;
+        }
+        .left::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* right 예시 */
+        .right li{
+            float: right;
+            width: 100px;
+            height: 40px;
+            margin: 0 0 0 10px;
+            text-align: center;
+            line-height: 40px;
+            background-color: antiquewhite;
+        }
+        .right {
+            background-color: steelblue;
+        }
+        .right::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>float: 가로 정렬을 시켜주는 스타일</h1>
+        <p>속성값: relft, right, none</p>
+        <p>옆으로 나열을 시킬 요소에 float값을 적용해야 한다</p>
+        <p>float값을 주면 그 부모요소의 영역이 사라진다</p>
+        <p>
+            float속성을 준 부모요소에 반드시 추가: 
+            <br>
+            <strong>
+                    <!-- 공식 -->
+                부모 요소::after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+            </strong>
+        
+        </p>
+        <!-- 예시 -->
+        <br><br><br>
+        <ul class="left">
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+        </ul>
+        <br>
+        <!-- left 예시 -->
+        <ul class="right">
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+        </ul>
+        <!-- right 예시 -->
+    </div>
+</body>
+</html>

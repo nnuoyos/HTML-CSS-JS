@@ -1,0 +1,49 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+body,
+button,
+input {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    line-height: 20px; /* 행간 */
+    color: #121219;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img,
+button,
+input {
+    vertical-align: top;
+}
+button,
+input {
+    border: 0;
+    background-color: transparent;
+}
+button {
+    cursor: pointer;
+}
+fieldset {
+    border: 0;
+}
+ul {
+    list-style: none;
+}
+address {
+    font-style: normal;
+}
+.hide {
+    position: absolute;
+    top: -999999px;
+    left: -99999999px;
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+}

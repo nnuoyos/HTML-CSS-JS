@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex05_아코디언메뉴</title>
+        <style>
+            /* reset */
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            /* style */
+            .gnb {
+                width: 320px;
+                background-color: rgba(145, 216, 135, 0.918);
+            }
+            .gnb .d1 {
+                border-bottom: 1px solid #aaa;
+            }
+            .gnb .main {
+                position: relative;
+                display: block;
+                padding: 15px;
+                font-size: 20px;
+                font-weight: 700;
+                color: #232329;
+            }
+            /* 가상태그로 삼각형 만들기 */
+            .gnb .main::after {
+                position: absolute;
+                right: 20px;
+                top: 16px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                border-top: 2px solid #7a7a7a;
+                border-right: 2px solid #7a7a7a;
+                transform: rotate(135deg);
+            }
+            .gnb .main.on {
+                color: rgb(71, 154, 236);
+            }
+            .gnb .main.on::after {
+                top: 25px;
+                transform: rotate(-45deg);
+            }
+            .gnb .sub {
+                display: none;
+            }
+            .gnb .sub ul {
+                padding: 12px 0;
+                background-color: rgba(130, 177, 228, 0.911);
+                border-top: 1px solid #aaa;
+            }
+            .gnb .sub li a {
+                display: block;
+                padding: 5px 15px;
+                font-size: 17px;
+                color: #191919;
+                font-weight: 600;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="gnb">
+            <ul class="menu">
+                <li class="d1">
+                    <a href="" class="main">리바트브랜드</a>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="">리바트</a></li>
+                            <li><a href="">리바트 이즈마인</a></li>
+                            <li><a href="">리바트 키즈</a></li>
+                            <li><a href="">H.MODE</a></li>
+                            <li><a href="">리첸</a></li>
+                            <li><a href="">리바트 키친</a></li>
+                            <li><a href="">리바트 하움</a></li>
+                            <li><a href="">리바트 네오스</a></li>
+                            <li><a href="">리바트 빌트인</a></li>
+                            <li><a href="">리바트 마린</a></li>
+                            <li><a href="">리바트 엔슬립</a></li>
+                            <li><a href="">법인 영업(H&S)</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="d1">
+                    <a href="" class="main">리바트몰</a>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="">기획전</a></li>
+                            <li><a href="">아울렛</a></li>
+                            <li><a href="">패키지 상품</a></li>
+                            <li><a href="">고객사은행사</a></li>
+                            <li><a href="">문화생활</a></li>
+                            <li><a href="">상품권</a></li>
+                            <li><a href="">이달의 행사</a></li>
+                            <li><a href="">온라인전용</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="d1">
+                    <a href="" class="main">리바트스토리</a>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="">미디어</a></li>
+                            <li><a href="">신제품</a></li>
+                            <li><a href="">다이어리</a></li>
+                            <li><a href="">매장 이벤트</a></li>
+                            <li><a href="">주방 시공 사례</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="d1">
+                    <a href="" class="main">회사소개</a>
+                    <div class="sub">
+                        <ul>
+                            <li><a href="">현대리바트</a></li>
+                            <li><a href="">연구소</a></li>
+                            <li><a href="">매장찾기</a></li>
+                            <li><a href="">인재채용</a></li>
+                            <li><a href="">투자정보</a></li>
+                            <li><a href="">고객센터</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <!-- <script src="./js/ex05.js"></script> -->
+        <script src="./js/ex05_JSver.js"></script>
+    </body>
+</html>

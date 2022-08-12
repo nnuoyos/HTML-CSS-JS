@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>반응형기본</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="reset.css" />
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="box1">
+                <img src="./images/mv04_m.jpg" alt="모바일" class="mo" />
+                <img src="./images/mv04_pc.jpg" alt="태블릿" class="ta" />
+            </div>
+            <div class="box2">
+                <ul>
+                    <li><img src="./images/bn11.jpg" alt="배너1" /></li>
+                    <li><img src="./images/bn12.jpg" alt="배너2" /></li>
+                    <li><img src="./images/bn13.jpg" alt="배너3" /></li>
+                    <li><img src="./images/bn14.jpg" alt="배너4" /></li>
+                </ul>
+            </div>
+            <div class="box3">
+                <ul>
+                    <li><img src="./images/pd01.jpg" alt="제품1" /></li>
+                    <li><img src="./images/pd02.jpg" alt="제품2" /></li>
+                    <li><img src="./images/pd03.jpg" alt="제품3" /></li>
+                    <li><img src="./images/pd04.jpg" alt="제품4" /></li>
+                    <li><img src="./images/pd05.jpg" alt="제품5" /></li>
+                    <li><img src="./images/pd06.jpg" alt="제품6" /></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text">
+            <textarea>
+                * 반응형 웹
+                -브라우저의 상태에 따라 최적화 된 레이아웃을 제공하는 방식
+                -주로 브라우저의 너비값에 반응하여 레이아웃이 달라지도록 작업을 하는 경우가 대다수
+                -하나의 html,css, script 문서에 모든 너비값에 대응 되는 코드를 작성하는 방식
+                
+                *미디어 쿼리
+                -css문서에서 문서가 노출될 환경에 대한 조건을 만들어 입력하는 방식
+                -웹에서는 주로 브라우저의 너비값이 조건으로 사용 됨
+                -미디어쿼리의 조건을 사용하는 방법
+                @media (조건) {해당조건에 적용될 스타일 속성 작정}
+                -하나의 문서에 여러번의 조건을 적용시킬 수 있다
+                -각각의 조건은 서로 따로 적용된느 것이 아니다
+                상위의 조건 값이 하위 조건의 환경에서도 그대로 적용 된다
+                따라서 하위 조건에서는 상위조건과 달라진 점을 체크해서 수정값을 더하거나 
+                새로운 값을 더해 스타일을 적용시키게 된다
+                구조가 더 단순한 모바일을 먼저 작업 하고 너비값이 점점 늘어나는 경우를 조건으로 작업하면 쉽게 가능 하다
+                -스타일 작성 시 맨 처음은 모바일 화면을 기준으로 작성한다
+                모바일화면의 값을 기본값으로 입력하기 때문에 미디어쿼리의 조건을 사용하지 않고 작성
+                태블릿화면의 경우 아이패드 초기 너비값 768px을 기준으로 화면의 전환이 이루어지도록 작성
+                pc의 경우 크기를 자유롭게 선택한다
+            </textarea>
+            <textarea>
+                각종 디바이스 사이즈 정리
+
+                아이폰 5/ SE : 320 x 568
+                기타 등등
+
+            </textarea>
+        </div>
+    </body>
+</html>

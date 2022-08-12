@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상태그</title>
+    <style>
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+        }
+        .before{
+            display: flex;
+            margin: 20px 10px;
+        }
+        .before > li{
+            margin: 0 10px;
+        }
+        .before>li::before{ /* 가상태그를 만들 곳에 ::before */
+            /* 너비와 높이값을 이용하는 방법 */
+            /* content: "";
+            display: inline-block;
+            width: 4px;
+            height: 15px;
+            margin: 0 20px 0 0;
+            background-color: tomato; */
+
+            /* contetn 속성값을 이용한 방법 */
+            content: "|";
+            display: inline-block;
+            margin: 0 20px 0 0;
+            font-weight: 700;
+            font-size: 15px;
+            color: springgreen;
+        }
+        .after{
+            display: flex;
+        }
+        .after>li{
+            position: relative; /* 기준점 잡기 */
+            width: 100px;
+            line-height: 30px; /* 행간 */
+            text-align: center; /* 가운데 정렬 */
+            background-color: lightslategrey;
+            transition: all 1s;
+        }
+        .after>li::after{
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: lightcoral;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transition: all 1s; /* hover효과주기위해 설정 */
+        }
+        .after>li:hover::after{/* 애프터의 자식으로 오는 li에 호버했을때 그 애프터에 오는 효과 */
+            transform: scaleX(1);
+        }
+    </style>
+</head>
+<body>
+    <h1>::before/ ::after 가상태그</h1>
+    <p>요소의 앞,뒤에 가상공간을 만들어 지정한 내용,모양을 넣을수 있다</p>
+    <p>content: ""; 과 display: block/inline-block을 꼭 넣어야 함</p>
+    <br>
+    <ul class="before">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    <ul class="after">
+        <li>
+            <p class="bg"></p>
+            <p class="text">menu1</p>
+        </li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>

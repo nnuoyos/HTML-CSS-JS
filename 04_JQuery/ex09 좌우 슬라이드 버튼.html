@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex09 좌우 슬라이드 버튼</title>
+        <style>
+            /* reset */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: inherit; /* 부모 요소를 상속 한다는 의미 */
+            }
+            /* slide */
+            .slide {
+                position: relative;
+                min-width: 1240px;
+            }
+            /* 사진 영역 */
+            .sImg {
+                position: relative;
+                height: 420px;
+                overflow: hidden;
+            }
+            .sImgBox {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 420px;
+                /* overflow: hidden; */
+            }
+            .sImgBox a {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                margin-left: -960px;
+            }
+            /* pager btn */
+            .sPager {
+                margin-top: 50px;
+            }
+            .sPager ul {
+                display: flex;
+                justify-content: center;
+            }
+            .sPager li {
+                width: 60px;
+                height: 10px;
+                margin: 0 20px;
+                background-color: #cacaca;
+                text-indent: -99999px;
+                cursor: pointer;
+            }
+            .sPager .active {
+                background-color: coral;
+            }
+            /* 좌우 버튼 */
+            .sPrev,
+            .sNext {
+                position: absolute;
+                top: 180px;
+                width: 70px;
+                height: 70px;
+                border-top: 6px solid #232329;
+                border-left: 6px solid #232329;
+                cursor: pointer;
+            }
+            .sPrev {
+                left: 100px;
+                transform: rotate(-45deg);
+            }
+            .sNext {
+                right: 100px;
+                transform: rotate(135deg);
+            }
+            .sPrev span,
+            .sNext span {
+                display: block;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slide">
+            <div class="sImg">
+                <div class="sImgBox">
+                    <a href="">
+                        <img src="./img/mv1.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="sImgBox">
+                    <a href="">
+                        <img src="./img/mv2.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="sImgBox">
+                    <a href="">
+                        <img src="./img/mv3.jpg" alt="" />
+                    </a>
+                </div>
+                <div class="sImgBox">
+                    <a href="">
+                        <img src="./img/mv4.jpg" alt="" />
+                    </a>
+                </div>
+            </div>
+            <div class="sPager">
+                <ul>
+                    <li class="active">01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                </ul>
+            </div>
+            <div class="sPrev"><span>이전으로</span></div>
+            <div class="sNext"><span>다음으로</span></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/ex09.js"></script>
+    </body>
+</html>

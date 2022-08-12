@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+}
+h1 {
+    width: 600px;
+    margin: 30px auto;
+    font-size: 25px;
+}
+.slide {
+    position: relative;
+    width: 600px;
+    margin: 0 auto 50px auto;
+}
+.s04Box {
+    box-sizing: border-box;
+    padding: 0 5px;
+}

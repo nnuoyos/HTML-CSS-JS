@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자관련 스타일2</title>
+</head>
+<body>
+    <div>
+        <h1>문자관련 스타일2</h1>
+        <ol>
+            <li>
+                <h2>word-spacing: 단어 사이의 간격 조정</h2>
+                <p>단위: px, em</p>
+                <!-- 예시 -->
+                <p style="font-size:20px; word-spacing:20px;">
+                    <span style="font-size: 1.5em; font-weight:400;">휴대폰 UI/UX 기획자</span>
+                    휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+                 </p>
+                </li>
+                <!-- word-spacing -->
+            <li>
+                <h2>font-style : 글자의 표현 방식</h2>
+                <p>속성값: normal, italic, oblique</p>
+                <!-- 예시 -->
+                <p style="font-size:50px; font-weight:700; font-style: italic;">글자의 표현 방식 나타내기</p>
+                <address style="font-style: normal;">adress태그: 주소, 사업자등록번호 등등을 작성하는 시멘틱태그. 글자 기울임이 기본값으로 적용되어 있음</address>
+            </li>
+            <!-- font-style -->
+            <br><br>
+            <li>
+                <h2>text-decoration: 텍스트 장식</h2>
+                <p>속성값: underline, overline, line-through, none</p>
+                <p style="text-decoration: line-through;">텍스트에 줄 긋기</p>
+                <a href="#" style="text-decoration: none; color: black;">링크태그, 밑줄과 글자색이 기본으로 들어온다 (데코레이션으로 색상과 밑줄 없앨 수 있음)</a>
+            </li>
+            <!-- text-decoration -->
+            <li>
+                <h2>text-indent: 텍스트 들여쓰기</h2>
+                <p>단위: px</p>
+                <br>
+                <p style="text-indent: 50px;">
+                    <span>휴대폰 UI/UX 기획자</span>
+                    휴대폰의 편리한 사용자 인터페이스를 제공하기 위해 사용자의 요구사항을 분석. 하드웨어 특성을 고려한 UI/UX의 기능을 분석하여 디자인을 검토한다 블라블라
+                 </p>
+            </li>
+            <!--text-indent -->
+            <br><br>
+            <li>
+                <h2>text-shadow: 글자 그림자</h2>
+                <p>text-shadow: (offset-x)(x축 수치)<br>px(offset-y)(y축 수치)<br>
+                (blur)px 색상;</p>
+                <br><br>
+                <p style="font-size: 50px; font-weight:900; text-shadow: 100px 10px 10px limegreen;">글자 그림자는 페이지크기에 영향을 주지 않는다</p>
+                <p>blur 수치는 음수는 안되고, 나머지 통상 수치가 음수가 되면 줄어들거나 거꾸로 되는 느낌으로 나타난다</p>
+                <p>rgba값으로 색상을 설정할 수 있다</p>
+                <p style="font-size: 50px; text-shadow: 15px 15px 5px rgba(100, 150, 125, 1);">rgba값으로 그림자 주기</p>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

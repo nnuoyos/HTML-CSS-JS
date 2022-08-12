@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover</title>
+    <style>
+        div{
+            width: 200px;
+            height: 50px;
+            margin: 0 0 30px;
+            background-color: thistle;
+        }
+        /* d1자리에 꼭 클라스가 아니여도 태그 사용해도 된다 */
+        .d1:hover{
+            font-size: 30px;
+        }
+        .d2:hover{
+            width: 300px;
+            background-color: aqua;
+        }
+        .d3{
+           height: 130px;
+           background-image: url(./images/city.jpg);
+           background-size: cover;
+           background-position: center center; 
+        }
+        .d3:hover{
+            background-size: 130% auto;
+        }
+        .d4>span{
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: blue;
+        }
+        .d4:hover > span{/* 클라스 d4에 호버가 됐을 때 그 자식으로 오는 span태그에 일어나는 일 */
+            transform: translate(50px);
+        }
+        .d5:hover{
+            transform: rotate(50deg);
+            font-size: 30px;
+            font-weight: 700;
+            text-decoration: underline;
+            color: teal;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hover : 마우스를 올렸을 때 일어나는 효과</h1>
+    <p>선택자 : hover{스타일속성: 속성값;}</p>
+    <br><br>
+    <!-- 예시 -->
+    <div class="d1">d1</div>
+    <div class="d2">d2</div>
+    <div class="d3">d3</div>
+    <div class="d4">d4
+        <span></span>
+    </div>
+    <div class="d5">d5</div>
+</body>
+</html>

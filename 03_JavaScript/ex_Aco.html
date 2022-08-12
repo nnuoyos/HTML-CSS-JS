@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex_Aco</title>
+        <style>
+            h3,
+            div {
+                margin: 0px;
+                width: 80%;
+                border: 2px solid #334455;
+                box-sizing: border-box;
+            }
+            h3 {
+                background: powderblue;
+            }
+            div {
+                transition: 1s;
+                position: relative;
+                height: 100px;
+                overflow: hidden;
+            }
+            .hidden {
+                opacity: 0;
+                height: 0px;
+            }
+            .show {
+                opacity: 100;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>아코디언 기능</h2>
+        <h3 onclick="changeView();">아코디언 기능 연습해보기!</h3>
+        <div class="hidden">
+            자바스크립트 기능 구현 해보기<br />
+            자바스크립트 기능 구현 해보기<br />
+            자바스크립트 기능 구현 해보기
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./ex_Aco.js"></script>
+    </body>
+</html>

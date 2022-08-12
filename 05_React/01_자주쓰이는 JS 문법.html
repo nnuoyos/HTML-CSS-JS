@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>React에서 자주쓰이는 Javascript 문법</title>
+    </head>
+    <body>
+        <h1>React 시작 전 자주쓰이는 Javascript 문법</h1>
+        <textarea cols="150" rows="10">
+            1. Object Shorthand Assignment
+                let name = "SoYoung"
+                let age = 20
+                let person = {
+                    name: name,
+                    age: age
+                }
+
+                위의 코드를 줄여쓰면 아래와 같다
+                let name = "SoYoung"
+                let age = 20
+                let person = {name, age}
+
+            2. Destructuring 
+                
+                let person = {
+                    name : "SoYoung"
+                    age : 20
+                }
+
+                let name = person.name
+                let age = person.age
+
+                위의 코드에서 객체 안의 내용을 변수화 시키는 방법(분해)
+                let name = person.name;
+                let age = person.age;
+                또는
+                let name = person['name'];
+                let age = person['age'];
+                의 방식으로 사용 가능하다. 하지만,
+                let {name, age} = person 의 코드로도 사용 가능하다
+            
+                위의 문법은 배열에서도 사용 가능한데 다음과 같다
+                let array = [1, 2, 3, 4];
+                let [a,b] = array;
+                let [a,b,...rest];
+
+            3. Spread
+                
+                let person = {
+                    name : "SoYoung",
+                    age = 20
+                }
+                person 객체를 복사해서 person2에 저장한다.
+                let person2 = {...person}
+                여기서 person3 = person 과 person 2 = {...person} 의 차이점은
+                복사하는 방법의 차이라고 볼 수 있다.
+                스프레드를 사용하지 않은 복사는 주소값만 복사하는 형식으로서
+                하나의 객체를 서로 다른 이름의 변수가 같이 참조하는 방식이라면,
+                스프레드를 사용한 복사는 내용을 그대로 가지고 새로운 객체를 생성하는 방식이라는 점에서
+                두 방법은 서로 다른 방법이라고 할 수 있다.
+                person == person2 : false
+                person == person3 : true
+
+                위의 person 객체를 복사해오면서 새로운 내용을 추가할 수 도 있다
+                person4 ={...person, address : 'Ulsan'}
+                person 객체를 복사해 오면서 객체에 address 라는 새로운 값을 추가하였다
+
+                위의 person 객체를 복사해오면서 새로운 내용을 변경할 수도 있다
+                person5 ={...person, name : '소영'}
+                person 객체를 복사해 오면서 객체에 name이라는 key의 value 값을 변경하였다
+
+                객체를 대상으로 동작하는 스프레드는 배열을 대상으로도 동작한다
+                let a = [1,2]
+                let b = [...a, 3]
+                배열 a를 복사해서 거기에 3을 추가시켜서 배열b를 생성하였다
+
+                let c = [...a, ...b]
+                배열 a와 b의 내용을 전부 가져와서 배열c를 생성하였다
+
+            4. 삼항연산자
+                let person = name : "JiHun", age : 20}
+                person이라는 객체가 있다고 하고,
+                if (person){
+                    console.log(person.name)
+                } else {
+                    console.log("there is no person")
+                }
+                person이 존재한다면 person안에 있는 name을 콘솔에 출력하고,
+                person이 존재하지 않는다면 else에 있는 문구가 출력 되는 코드.
+                이 상태 그대로 실행이 된다면 결과는 ? 이름이 출력될 것이다. 
+                console.log(person ? person.name : "there is no person")
+
+
+            
+
+        </textarea>
+    </body>
+    <script>
+        // 1번 Object Shorthand Assignment 예시
+        /* let name = 'SoYoung';
+        let age = 20;
+        let person = {
+            name: name,
+            age: age,
+        };
+        let person1 = {
+            name,
+            age,
+        };
+        console.log(person1); */
+
+        // 2번 Destructuring 예시
+        /* let person = {
+            name: 'SoYoung',
+            age: 20,
+        };
+
+        //let name = person.name;
+        //let age = person.age;
+        //let name = person['name'];
+        //let age = person['age'];
+        let { name, age } = person;
+        console.log(person); 
+        let { age } = person;
+        console.log(age);
+        */
+
+        /* let array = [1, 2, 3, 4];
+        //let [a, b] = array;
+        //console.log(a, b);
+        //let [a] = array;
+        //console.log(a);
+        let [a,b, ...rest] = array;
+        console.log(rest);
+        */
+
+        //3번 Spread 예시
+        /* let person = {
+            name: 'SoYoung',
+            age: 20,
+        };
+        let person2 = { ...person };
+        console.log(person, person2);
+        let person3 = person; //주소값이 다르다
+        console.log(person3);
+        console.log('스프레드를 사용한 복사', person == person2); //false 다른 객체 person2는 새로운걸 만들어낸 객체임
+        console.log('대입연산자를 사용한 복사', person == person3); //true 같은 객체, 그러나 주소값은 다름
+        let person4 = { ...person, address: 'Ulsan' }; //복사후 내용 추가하기
+        console.log(person4);
+        let person5 = { ...person, name: '소영' }; // 복사하면서 내용 수정하기
+        console.log(person5);
+        let a = [1, 2];
+        let b = [...a, 3]; //배열도 같은 원리로 실행 가능하다
+        console.log(b);
+        let c = [...a, ...b];
+        console.log(c); */
+
+        //4번 삼항연산자
+        let person = { name: 'JiHun', age: 20 };
+        if (person) {
+            console.log(person.name);
+        } else {
+            console.log('there is no person');
+        }
+
+        let person2 = null;
+        console.log(person2 ? person.name : 'there is no person');
+    </script>
+</html>

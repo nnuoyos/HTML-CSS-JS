@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        li{
+            font-size: 15px;
+        }
+        /* 태그선택자 : 태그만 불러 내는 것*/
+        .an{
+            color:orange;
+        }
+        /* 클래스선택자: 클래스만 불러 내는 것 */
+        #cup{
+            color:seagreen;
+        }
+        /* 아이디선택자: 아이디만 불러내는 것 */
+        .sin, .jja {
+            color: red;
+        }
+        /* 복합 선택자 */
+        ul li{
+            font-size:  18px;
+        }
+        /* 하위 선택자: 하위요소들 불러내기 */
+        ul a{
+            font-weight: 700;
+        }
+        /* 하위 선택자: 자식요소 뿐만 아니라, 모든 하위요소들을 불러낸다 */
+        .jjam > ul{
+            color:hotpink;
+        }
+        /* 자식 선택자: 자식 요소를 불러내기 */
+        p.yook{
+            color:royalblue;
+        }
+        /* 종속태그: 태그에 종속된 태그를 불러내기 */
+        .bi + li{
+            font-size: 10px;
+        }
+        /* 인접선택자: 클라스를 사용하여 인접해 있는 태그나, 다음에 오는 것들을 불러내기 */
+        .jin2~li{
+            font-size: 12px;
+        }
+        /* 형제선택자: ~을 사용해서 자기자신은 빼고, 뒤에 오는 형제요소들을 불러내기 */
+        li:nth-child(5){
+            color:aquamarine;
+        }
+        /* 순서 선택자: ()소괄호 안에 순서를 넣어, 그 순서의 것만 불러내기 */
+        .jjam li:nth-child(3){
+            font-size: 25px;
+        }/* jjam의 li 태그의 3번째만 선택 => 나가사키짬뽕*/
+        body > ul > li:first-child{
+            text-decoration: underline;
+        }/* body의 자식으로 오는 첫번째자식은 안성탕면 */
+        li:last-child{
+            font-style: italic;
+            /* li태그의 마지막으로 오는 자식요소들이 이탈릭으로  */
+        }
+        li:nth-child(even){
+            font-family: '궁서';
+        }
+        /* even : li태그의 짝수에 해당하는 요소들만 선택 */
+        li:nth-child(odd){
+            font-family: '돋움';
+        }
+         /* odd : li태그의 홀수에 해당하는 요소들만 선택 */
+        li:nth-child(3n){
+            font-size: 30px;
+        }
+        /* 배수 선택: 숫자 n */
+        li:nth-child(3n+2){
+            color:brown;
+        }
+        /* +뒤의 숫자부터 시작해서 앞의 숫자배수 만큼 선택 
+        3n+2 => 2번째부터 시작해서 3 6 9~ 배수 (잘 사용되진 않는다)*/
+        .yook#sa{
+            text-decoration: line-through;
+        }
+        /* 동시선택자 */
+        .jjam li:not(:nth-child(3)){
+            color:lightgreen;
+        }
+        /* 제외 선택자: 괄호안에 선택된 요소는 제외한 나머지를 불러오기 */
+        .jjam li:not(:last-child){
+            font-size: 30px;
+        }
+        /* jjam의 li 요소들 중 마지막만 제외 */
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <ul>
+        <li class="an">안성탕면</li>
+        <li class="sin">신라면</li>
+        <li class="jin">진라면</li>
+        <li class="nu"><a href="#">너구리</a></li>
+        <li class="cham">참깨라면</li>
+        <li class="jja">짜파게티</li>
+        <li class="yul">열라면</li>
+        <li class="hae">
+            해물라면
+            <ul>
+                <li>꽃게라면</li>
+                <li>홍합라면</li>
+                <li>새우라면</li>
+            </ul>
+        </li>
+        <li class="yook" id="sa">육개장 사발면</li>
+        <li class="yook" id="cup">육개장 큰컵</li>
+        <li class="cup">컵누들</li>
+        <li class="bi">비빔면</li>
+        <li class="ra">라면볶이</li>
+        <li class="jjam">
+            짬뽕라면
+            <ul>
+                <li class="jin2">진짬뽕</li>
+                <li>오짬</li>
+                <li>나가사키짬뽕</li>
+                <li>볶음짬뽕</li>
+            </ul>
+        </li>
+    </ul>
+    <p class="yook">p태그에 작성된 육개장</p>
+        
+</body>
+</html>

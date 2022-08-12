@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 table</title>
+</head>
+<body>
+    <h1>table</h1>
+    <ol>
+        <li>table 태그는 표를 만들 때 사용하는 태그</li>
+        <li>옛날 홈페이지를 제작하는 방식인데 수정이 어렵고, 잘 일그러져서 수정하고 확인하고를 반복해야 한다</li>
+        <li>행(row)과 열(Column)로 구성된다. 오-가로와 열-세로, 행-가로 종-세로</li>
+        <li>table -> tr -> tr/td 의 순서로 마크업 한다 tr, td, th는 모두 자식 요소로 들어오는 태그</li>
+        <li>
+            table에 속성값으 추가해서 선을 만들고
+            (border="선 굵기"), 선의 간격
+            (cellspacing="간격 수치") 과 셀의 여백
+            (cellpadding="간격 수치") 과 표의 넓이
+            (width="너비값"), 표의 높이
+            (height=높이값") 을 조절 할 수 있다
+        </li>
+
+        <li>tr태그에 align 속성으로 내용의 글자를 정리</li>
+        <li><b>td: </b>열(Column)을 정의할 때 사용하는 태그</li>
+        <li><b>th : </b>td와 같은 기능, 제목역할을 하는 셀을 정의할 때 사용</li>
+
+    </ol>
+    <br><br><br>
+    <table border="1">
+        <tr>
+            <td>1행 1열</td>
+            <td>1행 2열</td>
+            <td>1행 3열</td>
+            
+        </tr>
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+            <td>2행 3열</td>
+        </tr>
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+            <td>3행 3열</td>
+        </tr>
+    </table>
+
+    <br><br>
+
+    <table border="1">
+        <tr> <!-- tr 줄 -->
+            <td>1행 1열</td>
+            <td>1행 2열</td> <!-- td 칸 -->
+        </tr>
+            
+        <tr>
+            <td>2행 1열</td>
+            <td>2행 2열</td>
+        </tr>
+
+        <tr>
+            <td>3행 1열</td>
+            <td>3행 2열</td>
+        </tr>
+
+        <tr>
+            <td>4행 1열</td>
+            <td>4행 2열</td>
+        </tr>
+
+        <tr>
+            <td>5행 1열</td>
+            <td>5행 2열</td>
+        </tr>
+    </table>
+            
+    <br><br>
+    <table border="1" cellspacing="0" width="400" height="200">
+        <tr>
+            <th colspan="3">공연 요금</th> <!-- 셀 병합 -->
+        </tr>
+        <tr align="center">  <!-- 글자 정렬하기 -->
+            <th>구분</th> <!-- th의 기본값 : 중앙정렬, 글자 굵게 -->
+            <td>s석</td>
+            <td>vip</td>
+        </tr>
+
+        <tr align="center">
+            <th>성인</th>
+            <td>60,000원</td>
+            <td>100,000원</td>
+        </tr>
+
+        <tr align="center">
+            <th>청소년</th>
+            <td>40,000원</td>
+            <td>80,000원</td>  
+        </tr>
+
+        <tr align="center">
+            <th rowspan="2">공연 시간</th>
+            <td>1회</td>
+            <td>13:00-15:00</td>  
+        </tr>
+        <tr align="center">
+            <td>2회</td>
+            <td>17:00-19:00</td>  
+        </tr>
+    </table>
+</body>
+</html>

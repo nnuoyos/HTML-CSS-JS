@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ES6 최신문법</title>
+    </head>
+    <body>
+        <h1>ES6 Javascript 최신 문법</h1>
+        <textarea cols="150" rows="100">
+
+            1. 모던 자바스크립트, 모던 신텍스, 최신 문법 등으로 이야기 한다
+            2. ES 란? ECMAScript의 약자이고, 자바스크립트의 표준, 규격을 나타내는 용어. 자동차로 친다면 모델명 정도
+            3. 모든 언어는 업데이트를 한다. 처음부터 완벽하게 만들어서 나오진 않기 때문. 그 중에 가장 핫했던 업데이트가 ES6 이다
+            4. 뒤에 숫자는 버전을 나타낸다. ES4 -> ES5(2009)-> ES6(2015)
+            5. 문법을 나타내면 다음과 같다
+            -템플릿 리터럴
+                1. 사용법은 백틱` 으로 한다
+                2. `ES6 최신문법을 사용하는 나는 $(myName)이다`
+
+                ES5
+                var str1 = ', ';
+                var str2 = 'World!';
+                var str3 = 'Hello' + str1 + str2;
+                
+                ES6
+                let str1 = ', ';
+                let str2 = 'World!';
+                let str3 = `Hello ${str1} ${str2}`;
+
+            -객체 리터럴
+                1. 이전 문법보다 훨씬 간결해진 코드로 객체를 선언할 수 있다
+                2. 메소드에 더이상 콜론(:) 이나 function을 붙이지 않아도 된다
+                3. 함수명이 겹치는 경우에는 한번만 쓸 수 있다
+                4. 객체의 프로퍼티를 동적으로 생성하려면 객체 리터럴 바깥에서 [text + 1] 과 같이 선언했어야 했었다
+                5. ES6 부터는 객체 안에서 바로 속성으로 사용할 수 있게 되었다
+
+                const myFn = function(){
+                    console.log('myFn');
+                };
+                const text = 'TEXT';
+                const obj = {
+                    inside(){
+                        console.log('객체 안에 바로 함수를 선언');
+                    },
+                    myFn,
+                    [text + 1] : '프론트엔드'
+                };
+                obj.inside();           //출력값 : 객체 안에 바로 함수 선언
+                obj.myFn();             //출력값 : myFn
+                console.log(obj.TEXT1); //출력값 : 프론트엔드
+
+
+            -화살표 함수 (arrow function)
+                1. 함수 표현식을 화살표 함수로 표현 할 수 있다
+                2. 화살표 함수가 추가되어 함수를 간결하게 나타낼 수 있게 되어 가독성 및 유지 보수성이 올라갔다
+                3. 만약 함수의 본문에 return 만 있는 경우 화살표 함수는 return과 {}를 생략할 수 있다. 단, 둘이 같이 생략해야 함
+                4. return문에서 소괄호는 사용 가능
+
+                    ES5
+                    function plusFn(a, b){
+                        return a+b;
+                    };
+
+                    ES6
+                    // 함수 표현식 - 화살표 함수, arrow function
+                    const plusFn = (a, b) => {
+                        return a+b;
+                    }
+
+                    //함수 표현식 - 화살표 함수 (생략형)
+                    const plusFn = (a, b) => a + b;
+
+                    const 함수이름 = () => {}
+
+                5. 일반함수에는 있지만 화살표함수에는 없는 것. this 키워드
+                    - this 란? this는 나, 본인, 자기자신, 지금 이거!
+                    
+                    //this 예제
+                    let age = 30;
+                    let person = {
+                        name : '홍길동',
+                        age : 20,
+                        getInfo : function(){
+                            console.log(age)
+                        }
+                    }
+                    person.getInfo()
+
+
+                    // 전역변수 age 말고, 객체 안에 있는 age를 불러들이기 위해 this를 사용
+                    let age = 30;
+                    let person = {
+                        name : '홍길동',
+                        age : 20,
+                        getInfo : function(){
+                            console.log(this.age)
+                        }
+                    }
+                    person.getInfo()
+
+                    //객체 안에 함수를 arrow function 으로 바꾸면?
+                    let age = 30;
+                    let person = {
+                        name : '홍길동',
+                        age : 20,
+                        getInfo : () => {
+                            console.log(this.age) //Undefined 문구가 콘솔에 나온다
+                        }
+                    }
+                    <!-- Undefined : 변수는 존재하나, 어떠한 값으로도 할당되지 않아 자료형이 정해지지(undefined) 않은 상태 -->
+                    person.getInfo()
+                6. arrow function 에서 this는 나를 불러준 함수 또는 객체, 기타등등이 포함 되어 있는 가장 최상위의 공간을 this로 인식
+                let age = 30;
+                let person = {
+                    name : '홍길동',
+                    age : 20,
+                    getInfo : () => {
+                        console.log(this)
+                    }
+                }
+                person.getInfo()
+                7. 위의 함수 안에 this 생성 방식을 렉시컬스코프 (lexical scope) 라고 한다
+                    
+                8. 함수가 포함된 영역을 가리키는 상황이 필요하다면 일반함수를 사용하고 그게 아니라면 화살표함수를 사용하면 된다
+                //화살표 함수는 익명함수로만 사용할 수 있다 스스로 this를 생성할 수 없다. this는 일반함수에서만 사용 가능
+                //일반 함수에서 this는 함수가 어떻게 호출 되는지에 따라 this 바인딩이 동적으로 결정되는데,
+                //화살표함수는 this가 정적으로 결정 된다. 언제나 상위 스코프의 this를 가리킨다
+                9. 화살표 함수를 쓰면 안되는 경우
+                    *Object 안에서 함수 정의시
+                        const person = {
+                            points : 20,
+                            score : function () {
+                                this.points++; // 여기에서는 화살표함수를 쓰면 points가 증가 되지 않는다
+                            }
+                        }
+                    *프로토타입 함수
+                        class Car{
+                            constructor(make,color){
+                                this.make = make;
+                                this.color = color;
+                            }
+                        }
+                        let hyundai = new Car("MrJung","Blue")
+                        Car.prototype.summary = function(){
+                            console.log(`This car is a ${this.make} in the color ${this.color}`)
+                            //여기서 화살표함수를 쓰면 사용이 불가능해진다
+                        }
+                        hyundai.summary();
+                
+            -변수 선언 키워드
+                1. 기존에 사용되던 변수 선언의 키워드는 var 이다
+                2. 추가된 키워드 let과 const
+                3. 블로스코프를 가지고 재선언 불가 재할당 가능한 let 변수 선언 키워드
+                4. 상수 선언 키워드 const 추가 됨
+                5. 기존의 var 키워드만 있었을 때 보다 예측 가능한 코드를 작성할 수 있게 됐다
+
+            -모듈(Module)
+                1. 모듈이란 재사용하기 위한 코드의 조각을 뜻한다
+                2. 세부사항은 캡슐화 시키고, API 부분만 외부에 노출시킨 코드이다
+                3. type에 module을 추가시키고, 확장자를 mjs로 변경하여 사용한다
+                4. 모듈은 모듈스코프를 가지며, import와 export 키워드를 이용하여 사용한다
+                    <!-- <script type="module" src="lib.msj"></script> -->
+
+
+            -구조 분해 할당
+                1. 구조 분해 할당이란 펼치다 라는 뜻
+                2. 객체나 배열에서 사용
+                3. 값을 해체한 후 개별 값을 변수에 새로 할당하는 과정
+                    //배열에서 Spread 사용
+                    const arr = [1,2,3];
+                    const [one, two, three] = arr;
+                    one     //1
+                    two     //2
+                    three   //3
+
+                    //객체에서 Spread 사용
+                    const obj = {
+                        firstName : '프론트'
+                        lastName: '엔드'
+                    };
+                    const {firstName, lastName} = obj;
+                    firstName   //프론트 
+                    lastName    //엔드
+
+                4. 객체 초기화 방법
+                    let name = "SoYoung"
+                    let age=20
+                    위의 데이터들을 가지고, 객체를 만든다면 다음과 같았다
+                    let person = {
+                        이름: name, 
+                        나이: age
+                    }
+                    바뀐 방법으로 만들면 다음과 같다
+                    let person = {name, age}
+
+                5. 객체 분해 방법
+                    
+                    let bts = {
+                        name : "방탄소년단",
+                        num : 7
+                    }
+                    //기존에 우리가 사용하던 방법
+                    let name = bts.name
+                    let num = bts.num
+                    //ES6의 최신 문법
+                    let {name,num} = bts;
+                    //새로운 변수 이름으로 할당 (객체의 원본을 바꾸지 않고, 생성되는 새로운 변수이름)
+                    let { name: userName, num: userNum } = bts;
+                
+                6. 배열 
+                    let array = [1,2,3]
+                    // 기존에 우리가 사용하던 방법
+                    let a = array[0] 
+                    let b = array[1] 
+                    let c = array[2]
+                    //ES6 최신 문법
+                    let [a,b,c]=array
+                    let [a, ...rest] = array
+                        *스프레드 연산자 (Spread Operator) : ... '객체에서도 사용 가능 하다'
+                        let a = [1,2]
+                        let b = [3,4]
+                        let c = [5,6]
+                        //기존 사용 방법
+                        let result = a.concat(b,c) // [1,2,3,4,5,6] 배열을 이어 붙여준다
+                        //스프레드 연산자 활용방법
+                        let result = [...a, ...b, ...c] //a에 있는 내용 다 들고오기, b에 있는 내용 다 들고 오기...
+            -Class
+                1. 자바스크립트는 프로토타입 기반의 객체 지향 언어이다
+                2. 클래스 기반의 객체 지향 프로그래밍도 할 수 있도록 class 키워드를 도입하였다.
+                3. 자바스크립트에서 클래스는 내부적으로 프로토타입을 이용해서 만들어졌다.
+                4. 클래스는 사실 특별한 함수이다.
+                5. 클래스는 호이스팅이 let, const 키워드 처럼 동작한다.
+            
+            -Promise (프로미스)
+                1. 자바스크립트에서 비동기 처리를 기존에는 콜백함수를 사용한, 콜백 패턴을 사용했었다.
+                    *콜백함수 ? 파라미터로 함수를 전달하는 함수. 파라미터로 함수를 전달받아 함수 내부에서 실행하는 함수
+
+                    function add (a, b){
+                        return a+b;
+                    }
+                    function sayResult(value){
+                        console.log(value);
+                    }
+                    sayResult(add(3,4));
+
+                    위의 코드를 콜백함수를 사용한 코드로 바꾸면 아래와 같다.
+                    function add(a,b, callback){
+                        callback(a+b)
+                    }
+                    function sayResult(value){
+                        console.log(value)
+                    }
+                    add(3,4,sayResult);
+
+                    *콜백 패턴이란? 파라미터에 인자로 전달되는 함수 뒤에 ()를 붙이지 않고 전달함으로서, 실행되는 타이밍을
+                    콜백함수 내부로 옮기는 것. 그런 패턴을 의미한다
+
+                2. 결과적으로는 콜백지올(콜백헬)을 발생 시켰다.
+                    *콜백헬(CallbackHell) 이란? 코드가 점점점 깊게 딥하게 들어가는 것
+                3. 이를 해결하기 위해 프로미스가 도입 됨.
+                4. 프로미스 후속처리 메소드를 이용해 에러처리를 효과적으로 할수 있게 되었다.
+                5. 프로미스는 자바스크립트 비동기 처리에 사용되는 객체이다.
+                6. 프로미스의 3가지 상태
+                    *Pending(대기)          : 비동기 처리 로직이 아직 완료되지 않은 상태
+                        - new Promise();    //pending 상태
+                            new Promise(function(resolve, reject){
+                                내용...내용
+                            })
+
+                    *Fulfilled(이행)        : 비동기 처리가 완료되어 프로미스가 결과값을 반환해준 상태
+                        -위의 pending 상태에서 콜백함수의 인자인 resolve를 실행하면 Fulfilled 상태가 되어진다
+
+                            new Promise(function(resolve, reject){
+                                resolve();
+                            });
+
+                            function playPromise(){
+                                return new Promise(function (resolve,reject){
+                                    let data = 100;
+                                    resolve(data);
+                                })
+                            }
+                            playPromise().then(function(resolveData){
+                                console.log(resolveData); // 100 출력
+                            });
+
+                    *Rejected(실패)         : 비동기 처리가 실패하거나 오류가 발생한 상태
+                        - 위의 대기 상태에서 콜백 함수의 인자인 reject를 실행하면 실패 상태가 되어진다.
+                            new Promise(function(resolve, reject){
+                                reject();
+                            });
+
+                            function playPromise(){
+                                return new Promise(function(resolve,reject){
+                                    reject(new Error("실패"));
+                                })
+                            }
+                            playPromise().then().catch(function(err){
+                                console.log(err) // 실패 가 출력 된다
+                            })
+
+
+        </textarea>
+        <script>
+            /*
+                //화살표 함수
+                    function pooh() {
+                    console.log('곰돌이 푸우');
+                } */
+
+            /* let pooh = () => {
+                    console.log('곰돌이 푸우');
+                };
+
+                pooh(); */
+
+            /* function pooh() {
+                    return '푸우는 꿀을 좋아해';
+                }
+                console.log(pooh()); */
+
+            /* let pooh = () => '푸우는 꿀을 좋아해!!';
+                console.log(pooh()); */
+
+            /*
+
+                let age = 30;
+                let person = {
+                    name: '홍길동',
+                    age: 20,
+                    getInfo: function () {
+                        console.log(age);
+                    },
+                };
+                person.getInfo(); */
+
+            /*
+
+                let age = 30;
+                let person = {
+                    name: '홍길동',
+                    age: 20,
+                    getInfo: function () {
+                        console.log(this.age);
+                    },
+                };
+                person.getInfo(); */
+
+            //화살표 함수는 익명함수로만 사용할 수 있다 스스로 this를 생성할 수 없다. this는 일반함수에서만 사용 가능
+            //일반 함수에서 this는 함수가 어떻게 호출 되는지에 따라 this 바인딩이 동적으로 결정되는데,
+            //화살표함수는 this가 정적으로 결정 된다. 언제나 상위 스코프의 this를 가리킨다
+
+            /*
+                //화살표 함수
+                let 이름 = 'SoYoung';
+                let 나이 = 20;
+                let person = { 이름, 나이 };
+                console.log(person); */
+
+            /*
+                //객체 구조 분해 : 새로운 변수 이름으로 할당
+                let bts = {
+                    name: '방탄소년단',
+                    num: 7,
+                };
+                let name = bts.name;
+                let num = bts.num;
+
+                let { name: userName, num: userNum } = bts;
+                console.log(userName, userNum); */
+
+            /*
+                //스프레드 연산자 ...rest
+                let array = [1, 2, 3];
+                let [a, ...rest] = array;
+                console.log(a, rest);
+                console.log(array);
+
+                let person = {
+                    name: '장소영',
+                    age: 20,
+                    cute: true,
+                };
+                let { name, age, cute } = person;
+                console.log(name, age, cute); */
+
+            /*
+                //객체 배열 스프레드 연산자
+                let a = [1, 2];
+                let b = [3, 4];
+                let c = [5, 6];
+
+                //let result = a.concat(b, c);
+                let result = [...a, ...b, ...c];
+                console.log(result); //[1,2,3,4,5,6] */
+
+            /*
+                //프로토타입
+                class Car {
+                    constructor(make, color) {
+                        this.make = make;
+                        this.color = color;
+                    }
+                }
+                let hyundai = new Car('MrJung', 'Blue');
+                //프로토타입은 예를 들면, 차를 구매해서 그 차에 튜닝을 하여도 차 원본 자체는 그대로이다 튜닝과정이 프로토타입
+                Car.prototype.summary = function () {
+                    console.log(`This car is a ${this.make} in the color ${this.color}`);
+                    //여기서 화살표함수를 쓰면 사용이 불가능해진다
+                };
+                hyundai.summary();
+                console.log(Car);
+                console.log(hyundai); */
+
+            /*
+                문제1
+                다음 코드를 ES6문법을 이용하여 재작성 하시오
+                let name="Jihun's fruit store"
+                let fruits = ["banana","apple","mango"]
+                let address = "Ulsan"
+
+                let store ={ name:name , fruits:fruits, address:address}
+                console.log(store)
+                */
+            /*   let store = {
+                    name: "Jihun's fruit store",
+                    fruits: ['banana', 'apple', 'mango'],
+                    address: 'Ulsan',
+                }; */
+            //console.log(store);
+            /*  let name="Jihun's fruit store"
+                let fruits = ["banana","apple","mango"]
+                let address = "Ulsan"
+                let store ={ name, fruits, address}
+                console.log(store); */
+
+            /*
+                문제2
+                ES6 문법을 이용하여 다음과 같이 출력하기
+                제 가게 이름은 Jihun's fruit store 입니다. 위치는 Ulsan에 있습니다
+                */
+            /* let store = {
+                    name: "Jihun's fruit store",
+                    fruits: ['banana', 'apple', 'mango'],
+                    address: 'Ulsan',
+                };
+                console.log(`제 가게 이름은 ${store.name} 입니다. 위치는 ${store.address} 입니다`); */
+
+            /*
+                문제3
+                다음 코드를 구조,분해,할당(디스트럭팅)을 이용하여 해결하시오
+                함수 안을 바꿔야 함!
+                */
+            /*     function calculate(obj) {
+                    let { a, b, c } = obj;
+                    return a + b + c;
+                }
+                calculate({ a: 1, b: 2, c: 3 });
+                console.log(calculate); */
+            /*
+                문제4
+                다음 문제에 정답이 true가 나오게 하시오
+
+                */
+            let name = 'JiHun store';
+            let fruits = ['banana', 'apple', 'mango'];
+            let address = {
+                country: 'Korea',
+                city: 'Ulsan',
+            };
+            //객체 안의 객체를 불러올 때
+            function findStore(obj) {
+                let {
+                    name,
+                    address: { city },
+                } = obj;
+                return (name = 'JiHun store' && city == 'Ulsan');
+            }
+            console.log(findStore({ name, fruits, address }));
+        </script>
+    </body>
+</html>

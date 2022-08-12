@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ex10_슬라이드 자동재생</title>
+        <link rel="stylesheet" href="./css/ex10.css" />
+    </head>
+    <body>
+        <div class="slide">
+            <div class="sImg">
+                <div class="sImgBox">
+                    <a href="#"><img src="./img/mv1.jpg" alt="banner1" /></a>
+                </div>
+                <!--  <a href="#"> : #의 의미는 새로고침 하겠다는 의미 -->
+                <div class="sImgBox">
+                    <a href="#"><img src="./img/mv2.jpg" alt="banner2" /></a>
+                </div>
+                <div class="sImgBox">
+                    <a href="#"><img src="./img/mv3.jpg" alt="banner3" /></a>
+                </div>
+                <div class="sImgBox">
+                    <a href="#"><img src="./img/mv4.jpg" alt="banner4" /></a>
+                </div>
+            </div>
+            <div class="sPager">
+                <ul>
+                    <li class="active">01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                </ul>
+                <p class="sPlay"><span>재생하기</span></p>
+                <p class="sStop"><span>일시정지</span></p>
+            </div>
+            <div class="sPrev"><span>이전으로</span></div>
+            <div class="sNext"><span> 다음으로</span></div>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="./js/ex10.js"></script>
+    </body>
+</html>

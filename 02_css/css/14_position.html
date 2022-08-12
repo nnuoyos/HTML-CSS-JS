@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* reset */
+        *{/* *<<별모양은 전체all을 의미한다 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* exam */
+        .box{
+            position: relative;
+            /* 위치를 재배치할 absolute의 기준점 */
+            width: 100%;
+            height: 100vh; /* vh = 화면에 보여지는 비율을 얼만큼 채울 것인지의 단위 */
+            background-color: antiquewhite;
+        }
+        .box > .con1{
+            position: absolute;
+            /* "위치 재배치 할 것이다" 라고 선언한 상태! absolute를 넣는 순간 붕 뜨는 상태가 되버림 */
+            bottom: 100px;
+            right: 0px;
+            width: 80px;
+            height: 50px;
+            background-color: thistle;
+        }
+        .box > .con2 {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            width: 100px;
+            height: 60px;
+            background-color: royalblue;
+        }
+        .box > .con3 > span{
+            position: absolute;/* 블락요소 속성을 가져서 박스가 커짐 */
+            /* 배치기준점인 relative까지 가기전인 바로 상위(부모요소)에 position: fixed가 있으므로
+            그것을 기준으로 위치가 잡힌다 */
+            bottom: 0;
+            left: 50px;
+            width: 60px;
+            height: 30px;
+            background-color: blueviolet;
+        }
+        /* position: absolute 끝 */
+        .box > .con4{
+            position: sticky;
+            top: 100px;
+
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+        .box2{
+            width: 100;
+            height: 100vh;
+            background-color: forestgreen;
+            /* 스티키 박스가 어디까지 내려오는지 구분하기위해 만든 배경 */
+        }
+        .box > .con3{
+            position: fixed;
+            top: 100px;
+            right: 0;
+            width: 300px;
+            height: 200px;
+            background-color: aqua;
+        }
+        /* fixed는 relative랑 상관없이 스크린 기준이므로 계속 따라다님 */
+    </style>
+</head>
+<body>
+    <h1>position: 요소의 위치 지정방법 유형을 지정</h1>
+    <ol>
+        position 속성값
+        <li>static : 원래 기존의 상태</li>
+        <li>relative : absolute 영역 기준점</li>
+        <li>absolute : 상위요소의 relative를 기준으로 위치를 재배치 <br>
+        relative가 상위요소(형제태그 아님!)에 오고, absolute가 하위요소에 위치한다<br>
+        더 가까운 상위요소에 position속성값을 가진 요소가 있다면, 그 요소를 기준으로 배치된다 </li>
+        <li>fixed : 요소의 위치를 스크린을 기준으로 배치</li>
+        <li>sticky : 필수적으로 top, bottom, left, right 중에 하나를 설정해 주어야 하고, <br>
+            설정된 위치에 도달전까지는 static 처럼 행동하다가 위치에 다다르면 fixed처럼 행동</li>
+        <li>relative가 없이 absolute단독으로 사용될 경우, body를 기준으로 배치된다(기준점이 없이 배치가 붕 떠서 상단으로 올라감)</li>
+        <li>position과 함께 사용되는 속성
+            <ul>
+                <li>top, bottom, left, right</li>
+                <li>relative된 기준점으로 부터의 위치값을 지정하는 속성</li>
+                <li>단위: px, %, auto 0</li>
+                <li>단위를 음수로 사용도 가능하다</li>
+            </ul>
+        </li>
+        <li>span이나 a태그 같은 인라인요소에 absolute값을 주게되면 블락속성을 가지게 된다</li>
+      
+    </ol>
+    <br><br><br>
+    <div class="box">
+        <p  class="con1">content1</p>
+        <p class="con2">content2</p>
+        <p class="con3">content3
+        <span>span</span>
+        </p>
+        <p class="con4">sticky</p>
+    </div>
+    <!-- box -->
+    <div class="box2"></div>
+</body>
+</html>

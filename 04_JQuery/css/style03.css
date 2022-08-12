@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.box1 {
+    height: 100px;
+    background-color: antiquewhite;
+}
+.box2 {
+    display: flex;
+}
+.box2 > p {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px 0 0;
+    background-color: yellow;
+}
+.box2 > .p21 {
+    display: none;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border-radius</title>
+    <style>
+        /* 내부스타일 만들기 */
+        li{
+            width: 150px;
+            height: 100px;
+            margin: 0 0 30px 0;
+            color: #fff;
+            font-size: 28px;
+            background-color: tomato;
+        }
+        li:first-child{
+            border-radius: 20px;
+        }
+        li:nth-child(2){
+            border-radius: 20%;
+        }
+        li:nth-child(3){
+            height: 150px;
+            border-radius: 50%;
+        }
+        li:last-child{
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>border-radius: 둥근 모서리</h1>
+    <p>속성값: px, %</p>
+    <p>
+        원을 그릴 때는 border-radius값을 50%로 작성하면 된다(정 원을 그릴 경우 너비 높이 값을 일치시키면 됨)
+    </p>
+    <p>
+        border-radius: 10px 20px 30px 40px;<br>
+        >좌상단(10px) 우상단(20px) 우하단(30px) 좌하단(40px)
+    </p>
+    <p>img 태그에도 적용된다</p>
+    <br><br>
+    <ul>
+        <li>20px</li>
+        <li>20%</li>
+        <li>원그리기</li>
+        <li>10px 20px 40px 30px</li>
+    </ul>
+</body>
+</html>
