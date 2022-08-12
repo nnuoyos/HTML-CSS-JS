@@ -63,6 +63,34 @@
                 -컴포넌트를 나누는 기준은 없다. 시스템에 따라, 호ㅚ사에 따라 그 규칙은 바뀔 수 있지만
                 배우는 입장이라면, 컴포넌트를 앞의 기준으로 나누는게 좋다
 
+            6. 스테이트(State)
+                -state를 const로 선언하는 이유
+                    자바스크립트에서 함수같은 것들을 const로 선언하면 변수의 값을 바꿀 수 있다
+                    근데 state의 값은 계속 바뀌는데 왜 let이 아니라 const로 선언하는지 이유는 다음과 같다
+
+                    useState를 구현해보자면 다음과 같다
+
+                    function MyReact{
+                        function(){
+                            let val
+                            useState(inivialValue){
+                                val = val | inivialValue
+                                function setState(newValue){
+                                    val = newValue
+                                }
+                                return[val, setState]
+                            }
+                        }
+                    }
+                    const[counter, setCounter] = MyReact.useState(0)
+
+                    state는 일반 변수와 다르게, setState를 이용해서 값을 변경한다
+                    이런식으로 함수 내부의 변수가 함수 수명이 끝나더라도 변수의 참조가 계속 된다면 그 변수의 수명은 계속 되는데
+                    이런 것을 클로저라고 한다 컴포넌트가 render가 되더라도 State가 기억할 수 있게 된다
+
+                    하지만 let을 사용하게 된다면 counter2 = 100 과 같은 변수형식의 할당이 가능해진다
+                    따라서 이를 방지하고 setState 함수를 사용한 변수 변경만 허락해주기 위해서 const로 선언한다 
+                    (const로 선언하면 변수 형태의 재할당을 막을수 있기 때문)
                 
         </textarea>
     </body>
