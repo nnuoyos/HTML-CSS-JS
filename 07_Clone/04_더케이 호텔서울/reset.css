@@ -1,24 +1,11 @@
 @charset "utf-8";
-
 * {
     margin: 0;
     padding: 0;
 }
-body,
-button,
-input {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #121212;
-}
 a {
     text-decoration: none;
-}
-img,
-button,
-input {
-    vertical-align: top;
+    color: inherit;
 }
 button,
 input {
@@ -28,20 +15,9 @@ input {
 button {
     cursor: pointer;
 }
-fieldset {
-    border: 0;
-}
 ul {
     list-style: none;
 }
 address {
     font-style: normal;
-}
-.hide {
-    position: absolute;
-    top: -99999px;
-    left: -99999px;
-    width: 0;
-    height: 0;
-    overflow: hidden;
 }
