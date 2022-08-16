@@ -1,3 +1,4 @@
+
 let image = $('.photoBox');
 let pager = $('.pager li');
 //활성화 중인 대상의 순서값 저장

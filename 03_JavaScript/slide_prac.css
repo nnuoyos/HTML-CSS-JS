@@ -1,0 +1,61 @@
+body{
+    margin-top: 5em;
+}
+li{
+    list-style: none;
+    text-align: center;
+}
+.container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider-container{
+    position: absolute;
+    width: 100%;
+}
+.slide{
+    position: absolute;
+    width: 100%;
+    padding: 0 10%;
+    box-sizing: border-box;
+    /* 슬라이드 안의 내용의 크기가 다르더라도 센터에 위치하게 함 */
+    top: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    overflow: hidden;
+}
+.slider-container.animated{
+    -webkit-transition: left .3s ease-in;
+    transition: left .3s ease-in;
+}
+blockquote{
+    color: #636363;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 1.5em;
+}
+#prev,
+#next{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    z-index: 999999;
+    display: inline-block;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+/* #prev.disabled, #next.disabled {display: none;} */
+#prev{
+    background-image: url(./img/a_left.png); margin-left: -480px;
+}
+#next{
+    background-image: url(./img/a_right.png);
+    margin-left: 380px;
+}
