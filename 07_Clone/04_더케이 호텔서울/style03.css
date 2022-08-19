@@ -208,8 +208,8 @@
     /* main02 */
     #main02 {
         /* position: relative; */
-        background-color: rgba(251, 251, 251, 0.884);
         width: 100%;
+        background-color: rgba(251, 251, 251, 0.884);
         margin-top: 0px;
     }
     .main02_inner {
@@ -235,10 +235,10 @@
         color: #666;
     }
     .slide_box {
+        position: relative;
         display: flex;
         flex-wrap: nowrap;
         overflow: hidden;
-        position: relative;
         width: 100%;
     }
     .slide_box img {
