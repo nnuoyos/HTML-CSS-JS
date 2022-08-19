@@ -457,31 +457,6 @@ li {
     letter-spacing: 0.5em;
 }
 /* tab menu */
-.tab_menu {
-    position: relative;
-    background-color: yellowgreen;
-}
-.tab_menu .tab_list {
-    overflow: hidden;
-}
-.tab_menu .tab_list li {
-    float: left;
-    margin-right: 14px;
-    width: 100%;
-}
-.tab_menu .tab_list .tabContents {
-    display: none;
-    position: absolute;
-    background-color: yellow;
-    color: #fff;
-}
-.tab_menu .tab_list li.is_on .btn {
-    font-weight: bold;
-    color: green;
-}
-.tab_menu .content_area .contents {
-    position: absolute;
-}
 
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {

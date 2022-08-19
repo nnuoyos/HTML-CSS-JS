@@ -83,7 +83,7 @@ for (let i = 0; i < maxSlide; i++) {
 }
 
 /* tab menu */
-const tabList = document.querySelectorAll('.tab_menu .tab_list li');
+/* const tabList = document.querySelectorAll('.tab_menu .tab_list li');
 const contents = document.querySelectorAll('.tab_menu .content_area .content');
 let activeCont = ''; //현재 활성회 된 컨텐츠 첫번째 사진 (서울 탭)
 
@@ -106,3 +106,4 @@ for (let i = 0; i < tabList.length; i++) {
         document.querySelector(activeCont).style.display = 'block';
     });
 }
+ */
