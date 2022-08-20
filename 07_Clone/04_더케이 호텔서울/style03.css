@@ -208,8 +208,8 @@
     /* main02 */
     #main02 {
         /* position: relative; */
-        width: 100%;
         background-color: rgba(251, 251, 251, 0.884);
+        width: 100%;
         margin-top: 0px;
     }
     .main02_inner {
@@ -235,10 +235,10 @@
         color: #666;
     }
     .slide_box {
-        position: relative;
         display: flex;
         flex-wrap: nowrap;
         overflow: hidden;
+        position: relative;
         width: 100%;
     }
     .slide_box img {
@@ -317,7 +317,7 @@
     }
     /* main03 */
     #main03 {
-        /* position: relative; */
+        position: relative;
         width: 100%;
         height: 550px;
         margin-top: 0px;
@@ -328,8 +328,8 @@
     }
     .package_box {
         margin: 0 auto;
-        width: 290px;
-        height: 100px;
+        /* width: 290px;
+        height: 100px; */
         margin-top: 30px;
         padding: 30px;
         text-align: center;
@@ -345,10 +345,11 @@
         color: #666;
     }
     .slide_box_main03 {
+        position: relative;
+        width: 100%;
         display: flex;
         flex-wrap: nowrap;
         overflow: hidden;
-        position: relative;
         width: 100%;
     }
     .slide_box_main03 img {
@@ -364,17 +365,20 @@
         height: auto;
     }
     .main03_slide_textbox {
-        position: relative;
         height: 70px;
         background-color: #fff;
         padding: 20px;
         text-align: left;
     }
     .text_title_main03 {
+        width: 250px;
         margin-bottom: 10px;
         font-weight: 600;
         color: #444;
         font-size: 17px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     .text_date_main03 {
         color: #777;
@@ -395,9 +399,9 @@
     .slide_pagination {
         /* position: absolute; */
         display: flex;
-        gap: 3px;
-        margin-top: 10px;
-        margin-left: 35%;
+        gap: 0px;
+        margin-top: 5%;
+        justify-content: center;
     }
     .slide_pagination ul,
     li {
@@ -416,10 +420,9 @@
         margin: 0 5px;
         background-color: #ccc;
         cursor: pointer;
-        text-indent: -9999px; /* 텍스트 안보이게 하기 => 뒤로 날리기 */
+        text-indent: -9999px;
     }
     .slide_pagination li .active {
-        /* 현재 슬라이드 색상은 투명도 없이 */
         color: #909daf;
     }
     .slide_pagination .active {

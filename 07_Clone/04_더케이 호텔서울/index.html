@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="http://code.jquery.com/jquery-latest.js"></script> 
         <link rel="stylesheet" href="./reset.css" />
         <link rel="stylesheet" href="./style.css" />
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap" rel="stylesheet" />
@@ -335,36 +336,58 @@
             <!-- main03 end-->
             <section id="main04">
                 <div class="main04_inner">
-                    <h2 class="todo_title"># TO DO</h2>
-                    <div id="tab_btn">
-                        <ul>
-                            <li class="active"><a href="#">서울</a></li>
-                            <li><a href="#">경주</a></li>
-                            <li><a href="#">지리산</a></li>
-                        </ul>
-                        <div id="tab_cont">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_01.jpg" alt="[서울]성공적인비지니스" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_02.jpg" alt="[서울]성공적인비지니스" />
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_03.jpg" alt="[서울]성공적인비지니스" />
-                                    </a>
-                                </li>
+                    <h2 class="todo_title">#TO DO</h2>
+                    <div class="tab_warp">
+                        <div class="tab_box">
+                            <ul class="tabs_nav">
+                                <li><a href="#tab01">서울</a></li>
+                                <li><a href="#tab02">경주</a></li>
+                                <li><a href="#tab03">지리산</a></li>
                             </ul>
                         </div>
+                        <!-- .tab_box end -->
+                        <div class="tab_body">
+                            <div class="tabs_panel" id="tab01">
+                                <div class="tab_img">
+                                    <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_01.jpg" alt="[서울]성공적인비지니스"/>
+                                </div>
+                                <div class="content">
+                                    <div class="content_inner">
+                                        <h3 class="title">성공적인 비즈니스</h3>
+                                        <p class="hash_tag">#MICE행사 #만찬 #연회행사 #의미있는 만남 </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs_panel" id="tab02">
+                                <div class="tab_img">
+                                    <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_02.jpg" alt="[서울]성공적인비지니스"/>
+                                </div>
+                                <div class="content">
+                                    <div class="content_inner">
+                                        <h3 class="title">문화와 역사가 숨쉬는 경주로 떠나는 수학여행</h3>
+                                        <p class="hash_tag">#보문관광단지 #동궁과 월지 #첨성대 #불국사  </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs_panel" id="tab03">
+                                <div class="tab_img">
+                                    <img src="./반응형_더케이(클론코딩_참고자료)/img/todo_03.jpg" alt="[서울]성공적인비지니스"/>
+                                </div>
+                                <div class="content">
+                                    <div class="content_inner">
+                                        <h3 class="title">노고단 풍광 속에서 함께하는 특별한 단체여행</h3>
+                                        <p class="hash_tag">#38평 객실 #중소연회장 #휴스테이 힐링 이벤트</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .tab_body end -->
                     </div>
+                    <!-- .tab_warp end -->
                 </div>
+                <!-- .main04_inner end -->
             </section>
         </main>
-    </body>
+    </body>    
     <script src="./main.js"></script>
 </html>

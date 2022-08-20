@@ -440,7 +440,6 @@ li {
 }
 /* main04 TODO */
 #main04 {
-    /* position: relative; */
     width: 100%;
     height: 550px;
     margin-top: 50px;
@@ -448,15 +447,113 @@ li {
 .main04_inner {
     position: relative;
     width: 100%;
+    min-width: 320px;
     margin: 0 auto;
-    height: 600px;
+    height: 400px;
 }
 .main04_inner h2 {
     font-size: 24px;
     text-align: center;
     letter-spacing: 0.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 /* tab menu */
+.tab_box .tabs_nav{
+    min-width: 320px;
+    width: 100%;
+    display: table-cell;
+    font-weight: 600;
+    font-size: 14px;
+    color: #999;
+}
+.tab_box .tabs_nav li{
+    text-align: center;
+    width: 27%;
+    padding : 2em 0em;
+    float: left;
+    position: relative;
+    background-color: #ebebeb;
+}
+.tab_box .tabs_nav a{
+    display: block;
+    position: relative;
+}
+.tab_box .tabs_nav li:hover{
+    background-color: #fff;
+    color: #000;
+}
+.tab_box .tabs_nav li a.active::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    top: -28px;
+    height: 2px;
+    background-color: #000;
+}
+.tab_box .tabs_nav li a.active::before{
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    margin-left: 10px;
+    border-bottom: 10px solid #4b4b4b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: rotate(180deg);
+}
+.tab_box .tabs_nav li:nth-child(3) a.active::before{
+    position: absolute;
+    content: '';
+    bottom: -24px;
+    margin-left: 16px;
+    border-bottom: 10px solid #4b4b4b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    transform: rotate(180deg);
+}
+.tab_body{
+    position: relative;
+    height: 400px;
+}
+.tab_body .tab_img{
+    height: 100%;
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+}
+.tab_body .tab_img img{
+    position: absolute;
+    min-width: 320px;
+    width: 100%;
+    height: 80%;
+}
+.tab_body .content{
+    position: relative;
+    color: #fff;
+}
+.tab_body .content > .content_inner{
+    padding: 15px;
+    position: absolute;
+    top: 250px;
+    width: 92%;
+    min-width: 320px;
+    font-size: 10px;
+    font-family: sans-serif;
+    letter-spacing: -0.5px;
+    background-color: rgb(3, 3, 3, 0.5)
+}
+.content_inner .title{
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+.content_inner .hash_tag{
+    font-size: 11px;
+    font-weight: bolder;
+}
+
+
 
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {

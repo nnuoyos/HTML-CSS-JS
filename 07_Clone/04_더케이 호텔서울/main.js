@@ -29,7 +29,7 @@ for (let i = 0; i < maxSlide; i++) {
 }
 
 const paginationImg = document.querySelectorAll('.slide_pagination > li');
-console.log(paginationImg); //배열로 li들이 하나씩 들어있음
+/* console.log(paginationImg); */ //배열로 li들이 하나씩 들어있음
 
 //슬라이드 이동시 조건 마지막 이상 넘어가지 않게
 if (currSlide <= maxSlide) {
@@ -83,27 +83,25 @@ for (let i = 0; i < maxSlide; i++) {
 }
 
 /* tab menu */
-/* const tabList = document.querySelectorAll('.tab_menu .tab_list li');
-const contents = document.querySelectorAll('.tab_menu .content_area .content');
-let activeCont = ''; //현재 활성회 된 컨텐츠 첫번째 사진 (서울 탭)
+$(function () {
+    let tabAnchor = $('.tabs_nav li a');
+    let tabPanel = $('.tabs_panel');
 
-for (let i = 0; i < tabList.length; i++) {
-    tabList[i].querySelector('.btn').addEventListener('click', function (e) {
-        e.preventDefault();
-        for (let j = 0; j < tabList.length; j++) {
-            //나머지 버튼 클래스 제거
-            tabList[j].classList.remove('is_on');
-            //나머지 컨텐츠 display:none 처리
-            //조건문으로 가릴 때를 명시해주고 걸어줘야 안 막힌다
-            //투두리스트 타겟 조건문 참조하기
-            contents[j].style.display = 'none';
-        }
+    //링크를 클릭하면 할 일
+    tabAnchor.click(function(e){
+        e.preventDefault(); //링크의 기본 속성 막아놓기
+        //내가 클릭한 탭에만 active 부여하기
+        tabAnchor.removeClass('active'); //액티브 모두 제거
+        $(this).addClass('active'); //클릭이벤트가 발생한 그 요소에만 액티브 추가
 
-        //버튼 관련 이벤트
-        this.parentNode.classList.add('is_on');
-        //버튼 클릭시 컨텐츠 전환
-        activeCont = this.getAttribute('href');
-        document.querySelector(activeCont).style.display = 'block';
+        tabPanel.hide();
+        //tab 01 클릭하면 $('#tab01').show();
+        /* 어트리뷰트 불러오기 */
+        //let c = A.attr('href'); c라는 변수에 a링크 가져오기
+        let $target = $(this).attr('href');
+        //console.log($target); 클릭한 탭의 링크값이 콘솔에 찍힌다
+        //유저가 보고싶은 해당 탭은 target에 저장되어 있다 show로 보여주기
+        $($target).show();
     });
-}
- */
+});
+
