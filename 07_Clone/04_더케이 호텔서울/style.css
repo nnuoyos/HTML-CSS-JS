@@ -75,30 +75,47 @@ body {
     height: 3px;
     background-color: rgb(3, 3, 3);
     border-radius: 4px;
+    transition: all 0.4s;
 }
 .navbar_toggle_button span:nth-of-type(1) {
     top: 5px;
 }
-
 .navbar_toggle_button span:nth-of-type(2) {
     top: 12px;
 }
-
 .navbar_toggle_button span:nth-of-type(3) {
     top: 19px;
 }
-.menu-trigger.active-1 span:nth-of-type(1) {
-    -webkit-transform: translateY (20px) rotate (-45deg);
-    transform: translateY(20px) rotate(-45deg);
+.navbar_toggle_button.active-1 span:nth-of-type(1) {
+    transform: translateY(7px) rotate(-45deg);
 }
-
-.menu-trigger.active-1 span:nth-of-type(2) {
+.navbar_toggle_button.active-1 span:nth-of-type(2) {
     opacity: 0;
 }
-
-.menu-trigger.active-1 span:nth-of-type(3) {
-    -webkit-transform: translateY(-20px) rotate(45deg);
-    transform: translateY(-20px) rotate(45deg);
+.navbar_toggle_button.active-1 span:nth-of-type(3) {
+    transform: translateY(-7px) rotate(45deg);
+}
+/* 햄버거버튼 active 효과 */
+.menu_box.active {
+    background-color: #fff;
+    width: 100%;
+    height: 380px;
+    border-top: 1px solid #999;
+    z-index: 1;
+}
+.navbar_menu.active {
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    display: none;
+    padding-top: 40px;
+    margin-top: 40px;
+    flex-direction: column;
+    z-index: 1;
+}
+.navbar_menu.active,
+.navbar_language.active {
+    display: flex;
 }
 /* menu_box */
 .menu_box {
@@ -139,35 +156,6 @@ body {
 .navbar_language li:hover {
     color: #444;
     border-bottom: 1px solid #444;
-}
-/* .navbar_language {
-    display: none;
-    width: 55%;
-} */
-/* 햄버거버튼 active 효과 */
-.navbar_toggleBtn {
-    display: block;
-}
-.menu_box.active {
-    background-color: #fff;
-    width: 100%;
-    height: 380px;
-    border-top: 1px solid #999;
-    z-index: 1;
-}
-.navbar_menu.active {
-    position: relative;
-    width: 80%;
-    margin-left: 10%;
-    display: none;
-    padding-top: 40px;
-    margin-top: 40px;
-    flex-direction: column;
-    z-index: 1;
-}
-.navbar_menu.active,
-.navbar_language.active {
-    display: flex;
 }
 /* #main */
 #main {
@@ -250,7 +238,7 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 }
 .slide_box img {
@@ -324,8 +312,8 @@ li {
     cursor: pointer;
     text-indent: -9999px;
 }
-.slide_pagination li .active {
-    /* 현재 슬라이드 색상은 투명도 없이 */
+.slide_pagination li.active {
+    background-color: rgba(21, 41, 59, 0.849);
     color: #909daf;
 }
 .slide_pagination .active {
@@ -365,7 +353,7 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 100%;
 }
 .slide_box_main03 img {
@@ -470,7 +458,6 @@ li {
 .tab_box .tabs_nav li{
     text-align: center;
     width: 27%;
-    padding : 2em 0em;
     float: left;
     position: relative;
     background-color: #ebebeb;
@@ -478,8 +465,9 @@ li {
 .tab_box .tabs_nav a{
     display: block;
     position: relative;
+    padding : 2em 0em;
 }
-.tab_box .tabs_nav li:hover{
+.tab_box .tabs_nav li a.active{
     background-color: #fff;
     color: #000;
 }
@@ -488,14 +476,14 @@ li {
     content: '';
     display: block;
     width: 100%;
-    top: -28px;
+    top: 0px;
     height: 2px;
     background-color: #000;
 }
 .tab_box .tabs_nav li a.active::before{
     position: absolute;
     content: '';
-    bottom: -24px;
+    bottom: 5px;
     margin-left: 10px;
     border-bottom: 10px solid #4b4b4b;
     border-left: 5px solid transparent;
@@ -505,7 +493,7 @@ li {
 .tab_box .tabs_nav li:nth-child(3) a.active::before{
     position: absolute;
     content: '';
-    bottom: -24px;
+    bottom: 5px;
     margin-left: 16px;
     border-bottom: 10px solid #4b4b4b;
     border-left: 5px solid transparent;
@@ -526,20 +514,20 @@ li {
     position: absolute;
     min-width: 320px;
     width: 100%;
-    height: 80%;
+    height: 90%;
 }
 .tab_body .content{
-    position: relative;
+    position: absolute;
     color: #fff;
 }
 .tab_body .content > .content_inner{
     padding: 15px;
-    position: absolute;
-    top: 250px;
-    width: 92%;
+    position: relative;
+    top: 289px;
+    width: 100%;
     min-width: 320px;
+    width: 820px;
     font-size: 10px;
-    font-family: sans-serif;
     letter-spacing: -0.5px;
     background-color: rgb(3, 3, 3, 0.5)
 }
