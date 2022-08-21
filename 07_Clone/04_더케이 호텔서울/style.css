@@ -44,7 +44,6 @@ body {
 }
 .navbar_logo h1 {
     margin-left: -30px;
-    /* margin-top: 3px; */
     height: 23px;
     background-size: 80%;
     background-image: url(./반응형_더케이\(클론코딩_참고자료\)/img/logo_site.svg);
@@ -159,7 +158,7 @@ body {
 }
 /* #main */
 #main {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     min-width: 375px;
     height: auto;
@@ -169,19 +168,33 @@ body {
 /* main01 */
 #main01 {
     width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 57px;
 }
 .main01_inner {
-    /* position: relative; */
-    width: 100%;
+    position: relative;
+    display: flex;
+    height: 550px;
+    z-index: 3;
 }
-.main01_inner img {
+.main_slide{
     width: 100%;
+    height: 100%;
+}
+/* 슬라이드 속도 */
+#main01 ul{
+    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+.main01_inner .main01_img img {
+    width: 375px;
 }
 .main01_text_box {
-    position: absolute;
+    position: relative;
     z-index: 0;
     width: 100%;
-    top: 12%;
+    bottom: 42%;
     color: #fff;
     left: 9%;
     font-family: 'KHNPHD', sans-serif;
@@ -207,20 +220,17 @@ body {
 /* main02 */
 #main02 {
     position: relative;
-    background-color: rgba(251, 251, 251, 0.884);
     width: 100%;
-    margin-top: 0px;
+    height: 600px;
+    background-color: rgba(251, 251, 251, 0.884);
 }
 .main02_inner {
+    position: relative;
     margin: 0 auto;
-    background-color: rgba(251, 251, 251, 0.884);
     height: 600px;
 }
 .promotion_box {
     margin: 0 auto;
-    /* width: 310px;
-    height: 100px; */
-    margin-top: 30px;
     text-align: center;
     padding: 30px;
 }
@@ -228,9 +238,14 @@ body {
     font-size: 24px;
     letter-spacing: 0.5em;
     margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 .promotion_box p {
-    font-size: 14px;
+    margin: 0 auto;
+    width: 283px;
+    height: 45px;
+    font-size: 13px;
+    line-height: 19px;
     color: #666;
 }
 .slide_box {
@@ -238,7 +253,6 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    /* overflow: hidden; */
     width: 100%;
 }
 .slide_box img {
@@ -254,7 +268,6 @@ body {
     height: auto;
 }
 .main02_slide_textbox {
-    /* position: relative; */
     height: 70px;
     background-color: #fff;
     padding: 20px;
@@ -287,7 +300,6 @@ body {
     font-weight: 500;
 }
 .slide_pagination {
-    /* position: absolute; */
     display: flex;
     gap: 0px;
     margin-top: 5%;
@@ -312,8 +324,7 @@ li {
     cursor: pointer;
     text-indent: -9999px;
 }
-.slide_pagination li.active {
-    background-color: rgba(21, 41, 59, 0.849);
+.slide_pagination{
     color: #909daf;
 }
 .slide_pagination .active {
@@ -332,8 +343,6 @@ li {
 }
 .package_box {
     margin: 0 auto;
-    /* width: 290px;
-    height: 100px; */
     margin-top: 30px;
     padding: 30px;
     text-align: center;
@@ -342,9 +351,13 @@ li {
     font-size: 24px;
     letter-spacing: 0.5em;
     margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 .package_box p {
-    font-size: 14px;
+    margin: 0 auto;
+    width: 280px;
+    height: 60px;
+    font-size: 13px;
     line-height: 19px;
     color: #666;
 }
@@ -353,7 +366,6 @@ li {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    /* overflow: hidden; */
     width: 100%;
 }
 .slide_box_main03 img {
@@ -401,7 +413,6 @@ li {
     font-weight: 500;
 }
 .slide_pagination {
-    /* position: absolute; */
     display: flex;
     gap: 0px;
     margin-top: 5%;
@@ -429,8 +440,8 @@ li {
 /* main04 TODO */
 #main04 {
     width: 100%;
-    height: 550px;
-    margin-top: 50px;
+    height: 500px;
+    margin-top: 100px;
 }
 .main04_inner {
     position: relative;
@@ -439,12 +450,12 @@ li {
     margin: 0 auto;
     height: 400px;
 }
-.main04_inner h2 {
+.main04_inner .todo_title {
     font-size: 24px;
     text-align: center;
     letter-spacing: 0.5em;
     margin-bottom: 30px;
-    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
 }
 /* tab menu */
 .tab_box .tabs_nav{
@@ -540,9 +551,36 @@ li {
     font-size: 11px;
     font-weight: bolder;
 }
-
-
-
+/* main 05 OVERVIEW */
+#main05{
+    width: 100%;
+    height: 550px;
+}
+.main05_inner {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    margin: 0 auto;
+    height: 400px;
+}
+.main05_inner .overview_box{
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+.overview_box h1{
+    font-size: 29px;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.overview_box p{
+    margin: 0 auto;
+    width: 300px;
+    height: 56px;
+    font-size: 13px;
+    line-height: 19px;
+    color: #666;
+}
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {
     body {

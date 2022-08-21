@@ -9,9 +9,10 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script> 
         <link rel="stylesheet" href="./reset.css" />
         <link rel="stylesheet" href="./style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap" rel="stylesheet" />
         <script src="https://kit.fontawesome.com/fa4474c805.js" crossorigin="anonymous"></script>
-        <title>더케이호텔서울01</title>
+        <title>더케이호텔서울</title>
     </head>
     <body>
         <header id="header">
@@ -59,16 +60,53 @@
         <!-- header end-->
         <main id="main">
             <section id="main01">
-                <div class="main01_inner">
-                    <div class="main01_img">
-                        <img src="./반응형_더케이(클론코딩_참고자료)/img/visual_01_m.jpg" alt="" />
-                    </div>
-                    <div class="main01_text_box">
-                        <h1>The-K 호텔서울</h1>
-                        <p class="main01_text">최상의 서비스와 자연, 예술, 문화, 컨벤션이</p>
-                        <p class="main01_text text02">함께 어우러진 고품격 커뮤니티 호텔</p>
-                        <button class="main01_go_button">바로가기</button>
-                    </div>
+                <div class="container">
+                    <ul class="main01_inner" id="slide">
+                        <li class="main_slide" id="main_slide01">
+                            <div class="main01_img">
+                                <img src="./반응형_더케이(클론코딩_참고자료)/img/visual_01_m.jpg" alt="호텔서울" />
+                            </div>
+                            <div class="main01_text_box" id="seoul">
+                                <h1>The-K 호텔서울</h1>
+                                <p class="main01_text">최상의 서비스와 자연, 예술, 문화, 컨벤션이</p>
+                                <p class="main01_text text02">함께 어우러진 고품격 커뮤니티 호텔</p>
+                                <button class="main01_go_button">바로가기</button>
+                            </div>
+                        </li>
+                        <li class="main_slide" id="main_slide02">
+                            <div class="main01_img">
+                                <img src="./반응형_더케이(클론코딩_참고자료)/img/visual_02_m.jpg" alt="호텔경주" />
+                            </div>
+                            <div class="main01_text_box" id="kyungju">
+                                <h1>The-K 호텔경주</h1>
+                                <p class="main01_text">최상의 서비스와 자연, 예술, 문화, 컨벤션이</p>
+                                <p class="main01_text text02">함께 어우러진 고품격 커뮤니티 호텔</p>
+                                <button class="main01_go_button">바로가기</button>
+                            </div>
+                        </li>
+                        <li class="main_slide" id="main_slide03">
+                            <div class="main01_img">
+                                <img src="./반응형_더케이(클론코딩_참고자료)/img/visual_03_m.jpg" alt="지리산가족호텔" />
+                            </div>
+                            <div class="main01_text_box" id="jirisan">
+                                <h1>The-K 지리산가족호텔</h1>
+                                <p class="main01_text">최상의 서비스와 자연, 예술, 문화, 컨벤션이</p>
+                                <p class="main01_text text02">함께 어우러진 고품격 커뮤니티 호텔</p>
+                                <button class="main01_go_button">바로가기</button>
+                            </div>
+                        </li>
+                        <li class="main_slide" id="main_slide04">
+                            <div class="main01_img">
+                                <img src="./반응형_더케이(클론코딩_참고자료)/img/visual_04_m.jpg" alt="설악산가족호텔" />
+                            </div>
+                            <div class="main01_text_box" id="selak">
+                                <h1>The-K 설악산가족호텔</h1>
+                                <p class="main01_text">최상의 서비스와 자연, 예술, 문화, 컨벤션이</p>
+                                <p class="main01_text text02">함께 어우러진 고품격 커뮤니티 호텔</p>
+                                <button class="main01_go_button">바로가기</button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <!-- #main01 end -->
@@ -77,10 +115,9 @@
                     <div class="promotion">
                         <div class="promotion_box">
                             <h1>PROMOTION</h1>
-                            <p>The-K호텔앤리조트가 준비한 다양한 프로모션과</p>
-                            <p>이벤트들을 만나보세요</p>
+                            <p>The-K호텔앤리조트가 준비한 다양한 프로모션과 <br>이벤트들을 만나보세요 </p>
                         </div>
-                        <ul class="slide_box">
+                        <ul class="slide_box" id="promotion_ul">
                             <li class="slide_img_box">
                                 <div class="main02_slide_textbox">
                                     <a href="javascript:;">
@@ -204,7 +241,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="slide_pagination">
+                        <ul class="slide_pagination" id="promotion_list">
                             <li class="active"><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
@@ -229,7 +266,7 @@
                             <h1>PACKAGE</h1>
                             <p>The-K호텔앤리조트를 보다 현명하게 이용하는 방법!원하는 구성의 서비스를 최적의 가격으로 이용하실 수 있습니다.</p>
                         </div>
-                        <ul class="slide_box_main03">
+                        <ul class="slide_box_main03" id="package_ul">
                             <li class="slide_img_box_main03">
                                 <div class="main03_slide_textbox">
                                     <p class="text_title_main03">2022년 신년맞이 객실 초특가 Event</p>
@@ -321,7 +358,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="slide_pagination pagination03">
+                        <ul class="slide_pagination" id="package_list">
                             <li class="active"><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
@@ -338,7 +375,7 @@
             <!-- main03 end-->
             <section id="main04">
                 <div class="main04_inner">
-                    <h2 class="todo_title">#TO DO</h2>
+                    <h1 class="todo_title">#TO DO</h1>
                     <div class="tab_warp">
                         <div class="tab_box">
                             <ul class="tabs_nav">
@@ -388,6 +425,77 @@
                     <!-- .tab_warp end -->
                 </div>
                 <!-- .main04_inner end -->
+            </section>
+            <section id="main05">
+                <div class="main05_inner">
+                    <div class="overview_box">
+                        <h1>OVERVIEW</h1>
+                        <P>도심 속의 휴식, 휴양지로의 여행, 연회와 미식까지!
+                        당신이 원하는 LIFE STYLE을 The-K 호텔앤리조트와 함께하세요</P>
+                    </div>
+                    <div id="overview">
+                        <ul class="overview_list">
+                            <li id="overview_main">
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_main_01.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>the-K호텔서울</p>
+                                    <h3>크리스탈블룸 웨딩홀</h3>
+                                </div>
+                            </li>
+                            <li id="overview_main">
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_main_02.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>The-K설악산가족호텔</p>
+                                    <h3>카페테리아</h3>
+                                </div>
+                            </li>
+                            <li id="overview_main">
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_main_03.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>The-K지리산가족호텔</p>
+                                    <h3>온천사우나</h3>
+                                </div>
+                            </li>
+                            <li id="overview_main">
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_main_04.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>The-K호텔경주</p>
+                                    <h3>스카이 디럭스 트윈</h3>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- <ul class="overview_list02">
+                            <li>
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_sub1_01.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>the-K호텔서울</p>
+                                    <h3>크리스탈블룸 웨딩홀</h3>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="overview_list03">
+                            <li>
+                                <div class="overview_img">
+                                    <a href="#"><img src="./반응형_더케이(클론코딩_참고자료)/img/overview_sub2_01.jpg" alt=""></a>
+                                </div>
+                                <div class="overview_text">
+                                    <p>the-K호텔서울</p>
+                                    <h3>크리스탈블룸 웨딩홀</h3>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
             </section>
         </main>
     </body>
