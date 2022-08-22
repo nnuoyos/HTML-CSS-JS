@@ -179,22 +179,25 @@ body {
     height: 550px;
     z-index: 3;
 }
-.main_slide{
+.main_slide {
     width: 100%;
     height: 100%;
 }
 /* 슬라이드 속도 */
-#main01 ul{
+#main01 ul {
     transition: all 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
+
 .main01_inner .main01_img img {
     width: 375px;
+    /* width: 420px; */
 }
 .main01_text_box {
     position: relative;
     z-index: 0;
     width: 100%;
-    bottom: 42%;
+    /* bottom: 42%; */
+    bottom: 52%;
     color: #fff;
     left: 9%;
     font-family: 'KHNPHD', sans-serif;
@@ -288,11 +291,13 @@ body {
     font-size: 14px;
 }
 .local {
-    position: absolute;
+    position: relative;
+    width: 39px;
+    height: 15px;
     font-size: 13px;
     margin-top: 23px;
-    padding: 7px 11px;
-    margin-left: 0px;
+    padding: 7px 4px;
+    margin-left: -8px;
     border: 1px solid rgb(34, 42, 79);
     background-color: rgb(34, 42, 79);
     text-align: center;
@@ -324,7 +329,7 @@ li {
     cursor: pointer;
     text-indent: -9999px;
 }
-.slide_pagination{
+.slide_pagination {
     color: #909daf;
 }
 .slide_pagination .active {
@@ -401,11 +406,13 @@ li {
     font-size: 14px;
 }
 .local_main03 {
-    position: absolute;
+    position: relative;
+    width: 39px;
+    height: 15px;
     font-size: 13px;
     margin-top: 23px;
-    padding: 7px 11px;
-    margin-left: 0px;
+    padding: 7px 4px;
+    margin-left: -8px;
     border: 1px solid rgb(34, 42, 79);
     background-color: rgb(34, 42, 79);
     text-align: center;
@@ -458,7 +465,7 @@ li {
     font-family: 'Poppins', sans-serif;
 }
 /* tab menu */
-.tab_box .tabs_nav{
+.tab_box .tabs_nav {
     min-width: 320px;
     width: 100%;
     display: table-cell;
@@ -466,23 +473,23 @@ li {
     font-size: 14px;
     color: #999;
 }
-.tab_box .tabs_nav li{
+.tab_box .tabs_nav li {
     text-align: center;
     width: 27%;
     float: left;
     position: relative;
     background-color: #ebebeb;
 }
-.tab_box .tabs_nav a{
+.tab_box .tabs_nav a {
     display: block;
     position: relative;
-    padding : 2em 0em;
+    padding: 2em 0em;
 }
-.tab_box .tabs_nav li a.active{
+.tab_box .tabs_nav li a.active {
     background-color: #fff;
     color: #000;
 }
-.tab_box .tabs_nav li a.active::after{
+.tab_box .tabs_nav li a.active::after {
     position: absolute;
     content: '';
     display: block;
@@ -491,7 +498,7 @@ li {
     height: 2px;
     background-color: #000;
 }
-.tab_box .tabs_nav li a.active::before{
+.tab_box .tabs_nav li a.active::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -501,7 +508,7 @@ li {
     border-right: 5px solid transparent;
     transform: rotate(180deg);
 }
-.tab_box .tabs_nav li:nth-child(3) a.active::before{
+.tab_box .tabs_nav li:nth-child(3) a.active::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -511,27 +518,27 @@ li {
     border-right: 5px solid transparent;
     transform: rotate(180deg);
 }
-.tab_body{
+.tab_body {
     position: relative;
     height: 400px;
 }
-.tab_body .tab_img{
+.tab_body .tab_img {
     height: 100%;
     width: 100%;
     min-width: 320px;
     overflow: hidden;
 }
-.tab_body .tab_img img{
+.tab_body .tab_img img {
     position: absolute;
     min-width: 320px;
     width: 100%;
     height: 90%;
 }
-.tab_body .content{
+.tab_body .content {
     position: absolute;
     color: #fff;
 }
-.tab_body .content > .content_inner{
+.tab_body .content > .content_inner {
     padding: 15px;
     position: relative;
     top: 289px;
@@ -540,19 +547,19 @@ li {
     width: 820px;
     font-size: 10px;
     letter-spacing: -0.5px;
-    background-color: rgb(3, 3, 3, 0.5)
+    background-color: rgb(3, 3, 3, 0.5);
 }
-.content_inner .title{
+.content_inner .title {
     font-size: 16px;
     margin-bottom: 5px;
     font-weight: bolder;
 }
-.content_inner .hash_tag{
+.content_inner .hash_tag {
     font-size: 11px;
     font-weight: bolder;
 }
 /* main 05 OVERVIEW */
-#main05{
+#main05 {
     width: 100%;
     height: 550px;
 }
@@ -563,17 +570,17 @@ li {
     margin: 0 auto;
     height: 400px;
 }
-.main05_inner .overview_box{
+.main05_inner .overview_box {
     margin: 0 auto;
     padding: 30px;
     text-align: center;
 }
-.overview_box h1{
+.overview_box h1 {
     font-size: 29px;
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
 }
-.overview_box p{
+.overview_box p {
     margin: 0 auto;
     width: 300px;
     height: 56px;
