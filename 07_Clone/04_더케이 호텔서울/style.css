@@ -189,17 +189,18 @@ body {
 }
 
 .main01_inner .main01_img img {
-    width: 375px;
+    /* position: relative; */
+    width: 28%;
     /* width: 420px; */
 }
 .main01_text_box {
     position: relative;
     z-index: 0;
     width: 100%;
-    /* bottom: 42%; */
-    bottom: 52%;
+    /* margin-right: -10px; */
+    bottom: 48%;
     color: #fff;
-    left: 9%;
+    left: 3%;
     font-family: 'KHNPHD', sans-serif;
 }
 .main01_text_box h1 {
