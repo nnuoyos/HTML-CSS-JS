@@ -111,6 +111,7 @@ body {
     margin-top: 40px;
     flex-direction: column;
     z-index: 1;
+    transition: all ease-in 0.2s;
 }
 .navbar_menu.active,
 .navbar_language.active {
@@ -199,7 +200,7 @@ body {
     /* bottom: 42%; */
     bottom: 52%;
     color: #fff;
-    left: 9%;
+    left: 4%;
     font-family: 'KHNPHD', sans-serif;
 }
 .main01_text_box h1 {
@@ -587,6 +588,24 @@ li {
     font-size: 13px;
     line-height: 19px;
     color: #666;
+}
+.overview_main {
+    position: relative;
+}
+.overview_main ul {
+    display: flex;
+}
+.overview_text01 {
+    position: absolute;
+    color: #fff;
+    margin-left: 20px;
+    bottom: 20px;
+}
+.overview_list .overview_img01 {
+    width: 375px;
+}
+.overview_list .overview_img01 img {
+    width: 100%;
 }
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {
