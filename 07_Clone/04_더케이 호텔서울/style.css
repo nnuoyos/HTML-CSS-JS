@@ -200,7 +200,7 @@ body {
     /* bottom: 42%; */
     bottom: 52%;
     color: #fff;
-    left: 4%;
+    left: 9%;
     font-family: 'KHNPHD', sans-serif;
 }
 .main01_text_box h1 {
@@ -592,21 +592,70 @@ li {
 .overview_main {
     position: relative;
 }
-.overview_main ul {
+/* overview main photo */
+.overview_main .overview_list {
     display: flex;
+    height: 216px;
 }
-.overview_text01 {
-    position: absolute;
-    color: #fff;
-    margin-left: 20px;
-    bottom: 20px;
+.overview_main .overview_list .overview_item01 {
+    width: 375px;
+    height: 100%;
 }
 .overview_list .overview_img01 {
     width: 375px;
 }
+.overview_text01 {
+    position: relative;
+    color: #fff;
+    margin-left: 15px;
+    bottom: 65px;
+}
 .overview_list .overview_img01 img {
     width: 100%;
 }
+/* overview sub photo */
+.overview_list02 {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 187px;
+    height: 187px;
+}
+.overview_list02 .overview_img02 {
+    width: 187px;
+    height: 216px;
+}
+.overview_list02 .overview_img02 img {
+    width: 100%;
+}
+.overview_text02 {
+    position: absolute;
+    color: #fff;
+    margin-left: 15px;
+    bottom: 15px;
+}
+.overview_list03 {
+    position: relative;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    width: 187px;
+    height: 187px;
+}
+.overview_list03 .overview_img03 {
+    width: 187px;
+    height: 216px;
+}
+.overview_list03 .overview_img03 img {
+    width: 100%;
+}
+.overview_text03 {
+    position: absolute;
+    color: #fff;
+    margin-left: 15px;
+    bottom: 15px;
+}
+
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {
     body {
