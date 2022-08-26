@@ -91,16 +91,42 @@ $(function () {
     });
 });
 
-/* $(document).ready(function(){
-   
-    $('ul.tabs li').click(function(){
-      var tab_id = $(this).attr('data-tab');
-   
-      $('ul.tabs li').removeClass('current');
-      $('.tab-content').removeClass('current');
-   
-      $(this).addClass('current');
-      $("#"+tab_id).addClass('current');
-    })
-   
-  }) */
+/* LOCATION drop down menu */
+//active 추가 되었을 경우에만 list 보이게 하기
+function onClickSelect(e) {
+    const isActive = e.currentTarget.className.indexOf("active") !== -1;
+    if (isActive) {
+      e.currentTarget.className = "select";
+    } else {
+      e.currentTarget.className = "select active";
+    }
+  }
+  
+  document.querySelector(".select").addEventListener("click", onClickSelect);
+  
+  //클릭한 option을 선택창에 띄우기
+  function onClickOption(e) {
+    const selectedValue = e.currentTarget.innerHTML;
+    document.querySelector(".text").innerHTML = selectedValue; //선택한 옵션으로 html에 표기
+  }
+  //option list 
+  let optionList = document.querySelectorAll(".option");
+  for (let i = 0; i < optionList.length; i++) {
+    let option = optionList[i];
+    option.addEventListener("click", onClickOption);
+  }
+  
+  //해당 메뉴를 클릭하면 맵 하단에 해당 주소정보 보여주기
+  $(function () {
+    let address = $('.option_list li a');
+    let addressPanel = $('.option_address');
+    address.click(function (e) {
+        e.preventDefault(); //링크의 기본 속성 막아놓기
+        //내가 클릭한 탭에만 active 부여하기
+        address.removeClass('active'); //액티브 모두 제거
+        $(this).addClass('active'); //클릭이벤트가 발생한 그 요소에만 액티브 추가
+        addressPanel.hide();
+        let $target = $(this).attr('href');
+        $($target).show();
+    });
+});
