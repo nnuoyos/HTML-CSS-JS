@@ -31,7 +31,7 @@ button {
 fieldset {
     border: 0;
 }
-ul {
+ul, li {
     list-style: none;
 }
 address {
